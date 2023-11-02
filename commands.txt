@@ -1,0 +1,354 @@
+preet@preet-HP-Notebook:~$ mkdir Git-Bootcamp
+preet@preet-HP-Notebook:~$ cd Git-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Bootcamp$ git config --global user.name preet-7
+preet@preet-HP-Notebook:~/Git-Bootcamp$ git config --global user.email preet3.14159@gmail.com
+preet@preet-HP-Notebook:~/Git-Bootcamp$ git config user.name
+preet-7
+preet@preet-HP-Notebook:~/Git-Bootcamp$ git config user.email
+preet3.14159@gmail.com
+preet@preet-HP-Notebook:~/Git-Bootcamp$ mkdir MyFirstNovel
+preet@preet-HP-Notebook:~/Git-Bootcamp$ cd MyFirstNovel
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Bootcamp/MyFirstNovel/.git/
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ ls -a
+.  ..  .git
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ cd .git
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel/.git$ ll
+total 40
+drwxrwxr-x 7 preet preet 4096 Nov  1 16:22 ./
+drwxrwxr-x 3 preet preet 4096 Nov  1 16:21 ../
+drwxrwxr-x 2 preet preet 4096 Nov  1 16:21 branches/
+-rw-rw-r-- 1 preet preet   92 Nov  1 16:21 config
+-rw-rw-r-- 1 preet preet   73 Nov  1 16:21 description
+-rw-rw-r-- 1 preet preet   23 Nov  1 16:21 HEAD
+drwxrwxr-x 2 preet preet 4096 Nov  1 16:21 hooks/
+drwxrwxr-x 2 preet preet 4096 Nov  1 16:21 info/
+drwxrwxr-x 4 preet preet 4096 Nov  1 16:21 objects/
+drwxrwxr-x 4 preet preet 4096 Nov  1 16:21 refs/
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ touch outline.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	outline.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git add outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   outline.txt
+
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi characters.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   outline.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	characters.txt
+
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git add characters.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   characters.txt
+	new file:   outline.txt
+
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git commit -m "start work on outline and main characters"
+[master (root-commit) 0f7282a] start work on outline and main characters
+ 2 files changed, 12 insertions(+)
+ create mode 100644 characters.txt
+ create mode 100644 outline.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  1 16:57 ./
+drwxrwxr-x 3 preet preet 4096 Nov  1 16:21 ../
+-rw-rw-r-- 1 preet preet 2766 Nov  1 16:57 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  1 22:55 .git/
+-rw-rw-r-- 1 preet preet   51 Nov  1 16:56 outline.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi chapter1.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   outline.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chapter1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git add outline.txt chapter1.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   chapter1.txt
+	modified:   outline.txt
+
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git commit -m "begin work on chapter one"
+[master f2c4fda] begin work on chapter one
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+ create mode 100644 chapter1.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git log
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi chapter1.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git add .
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git commit -n "finish chapter one"
+error: pathspec 'finish chapter one' did not match any file(s) known to git
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git commit -m "finish chapter one"
+[master d8d6b21] finish chapter one
+ 2 files changed, 10 insertions(+)
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git log
+commit d8d6b2127535f88883b4602601764177f7cc456b (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi chapter1.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ vi chapter2.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   chapter1.txt
+	modified:   outline.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chapter2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git add .
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git commit -m "chapter one split into two"
+[master 9195093] chapter one split into two
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+ create mode 100644 chapter2.txt
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ git log
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Bootcamp/MyFirstNovel$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir shopping
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd shopping/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/shopping/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ touch yard.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ touch groceries.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	groceries.txt
+	yard.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git add groceries.txt  yard.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   groceries.txt
+	new file:   yard.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git commit -m "create yard and groceries list"
+[master (root-commit) d091343] create yard and groceries list
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 groceries.txt
+ create mode 100644 yard.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi yard.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi groceries.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git add groceries.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   groceries.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   yard.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git commit -m "add ingredients for tomato soup"
+[master 833fff3] add ingredients for tomato soup
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi yard.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   yard.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git add yard.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git commit -m "add items needed for garden box"
+[master 8bebad2] add items needed for garden box
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git log
+commit 8bebad214c9e202cb2b5126f5eeac6f2923aec95 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:24:26 2023 +0530
+
+    add items needed for garden box
+
+commit 833fff392d03f12f0a83d06d47b89c0cefb33c59
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:23:30 2023 +0530
+
+    add ingredients for tomato soup
+
+commit d091343e894f4d6a0cca8b3d252a2655e33b0ed0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:12:38 2023 +0530
+
+    create yard and groceries list
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi yard.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi groceries.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi yard.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ vi groceries.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git commit -m "add items needed to grow potatoes"
+[master 7941b5b] add items needed to grow potatoes
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/shopping$ git log
+commit 7941b5b14ba964bbc11433b8f41d119f2707cfaa (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:29:31 2023 +0530
+
+    add items needed to grow potatoes
+
+commit 8bebad214c9e202cb2b5126f5eeac6f2923aec95
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:24:26 2023 +0530
+
+    add items needed for garden box
+
+commit 833fff392d03f12f0a83d06d47b89c0cefb33c59
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:23:30 2023 +0530
+
+    add ingredients for tomato soup
+
+commit d091343e894f4d6a0cca8b3d252a2655e33b0ed0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:12:38 2023 +0530
+
+    create yard and groceries list
+
+
