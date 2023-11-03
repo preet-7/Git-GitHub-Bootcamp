@@ -1,0 +1,1035 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ls
+1.txt  MyFirstNovel  shopping
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd MyFirstNovel/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 28
+drwxrwxr-x 3 preet preet 4096 Nov  1 23:07 ./
+drwxrwxr-x 4 preet preet 4096 Nov  1 23:36 ../
+-rw-rw-r-- 1 preet preet 1669 Nov  1 23:07 chapter1.txt
+-rw-rw-r-- 1 preet preet 1836 Nov  1 23:07 chapter2.txt
+-rw-rw-r-- 1 preet preet 2766 Nov  1 16:57 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  1 23:08 .git/
+-rw-rw-r-- 1 preet preet  517 Nov  1 23:07 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ mkdir MoodBoard
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ cd MoodBoard/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel/MoodBoard$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../chapter1.txt
+	modified:   ../chapter2.txt
+	modified:   ../characters.txt
+	modified:   ../outline.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel/MoodBoard$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   chapter1.txt
+	modified:   chapter2.txt
+	modified:   characters.txt
+	modified:   outline.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	MoodBoard/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add chapter1.txt  chapter2.txt characters.txt outline.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "added lines in text files"
+[master 1fc14ca] added lines in text files
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	MoodBoard/
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add MoodBoard/
+jeremy-bishop-EwKXn5CapA4-unsplash.jpg  quentin-zwzeorQPepo-unsplash.jpg        
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add MoodBoard/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   MoodBoard/jeremy-bishop-EwKXn5CapA4-unsplash.jpg
+	new file:   MoodBoard/quentin-zwzeorQPepo-unsplash.jpg
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "create mood board"
+[master 04e26a2] create mood board
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 MoodBoard/jeremy-bishop-EwKXn5CapA4-unsplash.jpg
+ create mode 100644 MoodBoard/quentin-zwzeorQPepo-unsplash.jpg
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi outline.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add outline.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit
+[master 750a0e6] Fix typo
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 750a0e6596814c0663597e627e78f1642c3f900e (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git config core.editor
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git config --global core.editor
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git config --global core.editor "vim"
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi chapter2.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi chapter1.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add chapter1.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commmit
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit
+[master 9fcedaf] minor changes in chapter 1
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 9fcedaf59637fa108094f58cba0708797dba674f (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --pretty
+commit 9fcedaf59637fa108094f58cba0708797dba674f (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --abbrev-commit
+commit 9fcedaf (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b21
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fda
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+9fcedaf (HEAD -> master) minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ open .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   chapter1.txt
+	modified:   chapter2.txt
+	modified:   characters.txt
+	modified:   outline.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add chapter2.txt chapter1.txt characters.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "add headlines to all files"
+[master 7fcba66] add headlines to all files
+ 3 files changed, 9 insertions(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   outline.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add outline.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit --ammend
+error: unknown option `ammend'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit --amend
+[master 03996c4] add headlines to all files
+ Date: Thu Nov 2 11:56:11 2023 +0530
+ 4 files changed, 12 insertions(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneliner
+fatal: unrecognized argument: --oneliner
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+03996c4 (HEAD -> master) add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi .gitignore
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ls
+chapter1.txt  chapter2.txt  characters.txt  MoodBoard  outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 36
+drwxrwxr-x 4 preet preet 4096 Nov  2 12:01 ./
+drwxrwxr-x 4 preet preet 4096 Nov  1 23:36 ../
+-rw-rw-r-- 1 preet preet 1703 Nov  2 11:54 chapter1.txt
+-rw-rw-r-- 1 preet preet 1875 Nov  2 11:54 chapter2.txt
+-rw-rw-r-- 1 preet preet 2789 Nov  2 11:55 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  2 11:57 .git/
+-rw-rw-r-- 1 preet preet    1 Nov  2 12:01 .gitignore
+drwxrwxr-x 2 preet preet 4096 Nov  2 09:57 MoodBoard/
+-rw-rw-r-- 1 preet preet  538 Nov  2 11:55 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ rm .gitignore 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 32
+drwxrwxr-x 4 preet preet 4096 Nov  2 12:02 ./
+drwxrwxr-x 4 preet preet 4096 Nov  1 23:36 ../
+-rw-rw-r-- 1 preet preet 1703 Nov  2 11:54 chapter1.txt
+-rw-rw-r-- 1 preet preet 1875 Nov  2 11:54 chapter2.txt
+-rw-rw-r-- 1 preet preet 2789 Nov  2 11:55 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  2 11:57 .git/
+drwxrwxr-x 2 preet preet 4096 Nov  2 09:57 MoodBoard/
+-rw-rw-r-- 1 preet preet  538 Nov  2 11:55 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+03996c4 (HEAD -> master) add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir Branching
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd Branching/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ mkdir RoadtripPlaylist
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd RoadtripPlaylist/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -m "add playlist header"
+[master (root-commit) fdcc7b7] add playlist header
+ 1 file changed, 2 insertions(+)
+ create mode 100644 playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -m "add two ABBA songs"
+[master 6bd0fb6] add two ABBA songs
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch 
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch oldies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch
+* master
+  oldies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch oldies
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov  2 22:52 ./
+drwxrwxr-x 3 preet preet 4096 Nov  2 22:49 ../
+drwxrwxr-x 8 preet preet 4096 Nov  2 22:54 .git/
+-rw-rw-r-- 1 preet preet   56 Nov  2 22:52 playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> oldies, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -m "add two george jones song"
+[oldies 2720c8a] add two george jones song
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 2720c8a2e550f81237cda8d8802e88b71572f613 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cat 
+.git/         playlist.txt  
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cat playlist.txt 
+SONG - ARTIST
+=============
+SOS - ABBA
+one of us - ABBA
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies 
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cat playlist.txt 
+SONG - ARTIST
+=============
+SOS - ABBA
+one of us - ABBA
+he stopped loving her today - George Jones
+the race is on - George Jones
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 2720c8a2e550f81237cda8d8802e88b71572f613 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "add two george harrison song"
+[oldies ac2c46b] add two george harrison song
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch georges
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (HEAD -> oldies, georges)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch georges
+Switched to branch 'georges'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (HEAD -> georges, oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "add two george michael song"
+[georges d0f6bb8] add two george michael song
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit d0f6bb855f03bf07b3bd89cbce1ea1bdbf2020f9 (HEAD -> georges)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:21:51 2023 +0530
+
+    add two george michael song
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch georges
+Switched to branch 'georges'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "remove two ABBA songs"
+[georges 386b6ee] remove two ABBA songs
+ 1 file changed, 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 386b6ee2b0610f64aabbf9b9767c6fb913ed622a (HEAD -> georges)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:23:51 2023 +0530
+
+    remove two ABBA songs
+
+commit d0f6bb855f03bf07b3bd89cbce1ea1bdbf2020f9
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:21:51 2023 +0530
+
+    add two george michael song
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch emptyplaylist
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master, emptyplaylist)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch emptyplaylist 
+Switched to branch 'emptyplaylist'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "empty out playlist"
+[emptyplaylist 4764e4a] empty out playlist
+ 1 file changed, 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 4764e4a0a762721ff756e658db5fdaf23e00c7d1 (HEAD -> emptyplaylist)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:25:49 2023 +0530
+
+    empty out playlist
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch
+* emptyplaylist
+  georges
+  master
+  oldies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git checkout oldies 
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch -c recentish-music
+Switched to a new branch 'recentish-music'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "add 2 Phoebe Bridgers songs"
+[recentish-music c331656] add 2 Phoebe Bridgers songs
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit c3316565649d218b4ffd7f7ee87502170e1d17ac (HEAD -> recentish-music)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:48:58 2023 +0530
+
+    add 2 Phoebe Bridgers songs
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch oldies
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   playlist.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch emptyplaylist 
+error: Your local changes to the following files would be overwritten by checkout:
+	playlist.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch oldies
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   playlist.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "add two van morrison songs"
+[oldies 64dce8e] add two van morrison songs
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch -c chicken
+Switched to a new branch 'chicken'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi chicken.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oli
+fatal: invalid reference: oli
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies 
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  2 23:58 ./
+drwxrwxr-x 3 preet preet 4096 Nov  2 22:49 ../
+-rw-rw-r-- 1 preet preet   17 Nov  2 23:58 chicken.txt
+drwxrwxr-x 8 preet preet 4096 Nov  2 23:59 .git/
+-rw-rw-r-- 1 preet preet  248 Nov  2 23:56 playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch oldies
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chicken.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ 
+
+

@@ -1,0 +1,2385 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd R
+bash: cd: R: No such file or directory
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd Branching/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd RoadtripPlaylist/`
+> ^C
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd RoadtripPlaylist/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ dir
+chicken.txt  playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch georges 
+Switched to branch 'georges'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch -c deleteMe
+Switched to a new branch 'deleteMe'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 386b6ee2b0610f64aabbf9b9767c6fb913ed622a (HEAD -> deleteMe, georges)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:23:51 2023 +0530
+
+    remove two ABBA songs
+
+commit d0f6bb855f03bf07b3bd89cbce1ea1bdbf2020f9
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:21:51 2023 +0530
+
+    add two george michael song
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch -d deleteMe 
+error: Cannot delete branch 'deleteMe' checked out at '/home/preet/Git-Github-Bootcamp/Branching/RoadtripPlaylist'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch -d deleteMe 
+error: The branch 'deleteMe' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D deleteMe'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch -D deleteMe 
+Deleted branch deleteMe (was 386b6ee).
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch
+  chicken
+  emptyplaylist
+  georges
+* master
+  oldies
+  recentish-music
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git checkout recentish-music 
+Switched to branch 'recentish-music'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch -m 2000s
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch 2000s
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chicken.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit c3316565649d218b4ffd7f7ee87502170e1d17ac (HEAD -> 2000s)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:48:58 2023 +0530
+
+    add 2 Phoebe Bridgers songs
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -a -m "add two moderat songs"
+[2000s 6d01351] add two moderat songs
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6d01351cb1209283485825391e9ab4cdf8966f2a (HEAD -> 2000s)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 09:44:21 2023 +0530
+
+    add two moderat songs
+
+commit c3316565649d218b4ffd7f7ee87502170e1d17ac
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:48:58 2023 +0530
+
+    add 2 Phoebe Bridgers songs
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch 2000s
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chicken.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chicken.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cd .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git$ ll
+total 56
+drwxrwxr-x  8 preet preet 4096 Nov  3 09:57 ./
+drwxrwxr-x  3 preet preet 4096 Nov  3 09:53 ../
+drwxrwxr-x  2 preet preet 4096 Nov  2 22:49 branches/
+-rw-rw-r--  1 preet preet   22 Nov  3 09:44 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet   92 Nov  3 09:42 config
+-rw-rw-r--  1 preet preet   73 Nov  2 22:49 description
+-rw-rw-r--  1 preet preet   23 Nov  3 09:53 HEAD
+drwxrwxr-x  2 preet preet 4096 Nov  2 22:49 hooks/
+-rw-rw-r--  1 preet preet  145 Nov  3 09:57 index
+drwxrwxr-x  2 preet preet 4096 Nov  2 22:49 info/
+drwxrwxr-x  3 preet preet 4096 Nov  2 22:51 logs/
+drwxrwxr-x 32 preet preet 4096 Nov  3 09:44 objects/
+-rw-rw-r--  1 preet preet   46 Nov  3 09:40 packed-refs
+drwxrwxr-x  4 preet preet 4096 Nov  2 22:49 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git$ cat HEAD 
+ref: refs/heads/master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git$ cat refs/heads/master
+6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git$ cd refs
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs$ ll
+total 16
+drwxrwxr-x 4 preet preet 4096 Nov  2 22:49 ./
+drwxrwxr-x 8 preet preet 4096 Nov  3 09:57 ../
+drwxrwxr-x 2 preet preet 4096 Nov  3 09:44 heads/
+drwxrwxr-x 2 preet preet 4096 Nov  2 22:49 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs$ cd heads
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs/heads$ ll
+total 32
+drwxrwxr-x 2 preet preet 4096 Nov  3 09:44 ./
+drwxrwxr-x 4 preet preet 4096 Nov  2 22:49 ../
+-rw-rw-r-- 1 preet preet   41 Nov  3 09:44 2000s
+-rw-rw-r-- 1 preet preet   41 Nov  2 23:58 chicken
+-rw-rw-r-- 1 preet preet   41 Nov  2 23:25 emptyplaylist
+-rw-rw-r-- 1 preet preet   41 Nov  2 23:23 georges
+-rw-rw-r-- 1 preet preet   41 Nov  2 22:52 master
+-rw-rw-r-- 1 preet preet   41 Nov  2 23:57 oldies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs/heads$ cat master
+6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs/heads$ cat oldies
+64dce8e705281c756bd1c05e23da36bf38ddaadd
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs/heads$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git/refs$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cat .git/HEAD 
+ref: refs/heads/master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ mkdir Patronus
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd P
+bash: cd: P: No such file or directory
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd Patronus/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/Branching/Patronus/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ vi patronus.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  3 10:29 ./
+drwxrwxr-x 4 preet preet 4096 Nov  3 10:28 ../
+drwxrwxr-x 7 preet preet 4096 Nov  3 10:28 .git/
+-rw-rw-r-- 1 preet preet    0 Nov  3 10:29 patronus.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -a -m "add empty patronus file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	patronus.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  3 10:29 ./
+drwxrwxr-x 4 preet preet 4096 Nov  3 10:28 ../
+drwxrwxr-x 7 preet preet 4096 Nov  3 10:30 .git/
+-rw-rw-r-- 1 preet preet    0 Nov  3 10:29 patronus.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -a -m "add empty patronus file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	patronus.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -m "add empty patronus file"
+[master (root-commit) c169a90] add empty patronus file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 patronus.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git log
+commit c169a9066bc2c25ee9a872c3869c10485b40bbd2 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 10:31:09 2023 +0530
+
+    add empty patronus file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch harry
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch snape
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git switch harry
+Switched to branch 'harry'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ vi patronus.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git add patronus.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -m "add harry's stag patronus"
+[harry 249068b] add harry's stag patronus
+ 1 file changed, 26 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git log
+commit 249068b6f185e45edad753c9090557b5d04b3ce2 (HEAD -> harry)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 10:35:32 2023 +0530
+
+    add harry's stag patronus
+
+commit c169a9066bc2c25ee9a872c3869c10485b40bbd2 (snape, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 10:31:09 2023 +0530
+
+    add empty patronus file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git checkoput sna
+git: 'checkoput' is not a git command. See 'git --help'.
+
+The most similar command is
+	checkout
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git checkout snape 
+Switched to branch 'snape'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ vi patronus.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git add patronus.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -m "add snape's doe patronus"
+[snape 10ddb09] add snape's doe patronus
+ 1 file changed, 16 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git log
+commit 10ddb092f4b9d1c2d99bfc09876125f9ca944f60 (HEAD -> snape)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 10:37:39 2023 +0530
+
+    add snape's doe patronus
+
+commit c169a9066bc2c25ee9a872c3869c10485b40bbd2 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 10:31:09 2023 +0530
+
+    add empty patronus file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch lily
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git checkout lily
+Switched to branch 'lily'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ vi patronus.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git commit -m "add lily's doe patronus"
+[lily c7cea31] add lily's doe patronus
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch
+  harry
+* lily
+  master
+  snape
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch -d snape
+Deleted branch snape (was 10ddb09).
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ git branch
+  harry
+* lily
+  master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/Patronus$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd RoadtripPlaylist/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Already on 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (HEAD -> oldies, chicken)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git merge oldies
+Updating 6bd0fb6..64dce8e
+Fast-forward
+ playlist.txt | 7 +++++++
+ 1 file changed, 7 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (HEAD -> master, oldies, chicken)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cat playlist.txt 
+SONG - ARTIST
+=============
+SOS - ABBA
+one of us - ABBA
+he stopped loving her today - George Jones
+the race is on - George Jones
+my sweet lord - George Harrison
+what is life - George Harrison
+and it stoned me - van morrison
+caravan - van morrison
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 11:44 ./
+drwxrwxr-x 4 preet preet 4096 Nov  3 10:28 ../
+-rw-rw-r-- 1 preet preet   17 Nov  2 23:58 chicken.txt
+drwxrwxr-x 8 preet preet 4096 Nov  3 11:44 .git/
+-rw-rw-r-- 1 preet preet  248 Nov  3 11:44 playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git branch
+  2000s
+  chicken
+  emptyplaylist
+  georges
+* master
+  oldies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	chicken.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch oldies
+Switched to branch 'oldies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -m "add two wings song"
+[oldies 3d27b14] add two wings song
+ 2 files changed, 4 insertions(+)
+ create mode 100644 chicken.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 3d27b1451d3a0037897c43ba34c00f9ce73ac1d1 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 11:48:47 2023 +0530
+
+    add two wings song
+
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (master, chicken)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ vi playlist.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git status
+On branch oldies
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   playlist.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 11:50 ./
+drwxrwxr-x 4 preet preet 4096 Nov  3 10:28 ../
+-rw-rw-r-- 1 preet preet   17 Nov  2 23:58 chicken.txt
+drwxrwxr-x 8 preet preet 4096 Nov  3 11:50 .git/
+-rw-rw-r-- 1 preet preet  351 Nov  3 11:50 playlist.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git commit -m "add two joni mitchell songs"
+[oldies 2bb2df7] add two joni mitchell songs
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 2bb2df7652470ea1d4ef2f0bb01c4e32b6721674 (HEAD -> oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 11:51:24 2023 +0530
+
+    add two joni mitchell songs
+
+commit 3d27b1451d3a0037897c43ba34c00f9ce73ac1d1
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 11:48:47 2023 +0530
+
+    add two wings song
+
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (master, chicken)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git merger oldies
+git: 'merger' is not a git command. See 'git --help'.
+
+The most similar command is
+	merge
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git merge oldies
+\Updating 64dce8e..2bb2df7
+Fast-forward
+ chicken.txt  | 2 ++
+ playlist.txt | 4 ++++
+ 2 files changed, 6 insertions(+)
+ create mode 100644 chicken.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ git log
+commit 2bb2df7652470ea1d4ef2f0bb01c4e32b6721674 (HEAD -> master, oldies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 11:51:24 2023 +0530
+
+    add two joni mitchell songs
+
+commit 3d27b1451d3a0037897c43ba34c00f9ce73ac1d1
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 11:48:47 2023 +0530
+
+    add two wings song
+
+commit 64dce8e705281c756bd1c05e23da36bf38ddaadd (chicken)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:57:45 2023 +0530
+
+    add two van morrison songs
+
+commit ac2c46beb2ecae55cd7c8e40ec5d63c47465e5f7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 23:02:51 2023 +0530
+
+    add two george harrison song
+
+commit 2720c8a2e550f81237cda8d8802e88b71572f613
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:57:33 2023 +0530
+
+    add two george jones song
+
+commit 6bd0fb61d1167ffc7634f53d5556e2bb61b96fb5
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:52:23 2023 +0530
+
+    add two ABBA songs
+
+commit fdcc7b7f8f4a3d25795224344127f3b0218fafc2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 22:51:04 2023 +0530
+
+    add playlist header
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/RoadtripPlaylist$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ mkdir PlaylistTake2
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd P
+Patronus/      PlaylistTake2/ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd PlaylistTake2/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/Branching/PlaylistTake2/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -a -m "add songs file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	songs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit  -m -a  "add songs file"
+error: pathspec 'add songs file' did not match any file(s) known to git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add songs file"
+[master (root-commit) 3bca0db] add songs file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add two ABBA songs"
+[master 863ab89] add two ABBA songs
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -c ABBA
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (HEAD -> master, ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add ABBA song"
+[master 83a325e] add ABBA song
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 83a325e2076f27a49b2170720d18d5c268e77fe8 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:11:08 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add mama mia"
+[master cec8712] add mama mia
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit cec8712f1e52f2ebc0d248fc929ea3806a13ee22 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:11:51 2023 +0530
+
+    add mama mia
+
+commit 83a325e2076f27a49b2170720d18d5c268e77fe8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:11:08 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Already on 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git reset --hard HEAD~1
+HEAD is now at 83a325e add ABBA song
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 83a325e2076f27a49b2170720d18d5c268e77fe8 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:11:08 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git reset --hard HEAD~1
+HEAD is now at 863ab89 add two ABBA songs
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (HEAD -> master, ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch ABBA
+Switched to branch 'ABBA'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (HEAD -> ABBA, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m 
+error: switch `m' requires a value
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add ABBA song"
+[ABBA 9a34445] add ABBA song
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add mamma mia"
+[ABBA 7456495] add mamma mia
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff (HEAD -> ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov  3 12:19 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 12:19 .git/
+-rw-rw-r-- 1 preet preet   28 Nov  3 12:19 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add podcasts file"
+[master ec87086] add podcasts file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 podcasts.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit ec8708667e0f73b565fd64939fcc9376679129bb (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add 3 podcasts"
+[master 1970525] add 3 podcasts
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  ABBA
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch ABBA
+Switched to branch 'ABBA'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff (HEAD -> ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git merge ABBA
+Merge made by the 'ort' strategy.
+ songs.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 12:33 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 12:36 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet   66 Nov  3 12:33 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (HEAD -> master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff (ABBA)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -d ABBA
+Deleted branch ABBA (was 7456495).
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c serena
+Switched to a new branch 'serena'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c bjorn
+Switched to a new branch 'bjorn'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 12:33 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 13:47 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet   66 Nov  3 12:33 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add king gizzard and the lizard wizard song"
+[bjorn a5a177e] add king gizzard and the lizard wizard song
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add two stokes song"
+[bjorn 1c8cd7f] add two stokes song
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 13:50 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 13:51 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet  135 Nov  3 13:50 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c serena
+fatal: a branch named 'serena' already exists
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch serena
+Switched to branch 'serena'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add ABBA song"
+[serena f064eb1] add ABBA song
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add another ABBA song"
+[serena f160cff] add another ABBA song
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -amend
+error: did you mean `--amend` (with two dashes)?
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit --amend
+[serena 918e619] add dolly parton song
+ Date: Fri Nov 3 13:52:47 2023 +0530
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (HEAD -> serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch bjorn
+Switched to branch 'bjorn'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (HEAD -> bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c combo
+Switched to a new branch 'combo'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git merge serena
+Auto-merging songs.txt
+CONFLICT (content): Merge conflict in songs.txt
+Automatic merge failed; fix conflicts and then commit the result.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 14:06 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 14:06 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet  225 Nov  3 14:06 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (HEAD -> combo, bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  bjorn
+* combo
+  master
+  serena
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch serena 
+fatal: cannot switch branch while merging
+Consider "git merge --quit" or "git worktree add".
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch combo
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   songs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "resolve conflicts"
+[combo 888394a] resolve conflicts
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 888394ae330ff5690afce95d42d7b1515096a1bc (HEAD -> combo)
+Merge: 1c8cd7f 918e619
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 14:12:59 2023 +0530
+
+    resolve conflicts
+
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 14:11 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 14:12 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet  189 Nov  3 14:11 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cat podcasts.txt 
+the lead
+radiolab
+this american life
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cat songs.txt 
+dancing queen - ABBA
+minimum brain size - king gizzard & 
+the lizard wizard
+the adult are talking - the strokes
+last nite - the stokes
+gimme gimme - ABBA
+here you come again - dolly parton
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch serena 
+Switched to branch 'serena'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cat songs.txt 
+sos - ABBA
+one of us - ABBA
+mamma mia - ABBA
+dancing queen - ABBA
+gimme gimme - ABBA
+here you come again - dolly parton
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch bjorn 
+Switched to branch 'bjorn'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cat songs.txt 
+dancing queen - ABBA
+minimum brain size - king gizzard & 
+the lizard wizard
+the adult are talking - the strokes
+last nite - the stokes
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+* bjorn
+  combo
+  master
+  serena
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c combo2
+Switched to a new branch 'combo2'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  bjorn
+  combo
+* combo2
+  master
+  serena
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch combo2
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cat songs.txt 
+dancing queen - ABBA
+minimum brain size - king gizzard & 
+the lizard wizard
+the adult are talking - the strokes
+last nite - the stokes
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git merge serena
+Auto-merging songs.txt
+CONFLICT (content): Merge conflict in songs.txt
+Automatic merge failed; fix conflicts and then commit the result.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -d serena
+error: The branch 'serena' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D serena'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch combo
+fatal: cannot switch branch while merging
+Consider "git merge --quit" or "git worktree add".
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -D combo2
+error: Cannot delete branch 'combo2' checked out at '/home/preet/Git-Github-Bootcamp/Branching/PlaylistTake2'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  bjorn
+  combo
+* combo2
+  master
+  serena
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "combo doubts"
+U	songs.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "combo doubts"
+U	songs.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "combo doubts"
+[combo2 15150ff] combo doubts
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch combo2
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 15150ff5af6323d1a9161cc1128103f41533c987 (HEAD -> combo2)
+Merge: 1c8cd7f 918e619
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 14:23:31 2023 +0530
+
+    combo doubts
+
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch combo
+Switched to branch 'combo'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -d combo2
+error: The branch 'combo2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D combo2'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch -D combo2
+Deleted branch combo2 (was 15150ff).
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit 888394ae330ff5690afce95d42d7b1515096a1bc (HEAD -> combo)
+Merge: 1c8cd7f 918e619
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 14:12:59 2023 +0530
+
+    resolve conflicts
+
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 888394ae330ff5690afce95d42d7b1515096a1bc (HEAD -> combo)
+Merge: 1c8cd7f 918e619
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 14:12:59 2023 +0530
+
+    resolve conflicts
+
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 888394ae330ff5690afce95d42d7b1515096a1bc (HEAD -> combo)
+Merge: 1c8cd7f 918e619
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 14:12:59 2023 +0530
+
+    resolve conflicts
+
+commit 918e61981b6ab77ab5d7eb9dffe09d8da3052345 (serena)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:47 2023 +0530
+
+    add dolly parton song
+
+commit f064eb1b85857d98db43b53291646b0eecd2be1c
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:52:22 2023 +0530
+
+    add ABBA song
+
+commit 1c8cd7fe8a85a09454ebbf28f2988c97e14e9220 (bjorn)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:51:00 2023 +0530
+
+    add two stokes song
+
+commit a5a177e1ef91f50d5941ba6d3a7533f326671d8e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 13:49:59 2023 +0530
+
+    add king gizzard and the lizard wizard song
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  bjorn
+* combo
+  master
+  serena
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 16:04 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 16:04 .git/
+-rw-rw-r-- 1 preet preet   37 Nov  3 12:32 podcasts.txt
+-rw-rw-r-- 1 preet preet   66 Nov  3 16:04 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch -c silence
+Switched to a new branch 'silence'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch silence
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch silence
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   podcasts.txt
+	modified:   songs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add podcasts.txt songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "empty podcasts and songs file"
+[silence ce10553] empty podcasts and songs file
+ 2 files changed, 7 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit ce10553aaa901ab1172a891dd74ba3e868463ee0 (HEAD -> silence)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:07:58 2023 +0530
+
+    empty podcasts and songs file
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0 (master)
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add songs.txt podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "add song and podcast in files"
+[master a388693] add song and podcast in files
+ 2 files changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit a388693a4115ee540f55dd1839ffb63db1925251 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:10:20 2023 +0530
+
+    add song and podcast in files
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+    add two ABBA songs
+
+commit 3bca0dbb092e3d966eb8cad6111e1ff0838e88a2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:08:18 2023 +0530
+
+    add songs file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git merge silence
+Auto-merging podcasts.txt
+CONFLICT (content): Merge conflict in podcasts.txt
+Auto-merging songs.txt
+CONFLICT (content): Merge conflict in songs.txt
+Automatic merge failed; fix conflicts and then commit the result.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 16:11 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 16:11 .git/
+-rw-rw-r-- 1 preet preet  100 Nov  3 16:11 podcasts.txt
+-rw-rw-r-- 1 preet preet  118 Nov  3 16:11 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   podcasts.txt
+	both modified:   songs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "merge branch silence to master"
+U	podcasts.txt
+U	songs.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi podcasts.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ vi songs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "merge branch silence to master"
+U	podcasts.txt
+U	songs.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   podcasts.txt
+	both modified:   songs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   podcasts.txt
+	modified:   songs.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git commit -m "merge branch silence to master"
+[master c8aea62] merge branch silence to master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git log
+commit c8aea62e43b38c6915209f966a23fd56a8d1a00b (HEAD -> master)
+Merge: a388693 ce10553
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:16:24 2023 +0530
+
+    merge branch silence to master
+
+commit a388693a4115ee540f55dd1839ffb63db1925251
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:10:20 2023 +0530
+
+    add song and podcast in files
+
+commit ce10553aaa901ab1172a891dd74ba3e868463ee0 (silence)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:07:58 2023 +0530
+
+    empty podcasts and songs file
+
+commit a7a44574a9bb4b7d8deda7659248e449430585a0
+Merge: 1970525 7456495
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:33:15 2023 +0530
+
+    Merge branch 'ABBA'
+
+commit 19705252d53e7a3a67b4a79a705fc0c962c41a77
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:31:52 2023 +0530
+
+    add 3 podcasts
+
+commit ec8708667e0f73b565fd64939fcc9376679129bb
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:30:30 2023 +0530
+
+    add podcasts file
+
+commit 7456495ab4bf83d74ac25468cb3b8d8e9da04bff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:19:11 2023 +0530
+
+    add mamma mia
+
+commit 9a34445beff1a3ea24f471b988c99fdeb380d4e2
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:18:37 2023 +0530
+
+    add ABBA song
+
+commit 863ab896b47d783ed11f55b7e4daabc33a2136e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 12:09:39 2023 +0530
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git ll
+git: 'll' is not a git command. See 'git --help'.
+
+The most similar command is
+	pull
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  3 16:15 ./
+drwxrwxr-x 5 preet preet 4096 Nov  3 12:06 ../
+drwxrwxr-x 8 preet preet 4096 Nov  3 16:16 .git/
+-rw-rw-r-- 1 preet preet    0 Nov  3 16:15 podcasts.txt
+-rw-rw-r-- 1 preet preet    0 Nov  3 16:15 songs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ git branch
+  bjorn
+  combo
+* master
+  serena
+  silence
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/PlaylistTake2$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ mkdir merging-exercise
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching$ cd merging-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add greetings.txt 
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/Branching/merging-exercise/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add greetings file"
+[master (root-commit) d32c102] add greetings file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch -c spanish
+Switched to a new branch 'spanish'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add spanish greetings"
+[spanish 4cdfe23] add spanish greetings
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (HEAD -> spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git merge spanish
+Updating d32c102..4cdfe23
+Fast-forward
+ greetings.txt | 1 +
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (HEAD -> master, spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch -c french
+Switched to a new branch 'french'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (HEAD -> french, spanish, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add french language"
+[french 407d3ff] add french language
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (HEAD -> french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi farewells.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 16:44 ./
+drwxrwxr-x 6 preet preet 4096 Nov  3 16:36 ../
+-rw-rw-r-- 1 preet preet    8 Nov  3 16:44 farewells.txt
+drwxrwxr-x 8 preet preet 4096 Nov  3 16:44 .git/
+-rw-rw-r-- 1 preet preet    5 Nov  3 16:44 greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add farewells.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add farewell file"
+[master 00c195c] add farewell file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 farewells.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 00c195cc8c39d61600d77a90733e1301441ddd87 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git merge french
+Merge made by the 'ort' strategy.
+ greetings.txt | 1 +
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 083c3c72dfb0be92862cbf73d3f1634eb72dc329 (HEAD -> master)
+Merge: 00c195c 407d3ff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:46:03 2023 +0530
+
+    Merge branch 'french'
+
+commit 00c195cc8c39d61600d77a90733e1301441ddd87
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  3 16:46 ./
+drwxrwxr-x 6 preet preet 4096 Nov  3 16:36 ../
+-rw-rw-r-- 1 preet preet    8 Nov  3 16:44 farewells.txt
+drwxrwxr-x 8 preet preet 4096 Nov  3 16:46 .git/
+-rw-rw-r-- 1 preet preet   14 Nov  3 16:46 greetings.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ cat greetings.txt 
+hola
+bounjour
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ cat farewells.txt 
+goodbye
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git branch
+  french
+* master
+  spanish
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 083c3c72dfb0be92862cbf73d3f1634eb72dc329 (HEAD -> master)
+Merge: 00c195c 407d3ff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:46:03 2023 +0530
+
+    Merge branch 'french'
+
+commit 00c195cc8c39d61600d77a90733e1301441ddd87
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch -c japanese
+Switched to a new branch 'japanese'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git branch
+  french
+* japanese
+  master
+  spanish
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add japanese language"
+[japanese 01ff455] add japanese language
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit 01ff455b9c37f6c0f2c5a428a23fad5bd3ba8c9d (HEAD -> japanese)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:51:01 2023 +0530
+
+    add japanese language
+
+commit 083c3c72dfb0be92862cbf73d3f1634eb72dc329 (master)
+Merge: 00c195c 407d3ff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:46:03 2023 +0530
+
+    Merge branch 'french'
+
+commit 00c195cc8c39d61600d77a90733e1301441ddd87
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "add hello"
+[master d5fad2c] add hello
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit d5fad2cb5118c84ba19c00eff23781872db71a89 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:52:34 2023 +0530
+
+    add hello
+
+commit 083c3c72dfb0be92862cbf73d3f1634eb72dc329
+Merge: 00c195c 407d3ff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:46:03 2023 +0530
+
+    Merge branch 'french'
+
+commit 00c195cc8c39d61600d77a90733e1301441ddd87
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git merge japanese 
+Auto-merging greetings.txt
+CONFLICT (content): Merge conflict in greetings.txt
+Automatic merge failed; fix conflicts and then commit the result.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ vi greetings.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git commit -m "merge branch japanese"
+[master e22c45d] merge branch japanese
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git log
+commit e22c45dcc0e9b9c344092b22b02f71cc612cef76 (HEAD -> master)
+Merge: d5fad2c 01ff455
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:53:55 2023 +0530
+
+    merge branch japanese
+
+commit d5fad2cb5118c84ba19c00eff23781872db71a89
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:52:34 2023 +0530
+
+    add hello
+
+commit 01ff455b9c37f6c0f2c5a428a23fad5bd3ba8c9d (japanese)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:51:01 2023 +0530
+
+    add japanese language
+
+commit 083c3c72dfb0be92862cbf73d3f1634eb72dc329
+Merge: 00c195c 407d3ff
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:46:03 2023 +0530
+
+    Merge branch 'french'
+
+commit 00c195cc8c39d61600d77a90733e1301441ddd87
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:45:04 2023 +0530
+
+    add farewell file
+
+commit 407d3ffc94808715fcff05a3b8ff2bdd54537332 (french)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:43:13 2023 +0530
+
+    add french language
+
+commit 4cdfe23e8c2aed1c4626433f02148c3dbeba61f3 (spanish)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:39:29 2023 +0530
+
+    add spanish greetings
+
+commit d32c102ac5fb7aa2b735991d2444496a5ee6c85d
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 3 16:38:00 2023 +0530
+
+    add greetings file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ git branch
+  french
+  japanese
+* master
+  spanish
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/merging-exercise$ 
+
+
