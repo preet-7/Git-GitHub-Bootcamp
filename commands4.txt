@@ -1,0 +1,438 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/Branching/
+merging-exercise/ Patronus/         PlaylistTake2/    RoadtripPlaylist/
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/Branching/mkdir colors
+bash: cd: too many arguments
+preet@preet-HP-Notebook:~$ mkdir Git-Github-Bootcamp/Branching/colors
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/Branching/colors
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/Branching/colors/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ touch colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git add colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -m "add colors.txt"
+[master (root-commit) 11ba105] add colors.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ "red" >> colours.txt
+^C^C^C^Z
+[1]+  Stopped                 "red" >> colours.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ "red" >> colors.txt
+^Z
+[2]+  Stopped                 "red" >> colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov  4 10:16 ./
+drwxrwxr-x 7 preet preet 4096 Nov  4 10:15 ../
+-rw-rw-r-- 1 preet preet    0 Nov  4 10:15 colors.txt
+-rw-rw-r-- 1 preet preet    9 Nov  4 10:17 colours.txt
+drwxrwxr-x 8 preet preet 4096 Nov  4 10:16 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ cat colours.txt 
+
+?
+
+?
+
+?
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ rm colours.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ cat colors.txt << "red"
+> red
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ cat colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  4 10:17 ./
+drwxrwxr-x 7 preet preet 4096 Nov  4 10:15 ../
+-rw-rw-r-- 1 preet preet    0 Nov  4 10:15 colors.txt
+drwxrwxr-x 8 preet preet 4096 Nov  4 10:16 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+rpreet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git add colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -m "add red"
+[master d25f9e9] add red
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "add orange"
+[master 6d0c0cd] add orange
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "add yellow green"
+[master a9447f7] add yellow green
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "add blue purple"
+[master 4724877] add blue purple
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git log
+commit 4724877c66b911095f8014cca8433c516e057910 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:20:13 2023 +0530
+
+    add blue purple
+
+commit a9447f77351bad644df248ca400d0f0a550c8450
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:19:33 2023 +0530
+
+    add yellow green
+
+commit 6d0c0cdfbf5cca106b41f45f217c5f74ebc7c18e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:19:02 2023 +0530
+
+    add orange
+
+commit d25f9e90b67ae09507729fb1f940f358b32ce040
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:18:36 2023 +0530
+
+    add red
+
+commit 11ba105dcd8d9af7f7462fde7f85844d77e9bb2b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:16:10 2023 +0530
+
+    add colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   colors.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+diff --git a/colors.txt b/colors.txt
+index 16c4f5d..b6f76a0 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -3,4 +3,4 @@ orange
+ yellow
+ green
+ blue
+-purple
++indigo
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+diff --git a/colors.txt b/colors.txt
+index 16c4f5d..b6f76a0 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -3,4 +3,4 @@ orange
+ yellow
+ green
+ blue
+-purple
++indigo
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git add colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+diff --git a/colors.txt b/colors.txt
+index 16c4f5d..b6f76a0 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -3,4 +3,4 @@ orange
+ yellow
+ green
+ blue
+-purple
++indigo
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -m "add indigo replace purple"
+[master 0e0e7f3] add indigo replace purple
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi numbers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  4 13:51 ./
+drwxrwxr-x 7 preet preet 4096 Nov  4 10:15 ../
+-rw-rw-r-- 1 preet preet   36 Nov  4 10:21 colors.txt
+drwxrwxr-x 8 preet preet 4096 Nov  4 13:50 .git/
+-rw-rw-r-- 1 preet preet    4 Nov  4 13:51 numbers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	numbers.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git add numbers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi numbers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+diff --git a/colors.txt b/colors.txt
+index b6f76a0..26ec8e7 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -4,3 +4,4 @@ yellow
+ green
+ blue
+ indigo
++violet
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+diff --git a/colors.txt b/colors.txt
+index b6f76a0..26ec8e7 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -4,3 +4,4 @@ yellow
+ green
+ blue
+ indigo
++violet
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   numbers.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   colors.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff --staged
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git add colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   colors.txt
+	new file:   numbers.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff --staged
+diff --git a/colors.txt b/colors.txt
+index b6f76a0..26ec8e7 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -4,3 +4,4 @@ yellow
+ green
+ blue
+ indigo
++violet
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff HEAD
+diff --git a/colors.txt b/colors.txt
+index b6f76a0..26ec8e7 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -4,3 +4,4 @@ yellow
+ green
+ blue
+ indigo
++violet
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff --staged numbers.txt
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -m "add violet and create number file"
+[master 4832453] add violet and create number file
+ 2 files changed, 2 insertions(+)
+ create mode 100644 numbers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi numbers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "add more numbers"
+[master 8ad87b8] add more numbers
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git switch -c odd-numbers
+Switched to a new branch 'odd-numbers'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi numbers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "remove two and four number"
+[odd-numbers 86c2963] remove two and four number
+ 1 file changed, 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git log
+commit 86c2963d84ad1bb710d24a911d4474c07a5aaeed (HEAD -> odd-numbers)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 22:55:16 2023 +0530
+
+    remove two and four number
+
+commit 8ad87b804e47239d5e0728419226a48d279aafb1 (master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 22:54:15 2023 +0530
+
+    add more numbers
+
+commit 483245367d671ae299620fd16ccd96eb9ca0b89f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 22:53:36 2023 +0530
+
+    add violet and create number file
+
+commit 0e0e7f33f5c1dc5108ca1bbddbf113d38dc21283
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 13:50:32 2023 +0530
+
+    add indigo replace purple
+
+commit 4724877c66b911095f8014cca8433c516e057910
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:20:13 2023 +0530
+
+    add blue purple
+
+commit a9447f77351bad644df248ca400d0f0a550c8450
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:19:33 2023 +0530
+
+    add yellow green
+
+commit 6d0c0cdfbf5cca106b41f45f217c5f74ebc7c18e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:19:02 2023 +0530
+
+    add orange
+
+commit d25f9e90b67ae09507729fb1f940f358b32ce040
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:18:36 2023 +0530
+
+    add red
+
+commit 11ba105dcd8d9af7f7462fde7f85844d77e9bb2b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sat Nov 4 10:16:10 2023 +0530
+
+    add colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi numbers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "add five"
+[odd-numbers 95b145b] add five
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git branch
+  master
+* odd-numbers
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff master..odd-numbers
+diff --git a/numbers.txt b/numbers.txt
+index 2a0a94a..c708142 100644
+--- a/numbers.txt
++++ b/numbers.txt
+@@ -1,4 +1,3 @@
+ one
+-two 
+ there
+-four
++five
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff odd-numbers..master
+diff --git a/numbers.txt b/numbers.txt
+index c708142..2a0a94a 100644
+--- a/numbers.txt
++++ b/numbers.txt
+@@ -1,3 +1,4 @@
+ one
++two 
+ there
+-five
++four
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ vi colors.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git commit -am "remove some colors"
+[odd-numbers 58c31fb] remove some colors
+ 1 file changed, 3 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff master..odd-numbers
+diff --git a/colors.txt b/colors.txt
+index 26ec8e7..32bbbf4 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -1,7 +1,4 @@
+ red
+-orange
+ yellow
+-green
+ blue
+-indigo
+ violet
+diff --git a/numbers.txt b/numbers.txt
+index 2a0a94a..c708142 100644
+--- a/numbers.txt
++++ b/numbers.txt
+@@ -1,4 +1,3 @@
+ one
+-two 
+ there
+-four
++five
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git log --oneline
+58c31fb (HEAD -> odd-numbers) remove some colors
+95b145b add five
+86c2963 remove two and four number
+8ad87b8 (master) add more numbers
+4832453 add violet and create number file
+0e0e7f3 add indigo replace purple
+4724877 add blue purple
+a9447f7 add yellow green
+6d0c0cd add orange
+d25f9e9 add red
+11ba105 add colors.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ git diff d25f9e9..4832453
+diff --git a/colors.txt b/colors.txt
+index a9d1386..26ec8e7 100644
+--- a/colors.txt
++++ b/colors.txt
+@@ -1 +1,7 @@
+ red
++orange
++yellow
++green
++blue
++indigo
++violet
+diff --git a/numbers.txt b/numbers.txt
+new file mode 100644
+index 0000000..5626abf
+--- /dev/null
++++ b/numbers.txt
+@@ -0,0 +1 @@
++one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/Branching/colors$ 
+
+
