@@ -1,0 +1,1593 @@
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd MyFirstNovel/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --onrline
+fatal: unrecognized argument: --onrline
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+03996c4 (HEAD -> master) add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout 1fc14ca
+Note: switching to '1fc14ca'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1fc14ca added lines in text files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+1fc14ca (HEAD) added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout 9195093
+Previous HEAD position was 1fc14ca added lines in text files
+HEAD is now at 9195093 chapter one split into two
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50 (HEAD)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+HEAD detached at 9195093
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch master
+Previous HEAD position was 9195093 chapter one split into two
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 32
+drwxrwxr-x 4 preet preet 4096 Nov  6 15:38 ./
+drwxrwxr-x 8 preet preet 4096 Nov  6 13:11 ../
+-rw-rw-r-- 1 preet preet 1703 Nov  6 15:38 chapter1.txt
+-rw-rw-r-- 1 preet preet 1875 Nov  6 15:38 chapter2.txt
+-rw-rw-r-- 1 preet preet 2789 Nov  6 15:38 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  6 15:38 .git/
+drwxrwxr-x 2 preet preet 4096 Nov  6 15:38 MoodBoard/
+-rw-rw-r-- 1 preet preet  538 Nov  6 15:38 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+03996c4 (HEAD -> master) add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout d8d6b21
+Note: switching to 'd8d6b21'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d8d6b21 finish chapter one
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 24
+drwxrwxr-x 3 preet preet 4096 Nov  6 15:40 ./
+drwxrwxr-x 8 preet preet 4096 Nov  6 13:11 ../
+-rw-rw-r-- 1 preet preet 3307 Nov  6 15:40 chapter1.txt
+-rw-rw-r-- 1 preet preet 2766 Nov  6 15:40 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  6 15:40 .git/
+-rw-rw-r-- 1 preet preet  507 Nov  6 15:40 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch -c chapter2-reado
+Switched to a new branch 'chapter2-reado'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch chapter2-reado
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi chapter2.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add chapter2.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "start second stab at chapter2"
+[chapter2-reado fe7da56] start second stab at chapter2
+ 1 file changed, 4 insertions(+)
+ create mode 100644 chapter2.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit fe7da568497d03bc9bf1775538d20c94b5ef79a7 (HEAD -> chapter2-reado)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 15:43:02 2023 +0530
+
+    start second stab at chapter2
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+03996c4 (HEAD -> master) add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ vi chapter3.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "adding new chapter 3"
+[master 52773f4] adding new chapter 3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter3.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 52773f470691088ee16146cb2059ed1093913862 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 15:46:50 2023 +0530
+
+    adding new chapter 3
+
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --one-line
+fatal: unrecognized argument: --one-line
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+52773f4 (HEAD -> master) adding new chapter 3
+03996c4 add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout HEAD~1
+Note: switching to 'HEAD~1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 03996c4 add headlines to all files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 03996c4dee0ece23a7e3cbaa33099b5caff35462 (HEAD)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 11:56:11 2023 +0530
+
+    add headlines to all files
+
+commit 9fcedaf59637fa108094f58cba0708797dba674f
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:11:07 2023 +0530
+
+    minor changes in chapter 1
+
+commit 750a0e6596814c0663597e627e78f1642c3f900e
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:05:34 2023 +0530
+
+    Fix typo
+
+commit 04e26a296d882550d27d18f4b2e52cbfe2c5fef8
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:01:14 2023 +0530
+
+    create mood board
+
+commit 1fc14ca2e01a494d1b882f10c14ca3cfd49a6cec
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 2 10:00:28 2023 +0530
+
+    added lines in text files
+
+commit 9195093a92f81501f2c5e83d7fde6eee154aff50
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:08:16 2023 +0530
+
+    chapter one split into two
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 32
+drwxrwxr-x 4 preet preet 4096 Nov  6 15:47 ./
+drwxrwxr-x 8 preet preet 4096 Nov  6 13:11 ../
+-rw-rw-r-- 1 preet preet 1703 Nov  6 15:43 chapter1.txt
+-rw-rw-r-- 1 preet preet 1875 Nov  6 15:43 chapter2.txt
+-rw-rw-r-- 1 preet preet 2789 Nov  6 15:43 characters.txt
+drwxrwxr-x 8 preet preet 4096 Nov  6 15:47 .git/
+drwxrwxr-x 2 preet preet 4096 Nov  6 15:43 MoodBoard/
+-rw-rw-r-- 1 preet preet  538 Nov  6 15:43 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout HEAD~2
+Previous HEAD position was 03996c4 add headlines to all files
+HEAD is now at 750a0e6 Fix typo
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+750a0e6 (HEAD) Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch master
+Previous HEAD position was 750a0e6 Fix typo
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+52773f4 (HEAD -> master) adding new chapter 3
+03996c4 add headlines to all files
+9fcedaf minor changes in chapter 1
+750a0e6 Fix typo
+04e26a2 create mood board
+1fc14ca added lines in text files
+9195093 chapter one split into two
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch chapter2-reado 
+Switched to branch 'chapter2-reado'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git branch
+* chapter2-reado
+  master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git checkout HEAD~3
+Note: switching to 'HEAD~3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+0f7282a (HEAD) start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch -
+Previous HEAD position was 0f7282a start work on outline and main characters
+Switched to branch 'chapter2-reado'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log --oneline
+fe7da56 (HEAD -> chapter2-reado) start second stab at chapter2
+d8d6b21 finish chapter one
+f2c4fda begin work on chapter one
+0f7282a start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir undoingstuff
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ touch cat.txt dog.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ rm -r .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 228
+drwxrwxr-x  9 preet preet  4096 Nov  6 16:51 ./
+drwxr-x--- 35 preet preet  4096 Nov  6 15:51 ../
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  3 preet preet  4096 Nov  6 15:51 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  2 preet preet  4096 Nov  6 16:50 undoingstuff/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd undoingstuff/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/undoingstuff/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cp ../dog.txt ../cat.txt .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  6 16:51 ./
+drwxrwxr-x 9 preet preet 4096 Nov  6 16:51 ../
+-rw-rw-r-- 1 preet preet    0 Nov  6 16:51 cat.txt
+-rw-rw-r-- 1 preet preet    0 Nov  6 16:51 dog.txt
+drwxrwxr-x 7 preet preet 4096 Nov  6 16:51 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "add cat and dog files"
+[master (root-commit) c7f09e0] add cat and dog files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cat.txt
+ create mode 100644 dog.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cat.txt
+	modified:   dog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "first commit"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cat.txt
+	modified:   dog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "first commit"
+[master 2ffb350] first commit
+ 2 files changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "second commit"
+[master 486a65d] second commit
+ 2 files changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "third commit"
+[master a778b4c] third commit
+ 2 files changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log 
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cat.txt
+	modified:   dog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git checkout HEAD dog.txt
+Updated 1 path from 27856b8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat cat.txt 
+first commit
+second commit 
+third commit
+sflsf
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git checkout HEAD cat.txt
+Updated 1 path from 27856b8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat cat.txt 
+first commit
+second commit 
+third commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+sdfs
+sdf
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git checkout -- dog.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git checkout -- cat.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+hjjkhkhj
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git checkout HEAD dog.txt
+Updated 1 path from 27856b8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+firsfst commit
+second commasfit
+thirst commisdf
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore --source HEAD~2 dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   dog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore --source HEAD~2 dog.txt cat.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat cat.txt 
+first commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   dog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore cat.txt dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi secrets.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   cat.txt
+	modified:   dog.txt
+	new file:   secrets.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore --staged  secrets.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   cat.txt
+	modified:   dog.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	secrets.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "forth commit"
+[master ddd951e] forth commit
+ 2 files changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit ddd951e265b2adb53f44f07be219c7dad37ca5a7 (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 17:58:32 2023 +0530
+
+    forth commit
+
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add secrets.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   secrets.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore --staged secrets.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   dog.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	secrets.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git restore dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	secrets.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ rm secrets.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "mistake commit"
+[master 06b2143] mistake commit
+ 1 file changed, 3 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+06b2143 (HEAD -> master) mistake commit
+ddd951e forth commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ ll
+total 20
+drwxrwxr-x 3 preet preet 4096 Nov  6 19:42 ./
+drwxrwxr-x 9 preet preet 4096 Nov  6 16:51 ../
+-rw-rw-r-- 1 preet preet   54 Nov  6 17:55 cat.txt
+-rw-rw-r-- 1 preet preet   13 Nov  6 19:41 dog.txt
+drwxrwxr-x 8 preet preet 4096 Nov  6 19:41 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   cat.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "another mistake"
+[master d53ea2a] another mistake
+ 1 file changed, 3 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log -oneline
+fatal: unrecognized argument: -oneline
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+d53ea2a (HEAD -> master) another mistake
+06b2143 mistake commit
+ddd951e forth commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git reset ddd951e
+Unstaged changes after reset:
+M	cat.txt
+M	dog.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+ddd951e (HEAD -> master) forth commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git switch -c badstugg
+Switched to a new branch 'badstugg'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git switch -c badstuff
+Switched to a new branch 'badstuff'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "add bad stuff"
+[badstuff ef1227a] add bad stuff
+ 2 files changed, 6 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit ef1227a26be353e3b12d07305a03110ce365cd4c (HEAD -> badstuff)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 22:20:39 2023 +0530
+
+    add bad stuff
+
+commit ddd951e265b2adb53f44f07be219c7dad37ca5a7 (master, badstugg)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 17:58:32 2023 +0530
+
+    forth commit
+
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit ddd951e265b2adb53f44f07be219c7dad37ca5a7 (HEAD -> master, badstugg)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 17:58:32 2023 +0530
+
+    forth commit
+
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "undo this commit please"
+[master 72d39df] undo this commit please
+ 2 files changed, 7 insertions(+), 5 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+72d39df (HEAD -> master) undo this commit please
+ddd951e (badstugg) forth commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git reset --hard a778b4c
+HEAD is now at a778b4c third commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log
+commit a778b4cbcc22bedd9b7d852790337b01dbb4261a (HEAD -> master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:59 2023 +0530
+
+    third commit
+
+commit 486a65d114b834abb53768e6513dcbf1a47992cf
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:54:17 2023 +0530
+
+    second commit
+
+commit 2ffb350a5dac1ae367b5f85639c37ed63c4a9028
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:53:38 2023 +0530
+
+    first commit
+
+commit c7f09e0e68ae86d8124a5206af643b617a8b0594
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 16:52:47 2023 +0530
+
+    add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+a778b4c (HEAD -> master) third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi cat.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ vi dog.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git commit -m "bad commit"
+[master 51e5911] bad commit
+ 2 files changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+51e5911 (HEAD -> master) bad commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git revert 51e5911
+[master 25c1216] Revert "bad commit"
+ 2 files changed, 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ git log --oneline
+25c1216 (HEAD -> master) Revert "bad commit"
+51e5911 bad commit
+a778b4c third commit
+486a65d second commit
+2ffb350 first commit
+c7f09e0 add cat and dog files
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat dog.txt 
+first commit
+second commit
+thirst commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cat cat.txt 
+first commit
+second commit 
+third commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/undoingstuff$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 228
+drwxrwxr-x  9 preet preet  4096 Nov  6 16:51 ./
+drwxr-x--- 35 preet preet  4096 Nov  6 22:29 ../
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  3 preet preet  4096 Nov  6 15:51 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://github.com/Colt/yesterday-exercise
+Cloning into 'yesterday-exercise'...
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 24 (delta 7), reused 24 (delta 7), pack-reused 0
+Receiving objects: 100% (24/24), done.
+Resolving deltas: 100% (7/7), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ ll
+total 16
+drwxrwxr-x  3 preet preet 4096 Nov  6 22:34 ./
+drwxrwxr-x 10 preet preet 4096 Nov  6 22:34 ../
+drwxrwxr-x  8 preet preet 4096 Nov  6 22:34 .git/
+-rw-rw-r--  1 preet preet  423 Nov  6 22:34 lyrics.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log --oneline
+f199959 (HEAD -> master, origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git checkout 485a339
+Note: switching to '485a339'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 485a339 add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log
+commit 485a33962fc19a957cabb54273e99465fdba9c9d (HEAD)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:21 2021 -0800
+
+    add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+Scrambled eggs
+Have an omelette with some Muenster cheese
+Put your dishes in the wash bin please
+So I can clean the scrambled eggspreet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git switch master
+Previous HEAD position was 485a339 add original first verse
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log 
+commit f1999595607102cf26305052f642803d39d3a422 (HEAD -> master, origin/master, origin/HEAD)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:24:23 2021 -0800
+
+    rework final verse
+
+commit 8e3111cc0bcbb1eb3365a69690d747fdcfc68653
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:23:29 2021 -0800
+
+    rework chorus
+
+commit b88b2541a9b9480675250a019ab8b7005a237f5f
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:58 2021 -0800
+
+    rework second verse
+
+commit b5934442de209c5a579c8bee383b611ecd7f2312
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:46 2021 -0800
+
+    rework first verse
+
+commit cdd927c0bebbef64adf38f8cb58a186d33aaeeab
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:17 2021 -0800
+
+    finish original lyrics
+
+commit 9518e200d1aed15ddd7654d151feb5132ca17632
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:55 2021 -0800
+
+    add original chorus
+
+commit 9858f43403a7c6c5e92380a21a794faa6af87aff
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:34 2021 -0800
+
+    add original second verse
+
+commit 485a33962fc19a957cabb54273e99465fdba9c9d
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:21 2021 -0800
+
+    add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+Yesterday
+All my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday
+
+Suddenly
+I'm not half the man I used to be
+There's a shadow hanging over me
+Oh, yesterday came suddenly
+
+Why she had to go
+I don't know, she wouldn't say
+I said something wrong
+Now I long for yesterday
+
+Yesterday
+Love was such an easy game to play
+Now I need a place to hide away
+Oh, I believe in yesterdaypreet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git checkout cdd927c
+Note: switching to 'cdd927c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at cdd927c finish original lyrics
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git switch -c scrambled-eggs
+Switched to a new branch 'scrambled-eggs'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log
+commit cdd927c0bebbef64adf38f8cb58a186d33aaeeab (HEAD -> scrambled-eggs)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:17 2021 -0800
+
+    finish original lyrics
+
+commit 9518e200d1aed15ddd7654d151feb5132ca17632
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:55 2021 -0800
+
+    add original chorus
+
+commit 9858f43403a7c6c5e92380a21a794faa6af87aff
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:34 2021 -0800
+
+    add original second verse
+
+commit 485a33962fc19a957cabb54273e99465fdba9c9d
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:21 2021 -0800
+
+    add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ vi lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git restore lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+Yesterday
+All my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday
+
+Suddenly
+I'm not half the man I used to be
+There's a shadow hanging over me
+Oh, yesterday came suddenly
+
+Why she had to go
+I don't know, she wouldn't say
+I said something wrong
+Now I long for yesterday
+
+Yesterday
+Love was such an easy game to play
+Now I need a place to hide away
+Oh, I believe in yesterdaypreet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ vi lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git lyrics.txt
+git: 'lyrics.txt' is not a git command. See 'git --help'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git add lyrics.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git commit -m "add lyrics"
+[master 6d0083b] add lyrics
+ 1 file changed, 7 insertions(+), 16 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ vi lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git add lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git commit -m "add more lyrics"
+[master a824cd4] add more lyrics
+ 1 file changed, 10 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log --oneline
+a824cd4 (HEAD -> master) add more lyrics
+6d0083b add lyrics
+f199959 (origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c (scrambled-eggs) finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git reset f199959
+Unstaged changes after reset:
+M	lyrics.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log --oneline
+f199959 (HEAD -> master, origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c (scrambled-eggs) finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+404
+Guess this ain't the page you're looking for
+On this website there are thousands more
+With no error 404
+
+Suddenly
+This is not the page you thought you'd see
+But it's not an error 403
+Yes, 404s come easily
+
+Why it has to show, I don't know
+Or what it's for
+You typed something wrong?
+Here's no song - it's 404
+
+404
+Adding 1% to twenty score
+(I put that line in 'cause it scans, no more)
+"Goodbye" from error 404
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git switch -c 404lyrics
+Switched to a new branch '404lyrics'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+404
+Guess this ain't the page you're looking for
+On this website there are thousands more
+With no error 404
+
+Suddenly
+This is not the page you thought you'd see
+But it's not an error 403
+Yes, 404s come easily
+
+Why it has to show, I don't know
+Or what it's for
+You typed something wrong?
+Here's no song - it's 404
+
+404
+Adding 1% to twenty score
+(I put that line in 'cause it scans, no more)
+"Goodbye" from error 404
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch 404lyrics
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   lyrics.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git add lyrics.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git commit -m "404 lyrics"
+[404lyrics d0263bf] 404 lyrics
+ 1 file changed, 16 insertions(+), 15 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log
+commit d0263bf9657afc988331ed88b332dd98b5395c28 (HEAD -> 404lyrics)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 22:49:24 2023 +0530
+
+    404 lyrics
+
+commit f1999595607102cf26305052f642803d39d3a422 (origin/master, origin/HEAD, master)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:24:23 2021 -0800
+
+    rework final verse
+
+commit 8e3111cc0bcbb1eb3365a69690d747fdcfc68653
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:23:29 2021 -0800
+
+    rework chorus
+
+commit b88b2541a9b9480675250a019ab8b7005a237f5f
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:58 2021 -0800
+
+    rework second verse
+
+commit b5934442de209c5a579c8bee383b611ecd7f2312
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:46 2021 -0800
+
+    rework first verse
+
+commit cdd927c0bebbef64adf38f8cb58a186d33aaeeab (scrambled-eggs)
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:22:17 2021 -0800
+
+    finish original lyrics
+
+commit 9518e200d1aed15ddd7654d151feb5132ca17632
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:55 2021 -0800
+
+    add original chorus
+
+commit 9858f43403a7c6c5e92380a21a794faa6af87aff
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:34 2021 -0800
+
+    add original second verse
+
+commit 485a33962fc19a957cabb54273e99465fdba9c9d
+Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+Date:   Tue Feb 23 18:21:21 2021 -0800
+
+    add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git log --oneline
+f199959 (HEAD -> master, origin/master, origin/HEAD) rework final verse
+8e3111c rework chorus
+b88b254 rework second verse
+b593444 rework first verse
+cdd927c (scrambled-eggs) finish original lyrics
+9518e20 add original chorus
+9858f43 add original second verse
+485a339 add original first verse
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ cat lyrics.txt 
+Yesterday
+All my troubles seemed so far away
+Now it looks as though they're here to stay
+Oh, I believe in yesterday
+
+Suddenly
+I'm not half the man I used to be
+There's a shadow hanging over me
+Oh, yesterday came suddenly
+
+Why she had to go
+I don't know, she wouldn't say
+I said something wrong
+Now I long for yesterday
+
+Yesterday
+Love was such an easy game to play
+Now I need a place to hide away
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/yesterday-exercise$ 
