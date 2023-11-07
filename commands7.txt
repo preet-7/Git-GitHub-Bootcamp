@@ -1,0 +1,2389 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git status
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://github.com/gabrielecirulli/2048.git
+Cloning into '2048'...
+remote: Enumerating objects: 1315, done.
+remote: Total 1315 (delta 0), reused 0 (delta 0), pack-reused 1315
+Receiving objects: 100% (1315/1315), 623.29 KiB | 871.00 KiB/s, done.
+Resolving deltas: 100% (765/765), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 296
+drwxrwxr-x 11 preet preet  4096 Nov  7 13:56 ./
+drwxr-x--- 35 preet preet  4096 Nov  7 13:54 ../
+drwxrwxr-x  6 preet preet  4096 Nov  7 13:56 2048/
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 58322 Nov  6 23:05 commands6.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  3 preet preet  4096 Nov  6 15:51 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:49 yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd 2048
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ ll
+total 60
+drwxrwxr-x  6 preet preet 4096 Nov  7 13:56 ./
+drwxrwxr-x 11 preet preet 4096 Nov  7 13:56 ../
+-rw-rw-r--  1 preet preet 1970 Nov  7 13:56 CONTRIBUTING.md
+-rw-rw-r--  1 preet preet 4286 Nov  7 13:56 favicon.ico
+drwxrwxr-x  8 preet preet 4096 Nov  7 13:56 .git/
+-rw-rw-r--  1 preet preet   13 Nov  7 13:56 .gitignore
+-rw-rw-r--  1 preet preet 3988 Nov  7 13:56 index.html
+drwxrwxr-x  2 preet preet 4096 Nov  7 13:56 js/
+-rw-rw-r--  1 preet preet  335 Nov  7 13:56 .jshintrc
+-rw-rw-r--  1 preet preet 1083 Nov  7 13:56 LICENSE.txt
+drwxrwxr-x  2 preet preet 4096 Nov  7 13:56 meta/
+-rw-rw-r--  1 preet preet  300 Nov  7 13:56 Rakefile
+-rw-rw-r--  1 preet preet 2280 Nov  7 13:56 README.md
+drwxrwxr-x  3 preet preet 4096 Nov  7 13:56 style/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ git log --oneline
+fc1ef4f (HEAD -> master, origin/master, origin/HEAD) Remove Adsense code
+ffa8559 Add AdSense code
+ac03b1f Merge pull request #463 from marvin08/master
+8ae5ccd Update main.scss
+d39dcf7 Merge pull request #444 from jnohavica/edge-support
+163e480 Call window.localStorage moved into try catch due to possibly exception in Edge.
+837ca51 Merge pull request #233 from sigod/ie9-styles
+0ce1da5 Merge pull request #372 from Gitgiddy/master
+450ddd0 fixes type error surrounding `event.targetTouches`
+76336e8 README.md: store screenshot on github (close #358)
+caef60a Merge pull request #328 from marcingajda/patch-1
+845ee40 Updated contributors username.
+999bea3 Merge pull request #234 from sigod/contributing
+5297877 Merge pull request #258 from harimohanraj89/documentation
+f927cc5 Add maintainers to README
+c36ad21 Merge pull request #279 from sigod/numbers-positions
+c1a02dc fix positions of tile numbers
+d02e499 fixed typo in contributing doc
+ecd91f7 CONTRIBUTING.md: sass --unix-newlines
+cbd3055 fix styles for IE9: add -ms-transform
+5385464 Update README.md
+f30cde5 Merge pull request #188 from zzatkin/patch-1
+0656e4c Update README.md
+6141e30 Merge pull request #158 from janschoenherr/patch-1
+3b86903 code cleanup
+542208d Merge pull request #112 from Josso/startup-image
+2798bb0 Merge pull request #115 from iirelu/jshint-compliance
+82834df Made animframe_polyfill.js JSHint compliant
+1264d9b Add startup-images for the iPhone.
+878098f apply changes from #43
+b08fa8d apply css improvements from #68
+71baa9d Update CONTRIBUTING.md
+7dcbe28 #98 improve contributing guide
+d403f84 add https://github.com/mgarciaisaia mention to readme
+cf01ca7 manually apply #81
+2f91247 improve comments in game manager
+6cb3d71 improve comments in game manager
+af683a7 clear game state on game over
+bf1ba51 update css
+156ef6e Merge pull request #96 from jimminning/patch-3
+3cfdcca increase margin above game field
+e729f74 bring container margin top into variable and reduce it on mobile
+17fe360 Merge branch 'master' of https://github.com/gabrielecirulli/2048
+8ad8318 align assignments
+88e084a remove irrelevant size property on serialized game
+4fa41a0 reintroduce "to" in intro
+560859f restyle new game button to put it on the right side of the introduction
+4ad15d4 add R key to restart game
+a6531b0 add getter comments
+c48b926 refactor grid, gamemanager, tile
+4d294cf remove space to restart game, refactor code slightly
+08c50df rename LocalScoreManager to LocalStorageManager
+bd7f896 Merge branch 'resume-game' of github.com:mfrederiksen/2048 into mfrederiksen-resume-game
+17f0f57 Update main.scss
+6c12037 Update README.md
+03052c9 Merge pull request #85 from MaciejCzyzewski/patch-2
+a875a3a match and replace the "Updated" comment
+9ca6e3c Update README.md, centered screenshot!
+6a4b3ec add basic rake file with appcache:update task
+95ca668 Update README.md
+40fc901 credit elektryk
+b6e48e2 update scss
+2056ed4 Merge branch 'WP_touch_events' of github.com:elektryk/2048 into elektryk-WP_touch_events
+02a24c0 Added persistence of game state to localstorage after each move Added rebuilding of game state from localstoage on page load Added New Game button to allow game restarts now that refreshes resume the game
+01264c3 set mobile threshold slightly wider than the board size
+f732d4f remove debug logging
+db0dc7e rename keep playing to keep going
+f663e17 add styling for super tiles
+10c72a7 rename tile-gold to tile-super
+5392893 rename GameOver to GameTerminated to avoid ambiguity
+cfbf749 refactor code
+a831bae merge infinite game
+2bf48ef change local storage support check
+15057fd Merge pull request #50 from codeKonami/master
+8772e1a fix fill mode helper
+9274840 adding a test to verify the localStorage is supported fixing a bug on private browsing on safari
+f943d2a Merge pull request #42 from david-risney/fix-try-again-bug
+7c6fd1b Merge pull request #28 from gabrielecirulli/use-transforms
+74494bb modify the game to allow using transforms
+9239941 Merge pull request #48 from iharosi/master
+ca57623 Merge branch 'master' into use-transforms
+7f1a82e minimal-ui added to allow fullscreen on iOS 7.1
+7f18725 Windows Phone touch events
+d7ef12e change site note
+425076c add official site note
+c329f35 Update refs
+bd62716 add touchend event (see PR #32)
+e7be14d compile main.css
+9626e2b Endless Game. Allow user to continue the game.
+472e30c Ensure the Try Again button actually disappears when selected in Internet Explorer
+da75b7a Merge pull request #32 from coding46/patch-1
+bd8516a Merge pull request #29 from TimPetricola/fix-readme
+fc6206a [BUGFIX] Add touch event handler for retry button
+ffcb772 Fix README
+886712c add basic css transform positions
+7723697 Merge pull request #20 from leereilly/ios-launch-icon
+7b4c2c1 compile main.css
+608ca28 improve code structure in localscoremanager
+8827879 small change in scoremanager
+a862d44 add screnshot section
+0c771c8 add mentions to readme
+e61ef18 Endless Game. Allow user to continue the game.
+d9fef60 remove analytics from master branch
+385b65d mobile tweaks for best score
+b080e53 add small code tweaks
+39ebf51 fix merge conflict
+3dd8f3e Merge pull request #22 from ghoullier/master
+95a2676 Use querySelector instead of getElementsByClassName
+4010bbb Fix relative path issue - github.io vs. CNAME
+d990b3a Add metadata images to meta folder for consistency
+f071712 Hide the browser UI on :iphone:
+350e673 Add launcher icon for :apple: devices
+29e4b85 update css
+f251f5c remove hammer, small js changes
+db82cf4 Merge pull request #16 from chrisprice/master
+cf4087e Replace hammer with touch event handling
+7765445 Merge remote-tracking branch 'upstream/master' into best-score
+d6da8d9 localStorage fallback
+39ba3a9 Merge pull request #13 from remram44/readme-fixes
+5c6327f add WASD controls (closes #10)
+988d71f Minor fixes to README
+92fda72 move button styles to mixin
+d2315af add requestanimationframe polyfill
+5fb74fa add favicon meta tag
+53b0bd2 move scripts to bottom of body
+2e5ab78 add favicon
+84dbf49 update address
+c9906c8 Update README.md
+bc2a710 add threes reference. closes #7
+fda0e84 Fix win/over in local
+5a49a0e add basic iphone support
+664546e Store best score in localStorage
+e4476b4 remove debug printing
+c0ca375 properly ignore meta keys
+57deb5d move event send after type definition
+a422799 Merge pull request #2 from rayhaanj/master
+b3c822c add swipe gesture support
+96e9290 Added vim keybindings
+fb8eabe Added vim keybindings
+29c4bea Added vim keybindings
+a44433d Merge pull request #1 from Mechazawa/patch-1
+914fdd0 forgot the http://
+4ab265f update contributing link
+40f2df8 add contributing guide
+e355439 Update README.md
+32de41e add license
+433127c remove use of class list in actuator, fix animations for firefox
+a1e98e0 press space to restart
+d24c67a update rendered stylesheet
+4681307 add container around sharing functionality
+ce33401 remove analytics from master
+02b66cc add retry button
+2c066a5 Update README.md
+378ca28 increase padding on score
+e65111f add win condition
+4b3055f add movement check, score addition
+f18f7ce add score and endgame
+53e0872 add tile merging
+efa2af5 remove debug logging
+b20e26e implement tile movement
+b7476f1 make actuator properly create html elements
+dca5207 extract the grid to its own class
+cf31e14 basic grid implementation with initial setup
+0970a72 update screenshot in README
+fd2927c add game explanation, remove test tiles
+43aaf12 mix colors with optional predefined colors for each tile
+71122e1 reduce glow opacity
+3f6f06e fade tile text to white
+7c4d6d0 fix screenshot markdown
+39f3871 add screenshot to readme
+9945d02 add README
+61f20ac adjust font sizes, add transition and cursor states
+5e41f41 generate tile colors automatically
+e3a548b add sass helpers
+a26e1c6 rename style.scss to main.scss
+c45115f move fonts to style
+22ef3be move css to style dir
+b0bf6c5 basic tile styling
+3403e78 basic styling
+f4d95b6 initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ open .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git status 
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://github.com/poteto/hiring-without-whiteboards.git
+Cloning into 'hiring-without-whiteboards'...
+remote: Enumerating objects: 5754, done.
+remote: Counting objects: 100% (300/300), done.
+remote: Compressing objects: 100% (135/135), done.
+remote: Total 5754 (delta 221), reused 231 (delta 165), pack-reused 5454
+Receiving objects: 100% (5754/5754), 3.12 MiB | 1.47 MiB/s, done.
+Resolving deltas: 100% (3583/3583), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd hiring-without-whiteboards/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/hiring-without-whiteboards$ ll
+total 520
+drwxrwxr-x  4 preet preet   4096 Nov  7 22:33 ./
+drwxrwxr-x 12 preet preet   4096 Nov  7 22:33 ../
+-rw-rw-r--  1 preet preet     70 Nov  7 22:33 bors.toml
+-rw-rw-r--  1 preet preet   3227 Nov  7 22:33 CODE_OF_CONDUCT.md
+-rw-rw-r--  1 preet preet   1630 Nov  7 22:33 CONTRIBUTING.md
+-rw-rw-r--  1 preet preet    510 Nov  7 22:33 CRITERIA.md
+-rw-rw-r--  1 preet preet    282 Nov  7 22:33 .editorconfig
+drwxrwxr-x  8 preet preet   4096 Nov  7 22:33 .git/
+drwxrwxr-x  3 preet preet   4096 Nov  7 22:33 .github/
+-rw-rw-r--  1 preet preet    147 Nov  7 22:33 .gitignore
+-rw-rw-r--  1 preet preet     20 Nov  7 22:33 index.js
+-rw-rw-r--  1 preet preet   1077 Nov  7 22:33 LICENSE.md
+-rw-rw-r--  1 preet preet      6 Nov  7 22:33 .nvmrc
+-rw-rw-r--  1 preet preet   1419 Nov  7 22:33 package.json
+-rw-rw-r--  1 preet preet 228919 Nov  7 22:33 package-lock.json
+-rw-rw-r--  1 preet preet 171922 Nov  7 22:33 README.md
+-rw-rw-r--  1 preet preet   1034 Nov  7 22:33 RECOMMENDATIONS.md
+-rw-rw-r--  1 preet preet  66958 Nov  7 22:33 yarn.lock
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/hiring-without-whiteboards$ git log
+commit 505172dac6f0c1fb0cf86914646ccbd176131756 (HEAD -> main, origin/staging, origin/main, origin/HEAD)
+Merge: b230493 d064913
+Author: bors[bot] <26634292+bors[bot]@users.noreply.github.com>
+Date:   Fri Nov 3 21:11:17 2023 +0000
+
+    Merge #1362
+    
+    1362: added Progressive r=poteto a=jkatsaros
+    
+    ## Add Progressive
+    
+    - [X] I have read the [contributing guidelines](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md)
+    - [X] I agree to the [Code of Conduct](https://github.com/poteto/hiring-without-whiteboards/blob/master/CODE_OF_CONDUCT.md)
+    - [X] I have followed the [format](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md#format) prescribed in the contributing guidelines
+    - [X] (OPTIONAL) In your pull request message, add additional context on the interview process if necessary
+    
+    I provided links to how Progressive defines STAR interviews and its STAR technical interview.
+    
+    
+    Co-authored-by: Jason Katsaros <katsarjp@tutanota.com>
+
+commit d064913340fd38df2f7a2652d51bd6ba3281a9a8
+Author: Jason Katsaros <katsarjp@tutanota.com>
+Date:   Fri Nov 3 11:13:13 2023 -0400
+
+    added Progressive
+
+commit b230493a0991fe4e94b13917b82071e29d2b0678
+Merge: 158bc96 33aedf9
+Author: bors[bot] <26634292+bors[bot]@users.noreply.github.com>
+Date:   Wed Sep 6 19:12:59 2023 +0000
+
+    Merge #1358
+    
+    1358: Add Flower Labs r=poteto a=jafermarq
+    
+    <!--
+    Thank you for contributing!
+    
+    Pull requests that do not adhere to the format will be rejected. Please ensure
+    you complete the following checkboxes.
+    
+    Please also:
+    
+    - Add one company at a time.
+    - Insert in alphabetical order
+    - Do not sort other listings
+    -->
+    
+    ## Add/Update/Remove <CompanyName>
+    
+    - [x] I have read the [contributing guidelines](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md)
+    - [x] I agree to the [Code of Conduct](https://github.com/poteto/hiring-without-whiteboards/blob/master/CODE_OF_CONDUCT.md)
+    - [x] I have followed the [format](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md#format) prescribed in the contributing guidelines
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/hiring-without-whiteboards$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/hiring-without-whiteboards$ git log --oneline
+505172d (HEAD -> main, origin/staging, origin/main, origin/HEAD) Merge #1362
+d064913 added Progressive
+b230493 Merge #1358
+33aedf9 Update README.md
+158bc96 Merge #1359
+b6ff7e6 Add Gcore
+0417e34 Update README.md
+f6916b1 Merge #1354
+37c7cae Update README.md
+735248e Update README.md
+09a6d1c Merge #1357
+e862b72 Merge #1345 #1356
+8106b61 Update README.md
+a674f40 Merge #1355
+94350ef add close
+ef6d74a Fix: Added Career website for Acko in README.md
+48d99d2 Fix typo in README.md
+c7f2f02 Adding Careera.io
+11a5cfd Merge #1353
+4d7cbc7 fix: better naming convention
+2e6ec55 Add Pleo
+0666b8f Merge #1352
+26f6dee Update Url for rapidapi
+31c85c6 Merge #1350
+b528685 Merge #1351
+d6bec59 Fix typo
+2e191d6 Added Miro.
+38f29c4 Update README.md to include Seesaw
+4207ffc Merge #1349
+35d5c27 Merge #1348
+92cdd4f Updating Auth0 details
+7fe68aa Update README.md
+2e2d0ef Merge #1334
+963db64 Merge #1336
+08ef3c5 Merge #1346 #1347
+3cb8cde Merge #1343 #1344
+f6ed137 Merge #1340 #1342
+bf124b1 Update Swiftly, new careers url
+892aaec Quell lint warnings
+5e8211b Add End Point Dev
+4affcb1 fix animech 404
+ba6033b Update README.md
+261eafe Update README.md
+d0d20a7 fix exoscale headqarters
+aefb08e Update README.md
+2e08ef0 Polish semantics
+bd24b0b Add monite
+ff43609 Fix Location
+a0d20dc Update README.md
+fd4f978 Update README.md
+3eb8ed6 Merge #1339
+17c5dbb Merge #1338
+e08e09a Merge #1337
+c3bfe99 Merge branch 'master' into master
+8dd1512 Change url of website
+74ac13a Added Wikimedia Foundation info
+9a90bb6 fixing location
+cac4208 Add Aalyria
+192a279 Update README.md
+ad1ec84 Merge #1330
+8468e7e Merge #1335
+6c2a77f Merge #1333
+c16e6c2 Merge #1331
+95bbe1b Merge #1328
+1916dbe Merge #1327
+911c85f Merge #1326
+7bf9661 Merge #1325
+5cb18d5 Merge #1324
+054b04c Merge #1321
+e63b0dd Merge #1295 #1320
+7e15bcc Merge #1319
+2fa0109 fix order
+8f7c9f2 Merge branch 'poteto:master' into master
+d3b197a Merge #1318
+85ed41a Merge branch 'master' into ma8642-remove-dealtap
+2fa4427 Merge #1317
+4915eb1 Merge branch 'master' into ma8642-remove-datlinq
+3c62a3e Add V7 Labs (v7labs.com)
+f0bff50 Adding a relevant article
+85173c7 Add Paper (withpaper.com)
+337eb48 fix alphabetical order
+6e70647 add exmox
+517556f add digia to the list
+f05e12b Remove trailing slash
+ce473f1 Update location format
+1c16684 Add KUNGFUAI
+7622c15 Add Platogo
+0dd7b62 Remove Pillar Technology (Acquired by Accenture)
+f43de04 Update description for Integral.io.
+b2d6478 Fix alphabetical order with Form3 entry
+e6ebf3f Update README.md to add Form3
+dbc36e2 Merge #1323
+782a540 Remove Cloudistics
+a56cdd5 Merge #1322
+46fba4f Remove Clause
+e477fe3 Merge #1316
+a64fb47 Merge #1315
+b359215 Merge #1313
+4af8c5c Update README.md
+f6393d5 remove trailing slash from url, add the word role
+caabe00 Update README.md add Persado
+d230a3e Add Persado
+3f054ea Fix typo in README.md
+9623b98 Remove Dealtap
+365be39 Remove Datlinq
+76e1231 Remove Datascope
+1bd676e Remove Dark Sky
+8b58b9a Merge branch 'master' into ma8642-remove-centroida
+8d0a105 Update Caravelo (#1312)
+c615be6 Merge #1314
+1ac549e Merge #1311
+df1b553 Merge #1310
+79138d7 Remove Chain.Reaction
+90f9f76 Remove Centroida
+81f6b93 Update Capgemini
+524e0e5 remove trailing slash from url
+8b750f4 update README.md to add Svix
+6d0ad4d Merge #1307
+417b772 Merge branch 'master' into ma8642-update-belka
+dc651f1 Merge #1308
+50e9bca Merge #1305 #1306 #1309
+4617a65 Merge #1302 #1303 #1304
+0593fc3 Merge #1301
+4c551e1 Fixed alphabetical order
+ea933ec Update Bubblin Superbooks
+1925aae Update Bemind
+7b7225d Update Belka
+059c2b2 Update Bcredi
+27401c8 Remove B2W Digital
+81c21a2 Removed trailing slash
+3df77ec Remove Avocarrot
+14b44c8 Updated asos url
+2dee7ab Remove alluvium
+c501328 Remove Addstones
+21030b8 Merge #1299
+148d133 Merge branch 'master' into ma8642-update-list
+d1d6d75 Merge #1300
+5d2419c Merge #1298
+fc00ec6 Updated store2be url
+7fee273 Removed graphcool
+02e235b Add Graph Digital
+9be681f Merge #1297
+c5d6b1a Merge #1286
+a9df6c6 Merge #1294
+2cba4d1 updated README
+fcd07a5 add Xebia Security
+8c8ed50 Added Vitality South
+5a4cf4c Merge #1292
+45f82dd Merge #1291
+a51ae36 Fix typo
+a31afd5 Merge #1288
+15985de Merge #1287
+2c88780 Merge #1281
+3d64e07 Merge #1285
+27941cb Update README.md
+8f2a3c0 Update README.md
+60ac924 Update README.md
+1d9e1df Add Qonto
+7141620 Update README.md
+066b2b5 Slighly adjust DigitalService description
+d9f5dc7 Add DigitalService
+ac8eebc Update README.md
+6ad1756 Merge #1280
+f2af5e6 Merge #1283
+9198cab Removing the reference to Pivotal
+93151a1 chore: move timezone note into description
+619bbd3 chore: change order
+88f4996 Add Surglogs hiring experience
+ee015c8 remove trailing slash
+11d12aa Add Benshi and LinkAja
+0733d78 Merge #1260
+a0c7f91 Merge branch 'master' into patch-1
+e4dcafd Merge #1274
+bf65a20 Merge #1256
+99773b9 Update README.md
+88827e1 Merge #1236
+655e9fc Update README.md
+e92c5bd Merge #1278
+2f339b4 Merge #1276
+104b84f Merge #1275
+1be7cc4 Merge #1273
+b4f06b1 Merge #1270 #1271
+3a022db Merge #1269
+097570d Merge #1263
+c7f8fb3 Merge #1264
+96de31a Merge branch 'master' into patch-1
+0842447 Merge #1254 #1255
+3bd6829 Merge #1249
+894568a Merge branch 'master' into eyevinn
+9328c61 Add Zensurance.com to the list
+c244f80 Add Cortlex company to README.md
+226c138 add link correction for wetransfer.com
+c2c424f chore: add kodify
+863cdf5 Remove Weebly
+c67e26d Remove RealHQ, a now-closed company
+78f72f9 change PISMO readme
+57fbe50 add Pismo
+2e063ea Update README.md
+a847e0d Add lise GmbH
+905480a Update README.md (#1262)
+ca7a726 Update README.md (#1261)
+739ba9e Add Prokeep (#1258)
+c3ce609 Add Cabify (#1252)
+e4e883c Remove Canonical (#1265)
+103d283 Make remark-cli quiet (#1247)
+048147d Remove Datalogue
+7b25473 Fix location name
+7ba558c Simplify interview process description
+228defc Remove trailing slash from URL
+1df8948 Add Verve Industrial Protection
+0ddb658 Add OSISM + 23 Technologies (#1235)
+6963539 Add Cosium company
+7c9fca0 Merge #1259
+dabf5b4 Update Big Nerd range career urls
+f9d9402 Update README.md
+9afa901 Update README.md
+18b2e56 Trailing whitespace :)
+0395cd9 Add Calendly
+8e118c6 added naologic
+51bb836 Update README.md
+44d1afe Add Pie Insurance
+67877b6 Merge #1222
+65ef637 Merge #1225
+d887192 Merge branch 'master' into master
+a695117 Merge #1226
+2cc51b9 Merge branch 'master' into master
+4e3edcc Merge #1242 #1246
+6c5acb2 Merge #1243 #1244 #1245
+f05ee67 Merge #1240 #1241
+fa91ccf Merge #1238 #1239
+a21e039 Merge #1237
+fc47013 Merge #1230 #1233
+bdfd06e Merge #1231 #1232
+11d1f6d Merge #1228 #1229
+8bc8b78 Merge #1223 #1224
+25bd9c8 Merge #1219 #1220 #1221
+eb1926e Merge #1217 #1218
+2cea5b1 Merge #1215 #1216
+daad813 Merge #1209 #1210 #1212 #1213
+f2f4127 Merge #1207 #1208
+5451f25 Merge #1185
+8dc9cde Update README.md
+d8f5cff Add Resourcify
+0099497 fix: update Clubhouse to Shortcut
+f7cc9d2 Add Aparkado
+a1334eb add gridscale to the list
+effaf34 Add Goalbook
+3271f91 Add Goalbook
+e8b5b1a Add Poll Everywhere
+4fc7d81 Update README.md
+fa68a69 Add Filestage.io
+a3bcbb8 Add Ascend
+7e43228 Add Fonoa
+889d814 Add Fonoa
+5d6156c fix formatting
+1fb5f66 add Eyevinn Technology
+4afdbd9 Add CakeDeFi to the list
+38910d0 Add BCW Group
+1d2d339 Update link to the Test Double careers page
+eb222b5 Removing Realtor.com, 2 hackeRank questions in seperate interviews; both were brainteaser nonsensical type questions.
+a2eccc9 Add Sakari
+d851480 Clarify interview topics
+8036d0d Remove Wilbur Labs, they now ask whiteboard q's
+dd274de add Odeko
+01efb53 Add InvestSuite
+fff439e add locations and improve formatting
+69ad36c Add Quizlet
+b0cbe68 fixed location listing
+424388a added IONOS SE
+68a5976 Add hinge health to the list
+451251d Update interview and location
+be98397 Update location
+bcf58dd Add ConvertKit
+71a3f76 remove Revolut
+062caed No longer applicable.
+ebefdb5 Add Oda to the list
+01156a4 Remove Instacart
+6ac8387 Added JOURNEE to the list
+5112880 Added EWORX
+d6cb41a Remove GoDaddy
+7c75733 Add Cox Enterprises
+f131e08 Remove Aurora Solar (#1187)
+87e19ea Merge #1211
+514ce2d Remove PingCAP
+9db6543 Clarify Unito's hiring practices
+8748997 Add Jeli to the list (#1206)
+4cdd38a Merge #1098
+7cc04f7 Adds Pathos Ethos
+b27a323 Remove trailing slash
+ce9bdea Add CHG-MERIDIAN
+7124dd6 Update README.md
+8c58adb Remove Yhat (#1204)
+82bfcb8 Merge branch 'poteto:master' into master
+b9f2bb9 Fixing format for Upwave entry
+e1b4ae2 Add bevelop to list (#1201)
+acf5d30 Fixed dead link for Acumen (#1202)
+ad4c19d Add virtually human to the list (#1203)
+647bc67 Added Contino to the list (#1200)
+9a4907d Update link for Findy (Tokyo, Japan) (#1196)
+f1201ea Add Cossack Labs (#1190)
+fb0ba46 Add SigNoz to list (#1197)
+af55df0 Update: corrected URL and capitalization for Bustle - New York, NY. (#1198)
+bea6010 Add League (#1199)
+dd94572 Update CONTRIBUTING.md
+10ba5ee Update CONTRIBUTING.md
+61b839e Remove Buhler Group (#1195)
+76b8602 Add Harvard LIL (#1194)
+d5e6472 Update README.md (#1193)
+8834997 Add Double Nines (#1192)
+cc18cd4 remove Gamevy from the list (#1189)
+af75a12 Add Neural Lab to the list (#1188)
+ee6e40f Add Mobile Reality (#1186)
+7f9281e Fixed test, changed order
+5d5729b Add Mobile Reality
+ebde58a Add Trendency to the list
+c0247a5 Merge #1183
+928993e Merge #1182
+8296c83 Merge #1180
+28f6002 Merge #1184
+8fd456f Remove DHH tweet from README.
+e5f4bd8 add Colearn to the list
+3d941bd Update RECOMMENDATIONS.md
+f0d5c22 📦 NEW: RapidAPI
+2d01e20 Merge #1176
+ba6275d Cake Solution is no more
+6d9961f Merge #1175
+f3d6977 Remove Deliveroo
+ee109dc Merge #1150
+41cca5a Merge #1174
+a18270d Merge #1171 #1172
+b4711d1 Merge #1169 #1170
+c2cdcf5 Merge #1165 #1167
+0a9d50e Merge #1163 #1164
+2e6f509 Merge #1161 #1162
+8c7f635 Merge #1159 #1160
+7c43465 Merge #1157 #1158
+77e1e58 Merge #1156
+d751c5f Merge #1153 #1154
+f255b3c Merge #1152
+751cfc7 Merge #1151
+293dc78 Merge #1148
+29cf326 Merge #1146
+4be8c68 Merge #1145
+e64a3ed Merge #1140
+988a5a3 Merge #1139
+bdbab3d AeroFS no longer exists
+148aef1 Add Remote
+b5116d1 Update README.md
+8f2df78 fix: Remove erroneous trailing slash
+d0e1199 chore: Add Great Minds PBC
+e5e6f99 Fixing blackslash
+5b3ff94 Updating nowhiteboard url
+0c896bf Add Glassdoor to this list
+63456f0 Update README.md
+b408789 Update README.md
+c36cb04 Update README.md
+a9330ec Linting
+7899e90 Update README.md
+76b231e Updated pfs
+4f90244 Updated pfs
+0e0d38e Added Nurx engineering page
+6d890a9 Update README.md
+bb2d7a3 Merge branch 'poteto:master' into master
+b1ccdbe Adds Mozilla
+d9b80c1 Adding Dare to list
+96ca2c7 Add Hashnode
+9c07f64 Added pfs
+b77f7ed Fix location
+0f08410 Add Agency Enterprise Studio
+64e725e Add Stride Consulting to readme.
+0587c54 Add Indiana Farm Bureau Insurance
+81ad9d9 Added StashAway
+e19a3f8 Adding Neulabs
+e665c82 Added StashAway
+ded94ea Fix format
+910017a Fix format
+9204195 Fix format
+c18f66d added Magical
+f5ee3e2 added Magical
+cc4c362 Add Refty
+3ed4c90 Add ReviewTrackers
+68045e2 Align to linting
+7eb574c Add optilyz
+74ff51c add Innovia CoLabs 2 electric boogaloo
+cc01175 Add Innovia CoLabs
+81541eb Update README.md
+bb22b0a Merge #1143
+f992ff9 Merge #1142
+cbe3910 Merge #1134
+d1b6afa Added Holaluz - Platform Team
+f2fcc9a +Checkr
+8efe0ee Add CloudBees
+b1bd8d5 Merge #1141
+00e02ef Update 5Minds
+966258f Add 5Minds
+c2bf924 Add Smartia
+cdf754e Merge #1136 #1137 #1138
+f99e6f1 Merge #1135
+a770bb6 Merge #1131 #1132 #1133
+c61f6b0 Merge #1129
+d942cb7 Add Bramble to readme
+5ce7d37 Update README.md
+3e9b967 remove ubiome
+f92f75d Add Fourthwall
+7e0ad17 fix alphabetical order
+7261609 Add EatSleepRIDE
+9b7df43 Added Wiredcraft
+c4469e9 Clarify Automattic's process
+5da8f44 Add Kontainer
+17c2b0c Add Rockerbox
+f6e6d91 Merge #1128
+3cc26b7 Merge #1127
+0a71397 Add Koala
+ea989e0 Update link and text
+bf7dd98 Add more specific description
+7ce3c0a Merge #1117
+c0e5e21 Add Airbase to the List
+12f7a8a Merge #1126
+0a4387a Merge #1121
+caeb7f3 Merge #1122
+32888f0 Add GM Financial Marketing Technology
+1d3b8fa Add GM Financial Marketing Technology
+f3fc209 adjust location format
+74158c4 Remove DoorDash for consideration
+7bd41d1 Adding Able.co jobs to the list
+92901a1 Merge #1115
+7b9a267 Fix linting errors
+d8645ab Merge #1118
+0bffdb3 Merge #1116
+f37b6e7 Add Koho
+98b6bb5 Netflix does leetcode questions, shouldn't be here
+e1f242c Add Rapptr Labs to list.
+18fcea5 Merge #1113
+2b5bae1 Merge #1112
+6ea5a5d Adding ezgress to the list.
+e551d4f Add Cquence
+9cdae94 Merge #1110
+ebdfaea Merge #1097
+8464489 Add Field 33
+97cf5cc Merge #1104
+6902343 Update README.md
+df644e7 Merge #1108
+dd6fa32 Remove Pluralsight
+2cbdd65 Merge #1106 #1107
+a4aa29c Add Ginger (On-demand mental health support)
+b9000ae Update README.md
+6d43e17 Update README.md
+362bcd4 add realtor.com
+638410d Merge #1096
+db8067a Merge #1099
+1c02c82 Merge #1101
+3c3da10 Merge #1100
+a2a6409 Merge #1103
+f9c1f12 Fix bors config
+7154a03 Add github action for CI
+bb9d38f Merge branch 'master' into add-render
+2512c3f Add github action for CI (#1102)
+bcb8291 Removed Simple (based out of Portland, OR)
+c636ca6 Add Render
+57a3830 Update README.md
+7674ef2 Add Upwave to the list
+3b6f790 Adding BRYTER to list of companies
+a5725ac Update link for Interset
+33094ca Merge #1095
+fa9f32f Merge #1089
+3cc6af1 Adding Swisscom process details
+b5f8597 Update README.md
+744c270 Merge branch 'master' into patch-3
+a1a1fdb Merge #1093
+819f0a9 Merge #1091
+a8d74f7 few
+17f4177 Remove trailing slash in URL
+5a66d85 Add 3BoxLabs, the makers of the Ceramic Network
+aa7269e Merge #1087 #1088
+f79748d Adding btw.so to the list
+2204844 Added Hero Digital to the list
+510df43 Added STRV to the list
+d757bf7 Merge #1081 #1082 #1083 #1084 #1085 #1086
+384ba78 Merge #1080
+4f8a3db fix lint
+3e99708 added splyt
+678bd5e Add Linx Systems
+6d4d07f add openbase
+b433a46 remove: `Partialy`
+ba71b5e add nordpass
+0ec2261 add bitpanda
+7c88ce3 Add Noyo
+6da67c9 Add 1 company at a time
+d97267f Add Knock and Noyo
+0fed780 Merge #1077 #1078 #1079
+5c21a81 Merge #1076
+eb54b53 Fixed spelling mistake in Chef
+20ca4b6 Add Wallapop
+8e6dd25 Add Bonusly
+48d425f Added Bloom Works
+5c1d05e Merge #1075
+88d59d0 Merge #1074
+53a70c7 Update README.md
+704e442 Update README.md
+1e0298b Remove "Limited remote"
+6fe5515 Update remote info
+81cf3e8 Adding Redgate software
+615c3d8 Merge pull request #1 from poteto/master
+570e3b5 Merge #1072
+0e5b6e2 Update Netlify
+8391919 Merge #1070
+f89ed0c Merge #1071
+bda526d Adding BrowserStack
+03d0373 Remove Nanobox from README
+6bc2da1 Merge #1069
+5f9267e Add Kulkul Tec
+bc1adfb Merge #1063 #1066
+dd9ed6a Update README.md
+a91fbd2 Merge branch 'master' into patch-1
+687001d Merge branch 'master' into patch-1
+669136b Merge #1067
+dc73bd9 Add Interfrog Produktion GmbH
+97a856a Add Oncue
+e7e6355 Merge #1065
+3a0d49f Merge branch 'master' into patch-1
+f5cc6b0 Merge #1064
+b05a91e Remove CapitalOne
+dcc47e5 Add Lattice
+c42b209 Remove Affinity
+ad58cff Merge #1058
+efdf9e8 Merge #1042
+32bca7a Merge branch 'master' into fix-truora-url
+fc5d212 Merge branch 'master' into irmerk/clause
+2c9c394 Merge branch 'master' into fix-truora-url
+4bb71c9 Merge #1062
+bb73ec2 Merge branch 'fix-truora-url' of github.com:aledeltoro/hiring-without-whiteboards into fix-truora-url
+5f103e5 Remove path to english translation of website
+a95fb53 Reword
+c26e051 Alphabetize
+85eee79 Added Fetch Rewards
+fa65a1f Merge #1059
+95ff8e5 Merge branch 'master' into fix-truora-url
+c55c692 Merge branch 'master' into irmerk/clause
+c7a5da8 Merge #1061
+70fb3ec fix: typo
+fd0879b fix: warning about too many pipes
+dcda406 Adds Sixfold
+4201367 Merge #1057
+09684d0 Merge #1056
+1cc2699 add shipandco
+7aa8cd9 Fix Truora website url
+33ca4bb Added Accenture (Kuala Lumpur, Malaysia)
+7809800 Adds Oak Street Health
+1968ce5 Merge #1055
+fe1fa96 Update README.md
+29f0538 Adds Bitso as not-whiteboarding's company
+9ec1420 Merge #1054
+637cf9a Add INEVITABLE (fixed trailing slash)
+7ce192f Add INEVITABLE
+5250aff Merge #1052
+380601a Added Rebase Consulting
+25a69b5 Merge #1050
+6a0188c Merge #1051
+fae90f2 docs: add tophat
+9fc8713 Fixed links of Valuemotive and Hoxhunt
+75c7c8b Merge #1049
+0c776d5 Update location
+d1e48f2 Add Frappe
+07a0c9a Merge #1048
+2a20c36 Add Urban Dynamics
+3183a75 Merge #1047
+957e2f7 Updated Axios Link
+921b41d Merge #1046
+f1bc1c9 update link to jobs page
+449a137 Merge #1045
+c639bd0 Merge #1044
+8a934d2 Add Lyft
+b405d9a Add Philo!
+08acbbf Merge #1041
+80b0897 Merge #1043
+9dc18eb Add NovaCare
+95a3ec2 fix: remove trailing slash and fix location format
+b3e3db5 feat(README): add clause to list
+a7b41be feat: add Delivery Center
+16e8b98 feat: add Delivery Much
+9db20b4 Merge #1040
+30e16c6 fix linting errors
+c68208b rocket travel
+c4d19c6 add rocket travel
+1b0ed51 Merge #1038
+1576147 Removes trailing slash on company URL
+05b2824 Add Emergent Software
+97d4461 Merge #1037
+6e5da18 Correct URL for LOGIBALL GmbH
+da46921 Merge #1036
+aac4e45 Remove 1000mercis
+334c512 Merge #1034
+a682b98 Update Beam Dental to mention remote
+43f5a35 Update job postings link for Beam Dental
+c742b8a Merge #1033
+feeb744 Reducer - fixed trailing space
+074a91c Add Reducer
+d718067 DataFleets (#1014)
+ec31354 Merge #1032
+3b26905 Extend
+e22517b Update README.md (#1030)
+e9f3a7d Adding Airtable (#1031)
+b03716f Update README.md
+9797e72 Merge #1029
+22d9481 Merge #1028
+97befd6 Fix typo in the Da Nang city name
+1c3d100 Removed Ajira from the list
+7b1ac7a Merge #992
+ae2f3c5 Merge branch 'master' into master
+8c0c607 Merge branch 'master' into master
+77822fa Merge #1024
+207e1f4 Merge #1023 #1027
+f41db65 Merge #1026
+d6b718e Remove trailing slash to fix the linting error
+05eadba Use the company website link
+e51e34e Update Nimble's company locations
+6ee39f7 Update Nimble's company name and link
+b88e40a Merge branch 'master' into master
+c0be7a4 Update README.md
+3f33a38 We've rebranded from "GeneralUI" to "GenUI"
+531b088 Merge branch 'master' into patch-2
+ef66335 Added Square Sense, Paris, France
+6be669e Merge #1022
+94147ba Merge #1025
+e16c2c4 Add Zapier
+fe25942 Update README.md
+0fcbd28 Remove trailing slash from Facile.it website url
+8c9c7c5 Add Facile.it company
+8b3d704 Merge #1021
+843b550 Merge #1018 #1019 #1020
+1c5b6ac Merge #1017
+8e7211c Retail Pulse
+5d37f9a Add Tophatter
+b1f5e3c Merge branch 'master' into master
+1ac0802 Add SafeButler
+8539082 Correctly alphabetize DEV
+139c68c Update README to add DEV
+df90347 Update README.md
+aed1e45 Merge #965
+7ff1e12 Merge #1016
+aeda45b Merge #966
+6d73b6e Remove trailing slash
+81e983f Add combyne
+1d0d558 Update README.md
+3b2ab62 Update README.md
+22b4940 Merge branch 'master' into @peterpme/add-draftbit
+7a127c9 Merge #1012 #1013
+eb9cb92 Merge #1011
+51c10e6 Update Datascope
+52260bc Removed trailing slash and spaces
+d338194 Update README.md
+e8e1fd4 arranged it alphabetically
+0486e38 Added verloop.io
+18bc239 Update README.md
+7d8ae5b Merge branch 'master' into itexperts
+647bc90 swap for alphabetical
+a844059 Merge #1007 #1008 #1009 #1010
+2c5a986 Merge #1006
+4b2b4c5 albert
+58cfccf Add Full Facing to list
+b0b539d Add Dixa
+d160d37 Remove additional location info
+4c30bdc Add Artemis to company list
+a868f74 Update discussion links
+f26a6bf Merge #1005
+bf81ec6 Add Development Seed
+6fe73f9 Merge #1004
+5c65791 Add Flowdash
+9c42a87 Merge #1002 #1003
+82118ea Add country
+0e8945c Add snyk
+4802d86 Update README.md
+9c32aa4 Add Capital One
+90130ad Merge #1001
+51dc01b Fix location format.
+8ae1ef4 Add YouGov
+2e78cef Merge #999
+5dbac6f Merge #1000
+9ca6243 Merge #996 #998
+b3fc791 Merge #951
+292fc75 Add FastBill
+8ffad87 Update README.md
+a22769c Merge branch 'master' into master
+4c63be8 Add Doist
+f170c98 remove lusha from list
+7b51609 Update README.md
+144361a Update README.md
+a68423f Add Transparent Classroom.
+fa77913 Merge #995 #997
+1d91082 Merge #993 #994
+e2ad22f Merge #990 #991
+23abfbb Merge #982
+967bbbb Merge #985 #986
+76e4686 Merge #956
+be2fb8a Update link/text for TableCheck
+a5e4acc Format fix
+022ab6c Merge branch 'master' into patch-1
+d593dda Merge branch 'master' into master
+dbb0910 Added Red Balloon Security
+cabf213 Added Persona
+b635bba lmao ACTUALLY linting
+5f8b2bc linting
+8a033f7 adding some missed spaces
+0ea746f adding 47 Degrees
+6d601b2 Update README.md
+c4b1852 Undo an extra character
+8c8a15c Merge branch 'master' into add-21re-de
+b2a85cb updated the section
+81b77c0 Merge branch 'master' of https://github.com/poteto/hiring-without-whiteboards
+3634467 fix lusha description
+c5bcbd5 Add Lusha
+33d8de6 Merge #984 #987 #988 #989
+4ac0819 Merge #981 #983
+9cbca47 Merge branch 'master' into lovion-patch-1
+286a7ca Merge #980
+a6ee41a Merge #973 #974 #975 #976 #977 #979
+bc8b1cf Merge #967 #968 #969 #970 #971 #972
+f462a28 Merge #964
+0d523bc Merge #958 #959 #960 #961 #962
+889e0ad Merge #955 #957
+9819230 Merge #950 #952 #953 #954
+56d4b12 Merge #946 #947 #948 #949
+ad4d93e Merge #944 #945
+a1884ac Merge #943
+25e12c0 fixed formatting
+fe26b46 swap Animech/Angaza :facepalm:
+8046db6 Add Angaza
+d4a38b6 Add AImotive to the list
+a1362ec Add NerdWallet
+40b4566 removes ableton
+7b1a867 Adds SEITENBAU to list
+5ab2217 Remove trailing slash
+08e4248 Added Takeaway
+7293d3f Add wend
+7736e78 Add Lovion GmbH
+7a2a414 Add Octopus Energy
+29e1da0 Update README.md
+e1b99d3 Added Typito , Bangalor, India
+83a3e99 Update README.md to add Repl.it
+71ba38d Update README.md to add Structura Biotechnology
+de493b8 Add Anyfin to the list
+407c79d fixed broken link - Nozbe
+e83b65e Fixed location format
+7d4d8fd One Company at a time.
+ab5d9ed Added Sendyne and Red Balloon Security
+4237765 Added Sendyne and Red Balloon Security
+d621a1a Remove trailing slash
+d2c761d fix broken link
+3e1454f Update README.md
+c31dacd Added Teraki
+01edc8c Add Luna
+34cc004 Add Nexapp
+2039c94 Add MyTutor
+06fb855 Added Admiral
+524fd42 Update README.md
+31cdc9f Update README.md
+b45ebbe Added Container Solutions
+e5c0cbc Add Draftbit to the list
+b97a47c Add IT Experts
+828971c Update uSwitch to RVU and edit description
+2ead550 Removing Mimir from the list
+dc73eba Add Heroku
+6cf617e removed the trailing slash
+06a72e1 Add Convious, Vilnius, Lithuania
+e4f8dcb remove trailing slash
+2e385e2 fix alphabetic order
+f53b04e Add Ninjaneers
+91ca9ae Fix md
+ae2a5be Add Code Orange
+ddf20fb Update Bulb interview process
+c828c09 Remove trailing whitespace
+bfb3153 Fix one city per country bug
+2017446 Add Norbsoft
+11e79ed 21re.de - description
+809a36b Add Sixt
+d80c64d Added Espeo
+4ca5a93 Update README.md
+9a16d35 Update README.md
+2058555 Added DuckDuckGo
+794fca0 Added Chef
+2fce851 Add Passiv
+0681c06 Fix the ordering of items, numeric company names are already at the bottom so 4Degrees should be there as well.
+966e721 Add Mux to README
+ca3601f Add OneSignal
+135048f Fix CrowdStrike Info
+435ee39 Merge #941
+6eaf4ec adds Ghost Inspector to list
+e8f6b69 Merge #939
+40fa9a3 Merge branch 'master' into aadsm-facebook
+f99d354 Fix typo in Washington
+3681680 Merge #938
+bc17e91 Merge branch 'master' into common-spelling-fixes
+35252b1 Merge #940
+d94b7fd added 4degrees and a category for companies 0-9
+a83471d Update README.md
+1aba953 Add Facebook for the Front End Engineering position
+3bb0b65 Fix typo 👇🏻
+ec0d430 Merge #937
+72d89e6 complementary information
+2023ae3 chama the app
+966ad2b Merge #936
+3eca575 Add Nmbrs
+972d1e3 Add Nmbrs to list
+d8654e2 Merge #933 #934
+046a1e7 Merge #935
+00c62a5 All jobs are remote at platform.sh
+1e32e82 🪦 Bolste is dead
+624ebfc Adding Adaface
+f251cc5 Merge #932
+6a15b7a Merge #931
+0376ca9 Add Leapsome
+63cc0af fix typo
+81460d5 detailing description of interview process
+eb440ff fix sort
+36b549d fix alphabet sort
+e722821 fix alphabet sort
+baedd48 fix alphabetich company name with vietnam character
+a610aba adding Ruangguru, Kiến Guru, StartDee
+8bc498b adding Ruangguru, Kiến Guru, StartDee
+66f6d6a Merge #930
+60c77a6 Add DataChef.
+b5eb1f4 Merge #929
+8c845f8 Remove Lyft from list.
+0dfbd74 Merge #928
+9a1b007 add DevsData
+3f81870 Merge #927
+adf3c7c Fixing some errors
+b94d920 adding xplor as a new entry
+6a4f0c0 adding xplor as a new entry
+f89fc4b Merge #926
+6629a72 Remove Intercom
+81a1cf9 Merge #925
+509a508 Add Buildkite
+5f70f1e Merge #924
+f9c836a Merge #923
+5e6605e adding vena solutions
+a60aa17 Add BigBinary to the list
+0cfab3f Merge #922
+a608a45 Minor change to trigger CI
+9b1c9d8 Added HeavenHR
+3814e34 Merge #910
+f153203 Merge branch 'master' into master
+2dc2573 Merge #894
+a82e323 Merge branch 'master' into remove-avalara
+f18e57b Merge #921
+09c136a Merge branch 'master' into remove-avalara
+006c8e4 update(README.md): fix Graphistry link
+16a7307 Merge #920
+773ced0 Metro-Markets added
+9176816 Merge #919
+2daccb1 Add Aragon One
+7b52e96 Merge #918
+e2bceae Add GitLab
+e60993d Merge #917
+33a57d0 Update README.md
+267f329 Merge #916
+4ac4b10 Add Fold to the company list.
+7832415 Merge #906
+b0b8cd0 Merge #913
+247b0c2 README: add country to Toowoxx
+294e764 Merge branch 'master' into patch-1
+432aef1 Devfolio: Added Devfolio to the list.
+2cce4ed Remove Brex
+c245ccb Merge #909
+fb964b7 Add Mattermost
+d1b5184 Merge #908
+8fb98b7 Adding Mercado Livre
+3a8f122 Merge #907
+b17c1e7 Remove Rakuten
+cfb925a Add Toowoxx
+6fdc405 Merge #904 #905
+c677b26 feat(): Add SuperAwesome, London
+cb51ec1 docs: add AdCellerant
+f2e0422 Merge #890 #903
+0063640 Merge branch 'master' into master
+4e17192 Merge branch 'master' into patch-3
+7f19323 Merge #901 #902
+3eb5bb8 Merge branch 'master' into patch-2
+74cf71a Merge #899 #900
+d5f27af Merge #898
+b8e5c0d Update url of Novoda
+44e838c Update url of GatherContent
+f329ba5 Update url of ecobind
+d583c7b Removed Telus, they heavily use hackerrank
+a5de2ee ReactiveOps was rebranded to Fairwinds last year
+389eb30 Remove Avalara
+7b3f633 Provide more details about Etermax's process
+f954fa1 Add Etermax
+2d8aae5 Merge #895 #896
+735f107 Merge #897
+cefd628 Add Taxdoo
+1ebc4e5 Add Almabase.
+26f4536 Add TuneIn
+425be8f Merge #893
+7a6e988 Removing trailing slash
+75f0864 Adding Tipalti
+1757f89 Merge #892
+45064da Merge #891
+9af4544 Remove NIST
+57e56b9 Trim trailing whitespace
+2130490 Add OneMain Financial
+a589470 Remove LateRooms.com (Manchester)
+f718694 Merge #887
+f6b20ab Merge #886
+adcc072 Update README.md
+6bab341 Adding AdHawk and FloorForce into list
+4a22e16 Add Doctolib to list
+0785b44 Merge #885
+8f5bff2 Update vernacular
+ffd2488 Add Vernacular.ai (ML Role)
+eb99acf Merge #884
+247d9d9 Merge branch 'master' into master
+4bce08d Merge #883
+8bc1810 Update README.md
+d632bbd Update README.md
+f63dae1 Add Jetstack
+4bae620 Merge #882
+0f54a05 Add Swiftly Systems
+dda0ac3 Merge #881
+76c3751 Merge #879
+e2b8058 Fix Backbase links
+6af278b Add Wilbur Labs
+29b7f13 Merge #876 #878 #880
+990cbd5 Merge #877
+8b5fe43 Add Smile.io
+3b748a6 Fix broken link for Nyon
+f274644 Fix broken link for Softwear
+733e3d1 Merge branch 'master' into master
+ecf2b92 Merge #875
+228683e Correct Alluxi positioning
+98dd201 Add Alluxi
+5d2fd4e Update broken link
+5d9ab60 Merge #874
+8972d52 Add hacktiv8
+e5a4519 Merge #873
+3e436f3 Add Tooploox
+7b06590 Merge #872
+fec2da2 Merge #871
+0e46b68 Merge branch 'master' into master
+6fc8419 Adding Garmin
+cff462a Fixed broken link for Affinity
+404dab0 Merge #870
+b513161 fix whitespace
+a140e25 Add Amino Payments (Philadelphia) to list
+a557107 Merge #869
+d40ec60 Merge branch 'master' into master
+0743353 remove trailing slash form url
+0d8e7f4 Merge #865
+bc5a18f Merge branch 'master' into patch-1
+0d5ad03 Update README.md
+bbbed25 Correcting grammar and removing white space
+d9badb6 Merge #868
+885831c Merge #867
+96e4533 Merge branch 'master' into patch-1
+8e8546b Merge #866
+7e8f743 Add suggestion for take-home exercises
+16e51e3 Update README
+8791664 Updated syntax and link
+f483c46 Minor update to the Animech company description
+31d4c19 Added the company Animech to the readme
+679b50c Adding Veterans United
+f6fe3e3 Merge #864
+c2550c9 Change Socialcops name to Atlan
+b707dc3 Merge #863
+2b1b3de Remove trailing /
+b40e80c Add Cheerful
+2b81300 Merge #860 #861
+0b96227 Merge #859
+d974171 getting the alphabet right
+b53e9f0 adding Permutive
+2550d94 syncing with poteto
+c283856 updating
+0ca02ff Update README.md
+577f2d2 Update README.md
+397f548 Merge #834
+e1147c5 Merge branch 'master' into master
+bf2140e Fix alphabeticalisation
+b8ec1a9 Merge #858
+615c3b8 Add Gasket Games to list
+1b426f7 Merge #856
+17ffad2 Merge #857
+41f4dee Remove trailing space
+16ebd74 Remove Koddi
+cf2f8c1 Add El Niño
+ad40fa3 Merge #855
+5cd29bf Merge #854
+edcf611 Add Housemarque
+43c9c62 Add itdesign as a company
+234478f Merge #853
+8f35026 Merge branch 'master' into master
+c0492b1 Removed idea files
+6518177 Merge #852
+4797b85 Removed whitespace
+923e8c4 Added BigaBid
+4c274ea Add COYO
+009730d Merge #851
+0dd0ce0 remove url trailing slash
+5a8a6de add bcredi
+861cf0c Merge #850
+b30d6c7 Add Ad Hoc to list of companies
+9ad9546 Merge #849
+c05c3cc Merge #848
+c0b536d Merge #844 #845 #846 #847
+0b0bf71 Merge #838 #839 #840 #841 #842 #843
+e948964 Merge #835 #836 #837
+5e10b5a Merge #833
+85cb05f Update location to say just `Remote`
+fe62b6d - [x] I have read the [contributing guidelines](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md) - [x] I agree to the [Code of Conduct](https://github.com/poteto/hiring-without-whiteboards/blob/master/CODE_OF_CONDUCT.md) - [x] I have followed the [format](https://github.com/poteto/hiring-without-whiteboards/blob/master/CONTRIBUTING.md#format) prescribed in the contributing guidelines - [ ] (OPTIONAL) In your pull request message, add additional context on the interview process if necessary
+0606e62 Fix order
+e545b77 Fix order
+5c878f1 Add GramGames to README.md
+abbbdc2 Add Tara AI
+c18d351 Clear out process
+40cb534 Add Adeva, exclusive developers network
+ca70e92 Add Avalara SRE Hiring
+4e14858 Remove Heetch
+17b40d9 Add Salesfive
+ba7cd51 fix typo
+0119054 update
+76a99c7 update
+d924def add pingcap
+30fb4f1 Added Windy.com
+b316f30 Add Scapic
+bec1619 Remove trailing slash from the Revolut url
+9c83b2e Add Revolut
+8839bf6 Add Revolut
+8528f32 add Smartly.io
+9ef8366 Add Lykon
+4829cdd Add Ori
+942283a Fixing Jobs link and missing locations
+d380ebc Add Condé Nast International
+b9656c8 Rename DevMynd to Tandem
+5cf7b0c Merge #830
+f20fc2f Merge branch 'master' into add-zweitag
+fed7ac0 Fix typo
+14358ff Merge #832
+5bbc5ba Merge #831
+d4cd383 Remove trailing slash
+ce1a5ee Add Schibsted Tech Polska
+3b55b43 Add ecaresoft
+eac6f9b Add Zweitag
+ee2e864 Merge #694 #828
+fe09b55 Merge branch 'master' into add-myheritage
+9d35e73 Merge #826
+dccd57e Merge #823
+7b025b9 Change order and remove trailing slash
+c12d35b Add MyHeritage company
+dbee3a8 Fix trailing whitespace
+11f3570 Merge branch 'master' into patch-1
+b3eb3e0 Remove Isle of Man
+8f15f48 Add Rstudio
+5c71625 Merge branch 'master' into master
+cfc8a0d Remove trailing slashes
+9f3cbdc Merge #824
+66016d5 Add AdEx Network
+26e4df7 Added Proxy and Gemini
+6897be3 Merge #820
+7620166 Merge #771
+2cc9424 Merge branch 'master' into patch-1
+1023d9b Merge branch 'master' into master
+8b18d60 Merge #821
+4856c1f Fixed position of entry
+71b6d42 Added entry for NIST to the README
+379e49e Update README.md
+cd7381a Merge #808 #819
+1c966d4 Merge #818
+656df5b Update README.md
+3b5626c Merge pull request #1 from Upstatement/add-upstatement
+64e3274 Merge branch 'master' of github.com:poteto/hiring-without-whiteboards into add-upstatement
+be26b84 Add Upstatement
+a2ddbbc Merge branch 'master' into patch-1
+eec0300 Fix alphabetic ordering
+a16b135 Merge branch 'master' into patch-1
+ab0fcad Fix Stripe "Singapore" location
+63bb1cd Merge #817
+c66e9b1 Merge #816
+d514df3 Update README.md
+86911c3 Merge pull request #1 from Oziomajnr/Oziomajnr-patch-1
+2b9d7ed Update README.md
+8e8cb44 Add Storytel
+6c678cd Merge #813
+961ef24 Remove trailing slash
+feac88a Merge branch 'master' into master
+ba69a63 Merge #815
+011148e Merge #814
+9083339 Added Engel & Völkers Technology
+d5473b5 Add Nova Credit
+89be8b1 Add Rever
+b3581de Merge #811
+04e688b Add Aurora Solar
+855889f Merge #810
+48f5a6c Merge #809
+66087ad add axios company and interview info
+57a7c0b Add BrightHR
+5dff4a0 Merge #805
+2379655 Merge #806
+470cdca Add Stripe
+eccfac9 Add Fortumo
+4003206 Merge branch 'master' into add-salesloft
+c4b274c fix trailing slash
+6190cb3 Merge #804
+4146c24 Merge #803
+bc07ded add salesloft record
+6126bf4 Add Aura Frames
+de1a74a Add Wirecard Brazil (São Paulo, Brazil)
+68a3257 Merge #802
+b89db51 Fixes format
+610ebac Adds Ideamotive
+1e168b9 Merge #801
+a0b9638 Merge #800
+5716399 Add Despark
+24e973e Added eBay Kleinanzeigen
+73363eb Added eBay Kleinanzeigen
+3c4f1b8 Merge #799
+2971e95 Update README.md
+925b56e Update README.md
+5491924 Add iZettle
+3f6ecc3 Merge #798
+c934959 Merge branch 'master' into master
+73d0924 Merge #690
+66585f9 Merge branch 'master' into peaksware
+ac9f9e3 Merge #796 #797
+3acb887 Add Incloud
+f07fd3e Add Unito (Montreal, Canada)
+a501636 Add LOGIBALL GmbH
+82f4fbb Merge #794 #795
+5a23a31 Merge #790
+96ce223 Remove trailing slash
+09a5681 Add Learningbank.
+45f7b1d Removes trailing slash on URL for CI build
+a9ee375 Adds Electric Pulp - https://www.electricpulp.com/
+a2bac4a Merge branch 'master' of github.com:arturs105/hiring-without-whiteboards
+ade476f Fix typo
+d8677a3 Add city to Isle of Man
+4dcd5e9 Merge branch 'master' into master
+fe44c33 Merge #792
+c4f97b0 Merge branch 'master' into patch-1
+c105edc Merge #789 #791
+e93f30e Merge #787
+9d55a06 Forgot comma
+2d5fb60 Add IDEO
+14504c5 Shorten the message
+e014b2d Remove TransferWise due to HackerRank and trivia
+79ccee9 Fix bold text
+ec6a43a Fix spelling
+6c2579c Add Toggl.com
+ae8aa99 remove trailing slash
+9f4bb95 Add Ageno.pl
+ed491ed fix formatting
+94932bc add primary.com to the list of companies
+6e4c997 Merge #734
+f97175d Merge branch 'master' into master
+08ffdd4 Merge #783 #785 #786
+48764a0 Merge #776
+5942515 add Barracuda View Team
+4214e79 Update README.md
+d6fd179 Add Mobilethinking
+2f7101b Merge branch 'master' into patch-2
+e67b74e Remove trailing slash
+bf201b5 Added Instantpost
+5213de5 Merge #665
+de71d4d Merge branch 'master' into patch-1
+bff68d3 Merge #782
+1823936 Add stale bot config
+f5b2ea9 Merge #700
+2449ea4 Merge #719 #725
+cd1a6cb Merge branch 'master' into update-grape
+916625b Merge branch 'master' into patch-1
+737b1bf Merge branch 'master' into patch-1
+00a6c55 Merge #780
+40ac772 Merge #781
+6ec2fff Merge branch 'master' into patch-1
+98e05ca Merge branch 'master' into update-to-verve
+04b0328 Removed Shopify from the list (#777)
+74cd996 removed trustpilot
+38e8a96 Update streetteam to Verve
+93755d5 Merge branch 'master' into patch-1
+7250f44 Added Auto1 Group
+52b7eeb Merge #774 #775
+8d7473b Merge #773
+bb23a82 Merge branch 'master' into update-grape
+d1d0415 Update grape (fix order)
+a819c9a Adds Tailor Brands
+dfaaf29 Added Sertis (Bangkok, Thailand)
+1309e45 Add BetterPT
+5621f00 Add Backbone
+faf5c03 Merge #767 #769 #770
+18e66a2 Merge #765 #766
+6e2c1d3 Fixing typo
+c5e72e1 Fix remote first error
+1d4c73c Update README.md
+4c65439 Add SerpApi
+415e125 feature(Falcon.io): Add Copenhagen based Falcon.io
+82a6c73 Merge branch 'master' into patch-1
+9aabf90 Replace [] brackets for non-links with ()
+cce1845 updated location
+3b51759 Merge branch 'master' into patch-1
+b69800e fix lint issue
+941199c Add Titanium
+26a59f3 Added SurveySparrow
+18cbc37 Merge #754
+d392bf9 Merge branch 'master' into patch-2
+568c2af Merge #764
+49241e1 [add] splice
+217cd99 Merge branch 'master' into patch-2
+3538eb1 Update README.md
+b19b0dd Merge #709 #726 #762 #763
+4da6edc Merge #761
+4f11c7e Update README.md
+fc4bcaa Merge branch 'master' into patch-2
+5933eb8 added agrilyst to the list
+a3b66aa Merge branch 'master' into master
+857324c Deleted trailing slash
+a33779b Honor space convention
+dabe929 Add HomeLight to list of companies interviewing without whiteboards
+72c618b Modified our process - take home rather than pairing.
+2714a0c Merge branch 'master' into master
+19d948b Update README.md
+d595196 Merge #739 #751
+4eb9374 Merge branch 'master' into patch-1
+e62064e Merge branch 'master' into Remove-wimdu
+d100d8c Merge #759 #760
+10f1344 Merge branch 'master' into remove-orion
+ebbf146 Merge branch 'master' into master
+2320eef Merge #757
+465b04f Merge branch 'master' into master
+8a1f5ef Merge #756
+1e3e39c Merge branch 'master' into master
+9dd13c8 Merge #755
+241a657 Merge #752 #753
+e4d0d61 Merge branch 'master' into relabe
+c96daf5 Merge #750
+b24961c Merge branch 'master' into master
+d1ca42e Merge branch 'master' into master
+cc72057 Merge #748
+d24ea28 Merge #747
+fb864d4 Remove Orion
+2c32997 fix location error
+b92bb4b add ReactiveOps
+14a7e2c Add CJ Affiliate
+a2ece3f Add Hiventive
+a2bb645 Add Test Double
+003fcd8 Add Sulvo
+2163c7b Add Relabe
+118ad26 Update README.md
+9228164 Added Bulb
+334ff7e Remove Wimdu from list
+c4c97ed Add AMAGI
+36933ec Add Freetrade.io
+eec6f12 Add TransferWise
+705d06e Merge branch 'master' into patch-1
+19fba28 Merge #746
+e3361cd Update README.md
+6ac3310 Removed trailing slash
+df463aa Added flatfox.ch
+7068bd3 Merge #745
+c6d4958 Merge #744
+8b04686 Add Shogun
+4a396a3 add pex
+17e9beb Merge #735
+61e292b Merge branch 'master' into master
+c23a229 make entry single line
+b3fb4a3 Merge #743
+866936d Merge branch 'master' into update-deps
+53c3de0 Update travis.yml node version
+fafc7c2 Lint trailing spaces
+7c74f7b Update deps & node version
+dc673f1 Merge #711
+db47d14 Merge branch 'master' into patch-1
+f301ca8 Merge #518
+11685c5 Merge branch 'master' into master
+5d10694 Merge #623
+a41121f Update README.md
+cd48628 Merge branch 'master' into gitlab-does-cs-trivia-as-first-filter
+10b9a20 Merge #651 #668
+c310755 Merge branch 'master' into master
+c287be3 Merge #684 #689
+03e3caf Merge branch 'master' into ada
+c18ea76 Merge branch 'master' into remove-datacentred
+be3380a Merge branch 'master' into makemusic
+b57f23e Merge #712
+4827ab6 Merge branch 'master' into patch-1
+db792fa Merge #733
+e85a564 Merge branch 'master' into patch-1
+e9187f1 Merge #737 #738 #740
+b0aabe0 Merge branch 'master' into patch-1
+cd77c22 Merge branch 'master' into rose-digital
+c73d8f3 Merge branch 'master' into master
+c3212a4 Merge #731
+f6bebd2 Merge branch 'master' into samsara
+5100d81 Merge #729 #730
+83b6302 Merge branch 'master' into samsara
+7dc4902 Merge branch 'master' into patch-1
+3a84040 Merge branch 'master' into patch-1
+7fc5c4d Merge #728
+039b4db Merge branch 'master' into patch-1
+7e15495 Merge #706
+04260ea Merge branch 'master' into master
+f4599b2 Merge #692
+2b0109d Update README.md
+96e42aa Merge branch 'master' into trainingpeaks
+e486d0e Merge branch 'master' into trainingpeaks
+c102a21 Merge #727
+cfd4cb2 Merge branch 'master' into patch-1
+e8d4ee2 Merge #724
+8906cce Merge branch 'master' into master
+0a99a31 Merge #723
+a351ee9 Merge branch 'master' into influxdata
+fc41cc1 Merge #742
+0ca5bda Update travis config and add bors.toml
+0c28c1f Merge branch 'master' into influxdata
+fc513e0 Update PagerDuty Entry (#722)
+04e4167 Lint
+1740c5c Add Railslove
+4ef12bd Add virtual7
+c5d4b69 Adding Rose Digital
+b70116c Added HoloBuilder
+9c9305a add Kata.ai
+6e5401c README.md: Removed Final (got acquired)
+3804b33 Add Samsara
+1aacf6b Add Elvie
+fb0c34f [FIX] City name
+fe76ab8 [ADD] Busbud
+a26cb07 Add InfluxData
+a895f2e Add Lob
+abe89eb Add Skyrise Pro
+63c42a5 Add GitHub
+42772c7 Added K Health
+e0d6185 Add Adnymics
+231772f Add Truora
+7dae8e8 Add Kong to README.md (#721)
+8f6f52d Add cube19 (#705)
+ef5c562 Add Go-Jek to the list (#713)
+813ee3d Update Badi link (#714)
+a64dca7 Merge branch 'master' into patch-1
+eed50ce Added Jobtome (#708)
+047a05b Added Thinkmill to list (#718)
+91bb0aa Add TableCheck (#716)
+e5983f2 added Headspring to the list (#715)
+2cd053a Adding Firemind to the list
+e1d614c Merge branch 'master' into master
+900aa0e MM
+16e8cfb Merge branch 'master' into patch-1
+2c60142 Added Springer Nature Digital (#703)
+83a0342 Added garner (#702)
+add4485 Update ByBox (#701)
+cc04c83 Update Axelerant (#699)
+beb7852 Added Cultivate (#698)
+79b89a0 Add Tes details (#697)
+813ebfe Add Truefit (#696)
+90b889d Add Neoteric (#695)
+8fca1e4 Merge branch 'master' into patch-1
+18644f8 Add DroneSeed (#693)
+5cd0b6b Add TrainHeroic (#691)
+5cbb500 Merge branch 'master' into peaksware
+9214af3 add zencargo (#688)
+07899c6 Add Sensu (#687)
+38d5e20 Added Netlandish (#686)
+672f0e5 Adding Bugcrowd (#685)
+6614342 Adding DataMade (#683)
+9ac51d9 Adding NewStore (#682)
+11d5b3a Add Badi to list (#681)
+5ca6c5d Add knplabs selection process (#676)
+74188be Updating a market merge
+22711dd fixed exercises
+84d989b Update README.md
+4da4a8c Add Glints
+b3d036f Update Grape
+7b21741 Merge branch 'master' into patch-1
+af0d218 More details about Pilot interview process
+c255779 Add Canonical
+39dba40 Add TrainingPeaks
+112a738 Add Peaksware Family Companies
+9b20153 Remove DataCentred as they no longer exist
+54c42cc Merge branch 'master' into ada
+48dcf9d Add Clerkie (#680)
+cbe6af6 Add LaunchDarkly (#679)
+4e9376b Add Persgroep (#678)
+8a59d71 Add Beam Dental from Columbus OH (#677)
+4e5ec44 Add Collabora (#674)
+d2586f0 Update Sixt4.io to new redirect (#673)
+aeacd18 Add moteefe.com selection process (#672)
+1349c70 Add zype.com selection process (#671)
+a1d9991 Add dentolo selection process (#670)
+669c4ad Added Grafton Studio (Boston, MA) (#669)
+99456b4 Merge branch 'master' into ada
+a491da7 Add hash (#667)
+8009a99 Remove ada.support
+6ad8c6c Adding company Pilot
+00cf455 Add GeneralUI from Seattle (#662)
+8c0b417 Add cross browser testing (#660)
+20c6cf4 Update Airtable links (#658)
+b05d7b3 Update README.md (#629)
+1fee98f milch & zucker has moved (#619)
+c573b26 Added Gower Street Analytics (#616)
+b1c3ec6 Add Quizizz (#615)
+aed853d Update the VTS link (#613)
+f3a26c6 Update README.md (#605)
+06a021c Fixed typo for Statflo.com (#587)
+a4828bd Update 18f join link (#583)
+3db67bb Update README to reflect rebrand (#581)
+3a60a58 Amend Netflix (#600)
+3e3a733 Fix README for Drivy (#621)
+ac8f00e Remove InQuicker (#647)
+c6d0162 add Real HQ (#657)
+06d6f5c Add Broad Institute DSP (#656)
+f2bbde9 Add CARTO (#655)
+8d02f54 Add Zerodha (#654)
+a09732c Add Resin.io (#652)
+9d1d217 Add Paws (#649)
+67a34db Add Storm to README.md (#645)
+c547e22 add ada (#644)
+9730ec5 Add brainn.co (#643)
+9ae35cc Added LonRes (#641)
+7737358 Add Truss (#640)
+23e48a3 Add WeTransfer (#639)
+61d0b9e add Textio to hiring list (#638)
+0c5ec81 Update Slack process (#637)
+0052ab2 Add Shopify (#636)
+04f5ab5 Add Axelerant (#635)
+35909b6 Add EF Education First (#633)
+64d1058 add CoverHound, Inc. (#630)
+9d32c2a Include Healthify (#628)
+c8940b4 Add Segment (#646)
+997ba51 Remove DigitalOcean
+0088ac7 Add Sourcegraph (#626)
+e223932 Docs: Clarify language (#625)
+462906b Add Integral. to README (#624)
+2a6bc49 Add FRIDAY (#620)
+ff25bf4 Add Reflektive (#622)
+84156ea Gitlab filters with trivia and puzzles
+62c1d27 Added Cogent Labs (AI company in Tokyo, Japan) (#618)
+7f760b8 Added Leverton to the list (#611)
+e2c9519 Remove name of Canon Labs (#598)
+903a7d7 Added Touché to the list (#617)
+4d743d7 Add Clippings to the list (#612)
+c8fc830 Add DealTap to the list (#610)
+745e90e Adds wemake.services to the list (#609)
+b030453 Add Sharoo (#608)
+708280e Add Weploy to the list (#606)
+a06e3fa Adding Innoplexus (#604)
+817153c Add Waymark (#601)
+48f732d Add Nyon (#588)
+4e65d3b Add Jiminny (#589)
+736de05 Add Simple (#590)
+53945e0 add Addstones (#591)
+cce935c Add Olist (#593)
+1a277ec add meetrics (#594)
+3b1584c Add Pivotal (#595)
+b4eaadb Add Bits of Love (#586)
+2dde77a Add Statflo.com (#585)
+47d866d Add Chesapeake Technology (#584)
+b367875 Added Intelipost - SP/BR (#582)
+b7c5969 Update README.md (#578)
+3fd2354 Update README.md (#576)
+4776952 Add Nitro (#575)
+f634a9d Fix TravisCI node version (#579)
+69eec4a Add Red Badger (#577)
+32de3b2 Added iConstituent (#574)
+00d22ad Adds Nexcess.net (#573)
+b6c9f44 Update (#571)
+cda34fa Add Buffer (#570)
+e32b02d Add woumedia (#569)
+a1778b5 Add Datalogue (#568)
+4c831c4 Add eShares, Inc (#558)
+8d44cec Add Loom (#567)
+9b28aec Add Weebly (#554)
+22698e0 Add Me & Company (#566)
+c75da64 Add Vingle (#565)
+8f6b81b add OCTO Technology (#563)
+df3d62b Update README.md (#562)
+ffc55ce add object partners, inc. (#561)
+50f2405 Adding Realync Corp. (#560)
+d0c173e Add Enhancv (#559)
+7df44d4 Add Final to List (#557)
+2761606 Torii (#556)
+3f49cd3 Fix link for Ellucian (#553)
+84cbc51 Add Nearsoft Inc (#552)
+b54b28c Add Kentik (#551)
+2fb1db4 Add Logic Soft (#550)
+58d1e45 Added Paybase (#549)
+219c6a6 Added VSX Vogel Software GmbH, Dresden/Germany (#548)
+a09437e Added Simplicity Corporation (#547)
+edd9c04 Adding Enigma (#545)
+dd24fc5 fixed links (#543)
+b08d5db Update README.md (#542)
+54a9dbe Add Runtastic (#539)
+71cc35d Added Cartegraph (#540)
+7efdee3 Added Chain.Reaction and Lab.Coop (#538)
+609164a Added description for Mutual Mobile (#532)
+f263383 adds vivareal to hiring without whiteboards (#537)
+d669297 Add DigitalOcean (#536)
+34ecf4c Added Playlyfe (#535)
+eb3fb61 Added Liberty Mutual Insurance Group (#534)
+92691ff Add legalstart.fr (#533)
+b3c888a Update README.md (#530)
+3338b8b Added pointmanhq to the list (#528)
+1fc9a48 Added Mimir, a YC backed startup in Indianapolis (#527)
+ee37caf add Avarteq GmbH (#525)
+a093db8 fix links in PULL_REQUEST_TEMPLATE (#524)
+17ffbfc add Orion Labs (#523)
+3941943 Update README.md (#520)
+48d4b74 Add Symphony Commerce (#522)
+1a4c41c Add CACI Rome (#517)
+92fc1b8 Added LateRooms.com (#521)
+67d2424 Rewrote a few sentences in README
+f4ce544 Add Ragnarson (#514)
+77c76bb Add DevMynd (#515)
+20bf78e Added remote option to E-accent listing (#513)
+8d179a8 Add mfind (#511) (#512)
+689120d Patch 1 (#511)
+a27e99a Add Raising IT (#510)
+8a387cf Add Ginetta. (#508)
+6475133 Add MobileCashout (#509)
+be66868 Adding Ataccama company to the list. (#507)
+20fa407 Add Equal Experts to README (#506)
+35fd29a Add Human API (#505)
+a1f807b Add Gamevy to Readme (#504)
+67d47e7 Join Pragmateam company name instead of  Pragma Team (#503)
+cd8d0a6 Fixed company name :) (#502)
+4181ff5 Add Frontside to README list (#501)
+ec9faaa Update Link for Yhat (#500)
+96b8ae2 Added SocialCops (#499)
+de37165 Added Belka (#496)
+99946aa Add Eaze (#498)
+293d5f3 Add B2W Digital (#497)
+c29f5fa Added Ithaka (#495)
+5e58e2b Added Acko (#493)
+d350e8e Add Minute Media, Tel-Aviv, Israel (#492)
+fd07ace Kinnek (#489)
+dddcd41 Added miDrive (#488)
+9e1a513 Add hww-link linter (#491)
+cdcf655 do it for clara (#490)
+a86f36a Added Pariveda Solutions (#461)
+029e1ad add Zenefits UI (#474)
+3f701e6 Kahoot! job listing. (#484)
+0b49860 Added Native Instruments (#485)
+fd800ee Added Onfido (#486)
+eee4f15 Re-add drchrono with fixed description (#482)
+8f5aee6 Add Objective, Inc. (#478)
+9783036 Make test script work on windows (#481)
+7e8d988 add grok interactive (#480)
+490d667 Add Cake Solutions (#479)
+48ca5b2 Adding O'Reilly Media to list (#477)
+3b6282b Add (#476)
+d31559d Updates Endava with full list of locations (#475)
+e147fc1 Add Séntisis (#473)
+4848528 Update README.md
+c4d77dd Add Artsy.net (#472)
+6fca906 Added Optoro (#471)
+efd07be Adds Caravelo :airplane: (#470)
+617d7c6 Adds Noa (#469)
+78cea92 Update opening paragraph, split recommendations (#468)
+5cc1767 Added NewVoiceMedia (#464)
+75c557b Add Sensor Tower (#466)
+c68f793 Add Blue Bottle Coffee (#463)
+96785ae Add Deskbookers (#462)
+4546ee7 Remove Pivotal (#451)
+598ef8b Add Tesco (#448)
+0accdb7 add fauna (#460)
+9744d51 Add milch & zucker (#454)
+0d440d6 Add STYLABS (#450)
+e802f32 Adds 18F (#457)
+c0b084a Add ButterCMS (#459)
+cdd3427 Add Bolste (#458)
+3d7c32c Add Keymetrics (#456)
+f38b857 Add Blackdot Solutions (#455)
+ff8c6f2 Add EURA NOVA (#453)
+940ec41 Add Ableton (#449)
+005cb0a Add FundApps (#447)
+e3a906a Add Korbit (#446)
+fa8f71c Added Dollar Shave Club (#445)
+26fd753 Minor correction to theScore (#444)
+db10d95 Adds Accenture (#443)
+e9620cf Add 500friends to the list of companys (#441)
+4f07ee0 Add theScore (#440)
+240e1f5 Added Nanobox (#438)
+fa4203f Adds Razorpay (#439)
+38018d7 Removed Gusto (#442)
+6fe3225 Add Capgemini UK Java Team (#437)
+d7923ab Add Novoda to the list (#421)
+b9c9b29 Add PACE Telematics (#425)
+80566a3 Add Simply Business (#426)
+408baee Add Kiwi.com (#436)
+c4344a5 Add Datascope to README (#435)
+b6fecde Add 3D Hubs (#434)
+18eb2e7 Update README.md (#433)
+e4e89be Add eMarketer (#432)
+c2a20b6 Add BoomTown (#431)
+06ea98e Add Home Chef to the README (#430)
+705973d Added ASOS (#429)
+d3a2509 Add all about apps GmbH (#427)
+f6cb7cd Add Jamit Labs (#424)
+8ec2a7e Added Trivago (#423)
+331a87d Adds Voltra Co. (#422)
+4542f7f Add SimpliField (#420)
+b91eae3 Add ClickMagick (#419)
+c00e144 Add Ajira (#418)
+71293f4 Add link to keywords view (#417)
+17ddeb8 Update Netflix description
+8e8c1ff Added TrademarkVision (#416)
+cf995c6 Update Ento.com typo (#415)
+4c4883d Add Ento.com to the list (#413)
+bbfc1fe Automate everything (#414)
+f643bd3 Add Ericsson, Dublin, IP TV Team (#412)
+a15b7d3 Remove Airbnb (#403)
+de5ad75 Move format into contributing guidelines (#411)
+ddc79a6 Update README.md (#409)
+58073c6 Updated lint rules (#408)
+2e6edb7 Add SVTi (#407)
+737be8f Add Crownstone, Rotterdam, the Netherlands (#406)
+26c73b6 Add bitExpert (#405)
+b2b39b2 Fix good example
+2d4b379 Added Pillar Technology. (#373)
+881c78c Add criteria for acceptance (#401)
+9f4b64f Add Gruntwork (#399)
+d1e1400 Update CODE_OF_CONDUCT.md
+859a47e remove Heap from list (#204)
+f8deec8 Add CoC and contributor guidelines (#400)
+59e4a78 Add Rex Software (#397)
+125c196 Add Inmar (#383)
+e64324b Update PULL_REQUEST_TEMPLATE.md
+063a05b Add cookpad (#398)
+0dcf177 Add linting (#396)
+1124362 Update PR template
+56db8f8 add iTrellis (#392)
+b2e8564 Add Happypie (#389)
+99809e5 Add Mirumee (#388)
+9780bce Added Rockode (#387)
+db10076 Yhat (#386)
+ec27ba9 add brainstation-23 (#385)
+7df2d70 Add: Platform45 (#382)
+09dc5ee add Bleacher Report  (#381)
+3697ad8 Add Babylon Health iOS Team 💜 (#380)
+acb443a added AutoScout24 that located in Munich Germany (#379)
+74dfad5 Add GTM Sportswear (#378)
+7717333 Added Parabol (#376)
+f403436 Add Popular Pays (#375)
+67fd410 Add Meltwater Engineering department (#374)
+f64489e Update format (#391)
+fe03bf3 Adding Valassis Digital (#372)
+0ae4530 Update format, add PR template (#390)
+8ce2b44 Added RedCarpet (YC S'15, Google India Launchpad) (#371)
+8f880a7 Add Wheely (#370)
+c71294a Added Locastic (#369)
+c0e09bc Interviewed with them and they do CS questions (#368)
+1f14d2e Add Weedmaps.com (#364)
+2b38e1f Add InQuicker (#367)
+6ed861a Adjust Telus Digital Location (#366)
+4c51933 Add Mode (#365)
+d3a38cd Add Analytical Flavor Systems
+e9800c1 add-acumen (#362)
+dbdc771 Added Concordia Publishing House to the list (#361)
+22ac745 removes fogcreek due to technical puzzle (#360)
+954f18f Removing DockYard (#359)
+038e8bb Add Made Tech (#358)
+dd61941 add Thinslices from Iasi, Romania (#357)
+59130ad Update README.md (#356)
+4a77d8b Add Palatinate Tech (#355)
+3e3fb90 Added Subvertical (VerticalChange) (#354)
+a16987f Add Superplayer (#353)
+ce9ab6a Added Magnetis (#352)
+b6ebc89 Added busuu (#350)
+db3f7be Fix typo in VTEX (#351)
+f617ba8 Add DoorDash! (#349)
+75914e1 Added Kongregate (#348)
+255a41e Added Digitally Imported to README.md (#347)
+a92e565 Add Rentify (#346)
+2f1a33c Add RentoMojo (#345)
+a3ee9d8 Add Pager to the readme (#344)
+1bee1e2 Ask anyone that went through the process. This is not your whiteboard style interview. (#339)
+a77a915 Adds Culture Foundry. (#343)
+6b4289f Add Lightricks (#342)
+3efe487 Add Nubank (#341)
+95e6c02 Update README.md (#340)
+044900e Add Foundry Interactive to company listings (#338)
+1727737 Adds Quintype to the list of companies (#337)
+7d8dd31 Adding Feather (#336)
+07b30bd Update README.md
+6c4ea39 Add Hireology (#334)
+0ce0c98 Add Airbrake (#335)
+96094c9 Adds Nutshell with links to jobs & exercise pages (#332)
+31b5d1d Add YLD (#331)
+064bf80 Add thoughtbot (#330)
+ef34930 Added Bubblin Superbooks. (#329)
+328927f added restaurantops (#328)
+5829967 add Launch Academy (#326)
+7650660 Added entry for Novus partners (www.novus.com) (#325)
+6f77107 Add HE:labs (#324)
+dcda4e2 Adding Drivy (#323)
+5268663 Update README.md (#322)
+a490ddf Update README.md (#321)
+1af5cd3 Update README.md (#320)
+6d3cbee Update README.md (#319)
+7827076 Added aTech Media (#318)
+a21fd74 Adds Icalia Labs (#317)
+a5350c0 Add SC5 Online (#316)
+6b8c055 Add GatherContent (#315)
+76494a5 Add ESPI (#314)
+57ac2a5 Added Freeletics GmbH (#313)
+1b15e75 Add Nord Software (#312)
+391a347 Add Kayako (#311)
+6255239 Added elmah.io (#310)
+ae95488 add EPG GmbH (#309)
+9ff73e3 Adding Hill Holliday (#308)
+6968d8b Update README.md (#307)
+70b0709 Added E-accent (#306)
+d8ecd4b Add allegro.pl (#305)
+b2e961d Added Datlinq to the list (#302)
+b1eb5d5 Add mention.com (#301)
+2656025 Add WyeWorks (#300)
+4b70c2b Add Graffino (#299)
+7b68138 Add Contentful to the list (#298)
+c144eb3 Added Jitbit Software to the list (#297)
+957f784 Add Exoscale (#296)
+3f4c9b3 Add LoanZen (#295)
+1a4d925 Add LinkResearchTools (#293)
+33502e4 Added Findy in Japan (#292)
+7cb2326 Adding Showmax, SVoD platform (#291)
+4586fbd add Pento (#290)
+34c6ab9 Adding WeAreHive (#289)
+1d392d7 adding monzo (#288)
+f43b918 Add ContentSquare (#287)
+2402df5 Add YunoJuno to the list (#286)
+a1f86a8 Add tails.com to list of good interviewers (#285)
+0bdd03e Update README.md (#284)
+5babb9d Added Axiacore (#267)
+ed879c4 adding monzo
+f56f271 Update README.md
+3139d7e add mavenlink (#283)
+6c0c2a0 Update README.md (#282)
+7504507 Adds Timbuktu (#281)
+f277c11 Update README.md
+0568969 Update README.md
+d1a3f55 Update README.md
+2233475 Add Litmus (#280)
+b67fa8b Added F(x) (#279)
+670e5ed Fix webantic link (#278)
+aace720 Add WorldGaming to the list. (#277)
+6a6d7e6 Adds urbanmassage.com (#276)
+d507b1f Add Trōv (#275)
+9597796 Add ShuttleCloud (#274)
+e71ebc6 Updating to add Salesforce.org T&P (#262)
+559af7b Added Journalism++ (#223)
+9aa49b3 Add VTEX (#273)
+95e14e3 Added AirBnB, AeroFS, MixMax and Polar (#271)
+7aad753 Add BrightBytes (#272)
+0267286 Add Breather (#270)
+00dd925 Add DeSmart (#267) (#269)
+5bdebf8 Add Bakken & Bæck (#268)
+0e744dd Add Intercom (#266)
+9e77b59 Add EasyTaxi Company (#265)
+7af5555 Added a company named Yodas (#264)
+dc72cb3 Added ByBox (#263)
+6e1849b GitPrime committing directly on master of GP fork (#261)
+f1e39e9 Added Sweden based EA-studio Uprise (#260)
+55daa5e adds FINE (#259)
+7c95068 Add Canon Innovation Lab (#258)
+e74c034 Added country to Bemind Interactive (#257)
+a751b92 added Lydia (#256)
+73c8228 Adds Endava (#255)
+adde13a Add Interset (#254)
+db8f29e Update README.md (#253)
+7c90b99 Add Revlv (#231)
+f16c62f Link to airtable
+9d2031d Add Nozbe (#252)
+e235f3d enki (#251)
+e63d3e0 Update description
+89500d1 Add KindredGroup (#250)
+b3aca0e Add PeerStreet (#249)
+f89a8b2 Added City of Boston Analytics Team (#242)
+f300f8a Add Sogilis (#243)
+e47219a Add Landing.jobs (#244)
+892e857 Adds store2be (#245)
+647f439 added mango-solutions (#246)
+43965e2 Add AlphaSights (#247)
+7ed747a Added ThoughtWorks to list (#248)
+6da5394 Added Contactlab (#241)
+6053216 Removing Canva (#240)
+edc4fbe Fixed checkout-51 link (#239)
+28ed92f Coorp Academy (Paris, France) (#238)
+911deaa Added DICE (#237)
+4e1b8a8 Add Clockwork Consulting (Copenhagen, DK) (#236)
+0973e1a Add Food52 (#235)
+4bebe71 add webantic (#234)
+c3435b6 Add The Nerdery (#233)
+c807478 Add Outlandish, London (#232)
+7428694 add locaweb (#230)
+a6d9d19 Add Crowdstrike (#229)
+e55f2c0 Added Ontame.io (#226)
+62e8f68 Update README.md (#228)
+6f92130 Add numberly, 1000mercis group (#227)
+b631984 Update README.md (#225)
+61d4845 Add RubyGarage (#224)
+611b525 Add Setapp Sp. z o.o. (#222)
+302fde3 Add Rizk to README.md (#221)
+071d6b6 Added Wildbit. (#220)
+3c09c18 Fix typo (#219)
+269d26f chatgrape.com (#218)
+95a7879 Added FATMAP (#216)
+c19a89c Add Wimdu (#215)
+b584bd7 Add Causeway Technologies (#214)
+fdffb36 Add Outlook (at Microsoft) (#212)
+69ec103 Adding Srijan technologies (#211)
+4031312 Add Updater (#210)
+83bf4d8 Add Librato (#209)
+f8435be Add Affinity (#208)
+4642eb4 Update README.md (#207)
+7a9e8f3 Adding uBiome (#206)
+af6c59a Accredible added (#205)
+56c9462 Add X-Team (#203)
+9190264 feat(README): Add mutual of Omaha (#202)
+71b15bc Add Detroit Labs
+3cb96f7 Merge pull request #200 from nb/automattic
+9270584 Add Automattic
+e9657c5 adds Omada Health (#199)
+43a2aea Add Bustle (#198)
+9f56e02 Add PayByPhone (#197)
+20298d6 Add Cognitect, Inc. (#196)
+57df54d Add Clubhouse (#190)
+aa25745 Merge pull request #195 from chancancode/patch-3
+e60028c Add Tilde
+24db434 Merge pull request #193 from kingsleym/patch-1
+cd65703 Merge pull request #194 from ahmadnassri/patch-1
+17a30be Update README.md
+5ad4ff0 Update README.md
+c72c14c Update README.md (#192)
+ef41a43 Add Graphistry (#191)
+9ca6164 Adding UserTesting (#189)
+cd6bb17 Add SpronQ to the list (#188)
+10b5fb3 Link out to Spreedly's work sample philosophy (#187)
+540ae11 Add New Relic (#186)
+b717a30 Adding Social Tables (#185)
+7bb7a24 Add npm, Inc (#184)
+2a87dcf Add Betterment (#183)
+89ac4be Add Opbeat. (#182)
+099105e Add Pagar.me (#180)
+01e228c Add Pygmalios (#179)
+066d9fb add Casetext (#178)
+9dce922 Add CircleCI (#177)
+7df8419 added sixt4.io (#176)
+d991ff4 Added Avocarrot (#175)
+719c319 add Def Method (#174)
+28f45b4 Add Pivotal Labs to list (#173)
+a663082 add Avant (#172)
+1c862f7 Adding Civis Analytics (#171)
+85da3d0 Add Alluvium to README (#170)
+c363299 Added Bemind Interactive (#169)
+21d2ff0 Add Unbounce
+42873a8 Added PremiumBeat (Montreal) (#167)
+9420a81 Added Indellient! (#166)
+e96f519 add Jamasoftware (#165)
+f8b0db4 Added Netlify ✌️ (#164)
+74a8ebb Add Big Nerd Ranch (#163)
+4fd501c Add Rayfeed (#162)
+8a7d05a Add Venminder, Inc. (#161)
+b61688f Add fournova (#160)
+afdcbab adding Lanetix (#158)
+60f6caf Add Ostmodern
+cda021d update for brightwheel (#156)
+07a3a3c Added Toucan Toco (#154)
+00f672c Add Unearth to the list (#153)
+5e0260c add mapbox (#152)
+4e8b575 Update README.md (#151)
+a56854b Trim down comically large tweet image (#150)
+c1a0d6f Added Tanooki Labs (#149)
+0a8de1b Added Algolia (#148)
+28630f9 Add MokaHR (#147)
+60f53ea Add dubizzle (#146)
+f275b44 Added Bendyworks (#145)
+4c4f975 Added Webflow (#144)
+c277532 Add Koddi
+5014c8f Update README.md (#142)
+6affdb6 Adding Checkout 51 (#141)
+1696596 Added Trustpilot (#140)
+f51831d Update README.md (#139)
+27313dc Add Wealthsimple (#138)
+7a4298d Update README.md (#137)
+ad62ac7 Merge pull request #131 from bnb/master
+65c32ed Merge pull request #136 from rinukkusu/patch-1
+305a5fe Update with Whiteboard alternative
+de23455 Add Lyoness Austria
+5be47ba Add FreeAgent (#135)
+9a0a3b6 Adding Sahaj Software Solutions
+06a5e5f Fixed embarrassing typo. (#134)
+d90bce3 Adding inKind Capital to the list (#133)
+0987137 ✅ Add NodeSource
+923257b Add ReSpark (#130)
+94fdb43 Add Cloudistics (#129)
+65405a3 Update README.md
+f532762 Added devartis (#128)
+b3dffc1 Added Kabisa (#127)
+668dd13 Added Mesosphere (#126)
+3066692 Added Funda to list (#125)
+d4a4395 Add SysGarage to the list (#124)
+e34c544 Adding Square (#123)
+8156e42 add Reaktor (#122)
+88cac3b Added Varsity Tutors (#121)
+dbdc825 Update README.md
+a18a4da Add Mutually Human Software (#118)
+8ec3651 Add Impraise
+b8a6af4 Add PromptWorks in Philadelphia (#116)
+26abab1 Update README.md (#115)
+8e387f1 Add Hashrocket (#114)
+479b70e Add SweetIQ (#113)
+43e3584 Add Rakuten (#112)
+99c1f3d Update README.md
+b90a08f Add Rapyuta Robotics (#79)
+a55a44c Add Echobind (#110)
+42d8987 Added Yoyo Wallet (#109)
+37a1c88 Add Journal Tech
+59dbb55 Capitalize "the" in "The Outline" (#107)
+d275013 Added Dembach Goo Informatik GmbH & Co. KG (DG-i) (#100)
+b0c9e4e Adds blogfoster (#106)
+7a94859 Add Simpli.fi (#105)
+b737061 Adds Deliveroo (#104)
+7ad54ad Added Untappd, Inc. (#103)
+6768665 Add Bocoup (#102)
+843f370 Add MakeTime to the list (#101)
+d172fb9 Update README.md
+90f9c9f Added Outbrain (#99)
+1449290 Add Valuemotive to the list (#98)
+6e124ca Add B12 (#96)
+b1ebc11 Added StreetTeam (#97)
+3026104 Added BAE Systems AI to jobs list (#95)
+0a67ccf Add Articulate to the list! (#94)
+f36277b Add Dark Sky to the list! (#93)
+69c4f83 Added a Fintech in Japan called Moneytree.jp (#92)
+e887a60 Add Mercatus (#91)
+6a8c53c Add Quiet Light Communications (#90)
+400a3e1 Add Happy Team (#89)
+0ccc38f Add ASI Data Science (#87)
+c250c2a Add Spreedly (#86)
+716ccb4 Add Adthena Ltd to the list (#85)
+5a474c6 Update README.md (#88)
+4faf075 Adds Chargify (#84)
+ce00edf Update README.md
+8bcbbd2 Add 8th Light (#83)
+cf249ba Add Formidable Labs (#82)
+f2600a3 Add the Outline (#81)
+fe3b6fd Add PassFort (#80)
+2e17a5d Adding Nimbl3 - Bangkok, Thailand (#78)
+c32caa3 Add Pluralsight (#77)
+ca8e500 Add Ellucian (#76)
+6a5bd7a Added Fooji (#75)
+06d336d Add CurrencyTransfer.com (#74)
+fc3d220 Add grandcentrix GmbH (#73)
+f20f3f7 Adding Bluesoft to the list (#72)
+fa1ea16 Add City of Philadelphia (#71)
+4af540b Added Backbase (#70)
+8175f73 Update README.md (#68)
+d357af6 adds Credit Kudos (#67)
+9c0b102 Add Lyft (#66)
+af3e551 Added Aiwip (#65)
+732a867 Added Applied (#64)
+230d2a4 adding nomoko (#63)
+7ff7683 Add gitlab (#69)
+85d43c7 Add Arachnys (#62)
+311b66e Update README.md (#61)
+8363e18 A human job application approach by Nedap (#58)
+63fa528 Add Agoda, Badoo, and Canva (#60)
+f2c4bb2 Added 500Tech (#59)
+de3bbb8 Added Mutual Mobile (#56)
+f97a7df Add Pusher (#57)
+d2455f1 Add Pragma Team (#55)
+2e08eef Add The Book of Everyone (#54)
+242df7a Add AdWyze (#53)
+2c6cdd6 Update README.md (#51)
+e3a3e30 Add ImmobilienScout24 (#47)
+491b3ca Added Bouvet (#48)
+c7237c8 Update README.md (#50)
+2b9e91a Add Auth0 (#52)
+cffc06c add Founders (#46)
+2ff72ba Add: niteoweb (#45)
+0824004 Mergesort
+1c02219 Correct spelling of Detroit (#44)
+0545acb Add Thread
+b607c0a Update README.md (#43)
+6792d22 Add Elements Interactive (#42)
+cadc4c9 Add uSwitch (#41)
+f9ac6ef Add Poki
+c1ab3b2 Add JustWatch (#39)
+a4f2f21 Adds GoCardless (#36)
+2418805 adds io.co.za (#35)
+3844fe4 Add DockYard (#37)
+29c54fb Add NoRedInk (#33)
+ceb3e2d Update DataCentred (#32)
+4bf10f5 Update README.md (#30)
+acaf855 Add HelloFresh (#31)
+8dc9e58 Update README.md
+5c1b3f2 Update README.md (#29)
+714e333 Add Fog Creek
+c956302 Add basecamp
+5b5459a Adding Twistlock (#28)
+31cb5b7 Add blendle
+362dcb0 Added HoxHunt (#26)
+43c7391 Added Visma e-conomic (#27)
+54f59e8 Update README.md (#25)
+6a60636 Add Softwear (#22)
+e139c9d Update README.md (#23)
+03185e3 add Instacart (#21)
+af42076 Add Small Improvements (Berlin, Germany) (#19)
+5713522 Add a bit of guidance
+5ca620f Add Drawbotics (#18)
+947e945 Update README.md (#17)
+27108f4 Add DroneDeploy (#16)
+8fcbb74 Add Heap (#15)
+9a14814 Add drchrono (#14)
+a0176b3 Add AgileMD (#10)
+40afa8c Shopify added (#13)
+7b48949 brightwheel (#12)
+59563f7 Add Etix Everywhere (#9)
+864bd60 Add Heptio (#11)
+626f530 Update format, add locations to previous listings
+9935550 Update README.md (#8)
+0628759 Add Popstand Inc as a company that doesn't use stupid white boards for coding interviews (#7)
+abee714 Merge pull request #6 from kairichard/patch-2
+85a234e Add Paessler AG
+de8aaa8 Merge pull request #5 from trevorcreech/patch-1
+62b12a5 Opendoor
+4ea3d4c Merge pull request #4 from azranel/master
+70319ca Add Netguru
+6a1c1fc Merge pull request #3 from rohitjha/master
+2c8c305 Added GoDaddy
+d0cbf2c Merge pull request #2 from caseyjenks/fitbot
+89d4001 Added readme for Fitbot
+19ca063 Merge pull request #1 from tommoor/patch-1
+0057e86 No to whiteboards 🙅
+0124e2d Update format
+721a703 Update
+e719e17 Initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/hiring-without-whiteboards$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://gitlab.com/gitlab-tests/sample-project.git
+Cloning into 'sample-project'...
+remote: Enumerating objects: 12, done.
+remote: Total 12 (delta 0), reused 0 (delta 0), pack-reused 12
+Receiving objects: 100% (12/12), 30.73 KiB | 30.73 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd sample-project/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/sample-project$ ll
+total 52
+drwxrwxr-x  3 preet preet  4096 Nov  7 22:37 ./
+drwxrwxr-x 13 preet preet  4096 Nov  7 22:37 ../
+-rw-rw-r--  1 preet preet 30838 Nov  7 22:37 fork-sample-project.png
+drwxrwxr-x  8 preet preet  4096 Nov  7 22:37 .git/
+-rw-rw-r--  1 preet preet    34 Nov  7 22:37 hello_world.md
+-rw-rw-r--  1 preet preet   541 Nov  7 22:37 README.md
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/sample-project$ git log
+commit 90c439634077a85bcf42d38c2c79cd94664a94ad (HEAD -> master, origin/master, origin/HEAD)
+Author: Marcia Ramos <marcia@gitlab.com>
+Date:   Wed Apr 29 11:32:58 2020 +0000
+
+    Update README.md
+
+commit 3ab915edfd7c6dcd8d89c78cc13133ff1df41472
+Author: Marcia Ramos <marcia@gitlab.com>
+Date:   Wed Apr 29 11:27:23 2020 +0000
+
+    Add screenshot
+
+commit 1818c9036e0ad39cd8ff764c2a48643dac6e114e
+Author: Marcia Ramos <marcia@gitlab.com>
+Date:   Wed Apr 29 11:24:21 2020 +0000
+
+    Add new file
+
+commit 46081376f47e386db96af3a58aa704a2279c4375
+Author: Marcia Ramos <marcia@gitlab.com>
+Date:   Wed Apr 29 11:23:42 2020 +0000
+
+    Initial commit
