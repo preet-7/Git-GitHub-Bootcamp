@@ -1,0 +1,193 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 420
+drwxrwxr-x 15 preet preet  4096 Nov  9 00:17 ./
+drwxr-x--- 35 preet preet  4096 Nov  8 22:21 ../
+drwxrwxr-x  6 preet preet  4096 Nov  7 13:56 2048/
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+drwxrwxr-x  3 preet preet  4096 Nov  8 22:14 cloning/
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 58322 Nov  6 23:05 commands6.txt
+-rw-rw-r--  1 preet preet 78903 Nov  7 23:27 commands7.txt
+-rw-rw-r--  1 preet preet 28600 Nov  9 00:17 commands8.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  4 preet preet  4096 Nov  7 22:33 hiring-without-whiteboards/
+drwxrwxr-x  3 preet preet  4096 Nov  8 18:35 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  8 22:10 pushing/
+drwxrwxr-x  3 preet preet  4096 Nov  7 22:37 sample-project/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:49 yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir favorites
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd favorites/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/favorites/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git remote add origin https://github.com/preet-7/gh-fav-exercise.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch -M main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ touch fav.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git add fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git commit -m "add fav file"
+[main (root-commit) 4ff9e22] add fav file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fav.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch
+* main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git push origin main
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 209 bytes | 104.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/gh-fav-exercise.git
+ * [new branch]      main -> main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch foods
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch movies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git switch foods 
+Switched to branch 'foods'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ vi fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git add fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git commit -m "add fruits in fav"
+[foods 8229026] add fruits in fav
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git switch movies 
+Switched to branch 'movies'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ vi fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git add fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git commit -m "add movies in fav"
+[movies 0dd8a94] add movies in fav
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git push origin foods 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 259 bytes | 129.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'foods' on GitHub by visiting:
+remote:      https://github.com/preet-7/gh-fav-exercise/pull/new/foods
+remote: 
+To https://github.com/preet-7/gh-fav-exercise.git
+ * [new branch]      foods -> foods
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git push origin movies 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 267 bytes | 133.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'movies' on GitHub by visiting:
+remote:      https://github.com/preet-7/gh-fav-exercise/pull/new/movies
+remote: 
+To https://github.com/preet-7/gh-fav-exercise.git
+ * [new branch]      movies -> movies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git switch main 
+Switched to branch 'main'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git merge foods 
+Updating 4ff9e22..8229026
+Fast-forward
+ fav.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git merge movies
+Auto-merging fav.txt
+CONFLICT (content): Merge conflict in fav.txt
+Automatic merge failed; fix conflicts and then commit the result.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ vi fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git sta
+git: 'sta' is not a git command. See 'git --help'.
+
+The most similar commands are
+	status
+	stage
+	stash
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git status 
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   fav.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git add fav.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git commit -m "merge movies to main"
+[main 8bb11f0] merge movies to main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git log
+commit 8bb11f01aa08c9d7e9f8018b489a4b5e2eb42a83 (HEAD -> main)
+Merge: 8229026 0dd8a94
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 9 23:58:58 2023 +0530
+
+    merge movies to main
+
+commit 0dd8a944a9e853e6b5b5e50c227554f3f123a9ea (origin/movies, movies)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 9 23:55:43 2023 +0530
+
+    add movies in fav
+
+commit 8229026b96c82d1cd8009f629f47a5bdca9d1fd1 (origin/foods, foods)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 9 23:54:45 2023 +0530
+
+    add fruits in fav
+
+commit 4ff9e22d5198b6858365a2e2057840c13265bb83 (origin/main)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Thu Nov 9 23:51:58 2023 +0530
+
+    add fav file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git push origin main
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Writing objects: 100% (3/3), 315 bytes | 157.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/gh-fav-exercise.git
+   4ff9e22..8bb11f0  main -> main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ git branch -r
+  origin/foods
+  origin/main
+  origin/movies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/favorites$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://github.com/preet-7/animals.git
+Cloning into 'animals'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd animals/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/animals$ git branch
+* main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/animals$ git remote -v
+origin	https://github.com/preet-7/animals.git (fetch)
+origin	https://github.com/preet-7/animals.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/animals$ git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/animals$ 
+

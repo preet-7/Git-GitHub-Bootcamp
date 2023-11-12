@@ -1,0 +1,574 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd 2048
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ git remote -v
+origin	https://github.com/gabrielecirulli/2048.git (fetch)
+origin	https://github.com/gabrielecirulli/2048.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/2048$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd s
+sample-project/ shopping/       stash-diary/    stashing/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd sample-project/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/sample-project$ git remote -v
+origin	https://gitlab.com/gitlab-tests/sample-project.git (fetch)
+origin	https://gitlab.com/gitlab-tests/sample-project.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/sample-project$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 384
+drwxrwxr-x 13 preet preet  4096 Nov  7 23:27 ./
+drwxr-x--- 35 preet preet  4096 Nov  7 22:37 ../
+drwxrwxr-x  6 preet preet  4096 Nov  7 13:56 2048/
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 58322 Nov  6 23:05 commands6.txt
+-rw-rw-r--  1 preet preet 78903 Nov  7 23:27 commands7.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  4 preet preet  4096 Nov  7 22:33 hiring-without-whiteboards/
+drwxrwxr-x  3 preet preet  4096 Nov  6 15:51 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  7 22:37 sample-project/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:49 yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd MyFirstNovel/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 28
+drwxrwxr-x  3 preet preet 4096 Nov  6 15:51 ./
+drwxrwxr-x 13 preet preet 4096 Nov  7 23:27 ../
+-rw-rw-r--  1 preet preet 3307 Nov  6 15:51 chapter1.txt
+-rw-rw-r--  1 preet preet   50 Nov  6 15:51 chapter2.txt
+-rw-rw-r--  1 preet preet 2766 Nov  6 15:50 characters.txt
+drwxrwxr-x  8 preet preet 4096 Nov  6 15:51 .git/
+-rw-rw-r--  1 preet preet  507 Nov  6 15:51 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git remote -v
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git remote add origin https://github.com/preet-7/github-demo-novel.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git remote -v
+origin	https://github.com/preet-7/github-demo-novel.git (fetch)
+origin	https://github.com/preet-7/github-demo-novel.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/preet-7/github-demo-novel.git/'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (43/43), 12.32 MiB | 357.00 KiB/s, done.
+Total 43 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/preet-7/github-demo-novel.git
+ * [new branch]      master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git branch
+* chapter2-reado
+  master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin chapter2-reado 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 160.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'chapter2-reado' on GitHub by visiting:
+remote:      https://github.com/preet-7/github-demo-novel/pull/new/chapter2-reado
+remote: 
+To https://github.com/preet-7/github-demo-novel.git
+ * [new branch]      chapter2-reado -> chapter2-reado
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch -c empty
+Switched to a new branch 'empty'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 28
+drwxrwxr-x  3 preet preet 4096 Nov  6 15:51 ./
+drwxrwxr-x 13 preet preet 4096 Nov  7 23:27 ../
+-rw-rw-r--  1 preet preet 3307 Nov  6 15:51 chapter1.txt
+-rw-rw-r--  1 preet preet   50 Nov  6 15:51 chapter2.txt
+-rw-rw-r--  1 preet preet 2766 Nov  6 15:50 characters.txt
+drwxrwxr-x  8 preet preet 4096 Nov  8 18:12 .git/
+-rw-rw-r--  1 preet preet  507 Nov  6 15:51 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ rm chapter1.txt  chapter2.txt characters.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch empty
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    chapter1.txt
+	deleted:    chapter2.txt
+	deleted:    characters.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "delete most things"
+[empty c86a1ed] delete most things
+ 3 files changed, 23 deletions(-)
+ delete mode 100644 chapter1.txt
+ delete mode 100644 chapter2.txt
+ delete mode 100644 characters.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin empty 
+Username for 'https://github.com': preet
+Password for 'https://preet@github.com': 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$  git config --global credential.helper cache
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin empty 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'empty' on GitHub by visiting:
+remote:      https://github.com/preet-7/github-demo-novel/pull/new/empty
+remote: 
+To https://github.com/preet-7/github-demo-novel.git
+ * [new branch]      empty -> empty
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git config --global --unset credential.helper
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ touch chapter4.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add chapter4.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   chapter4.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "begin chapter4"
+[master 1198b2a] begin chapter4
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chapter4.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/preet-7/github-demo-novel.git/'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 266 bytes | 266.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/preet-7/github-demo-novel.git
+   52773f4..1198b2a  master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 36
+drwxrwxr-x  4 preet preet 4096 Nov  8 18:16 ./
+drwxrwxr-x 13 preet preet 4096 Nov  7 23:27 ../
+-rw-rw-r--  1 preet preet 1703 Nov  8 18:16 chapter1.txt
+-rw-rw-r--  1 preet preet 1875 Nov  8 18:16 chapter2.txt
+-rw-rw-r--  1 preet preet   22 Nov  8 18:16 chapter3.txt
+-rw-rw-r--  1 preet preet    0 Nov  8 18:16 chapter4.txt
+-rw-rw-r--  1 preet preet 2789 Nov  8 18:16 characters.txt
+drwxrwxr-x  8 preet preet 4096 Nov  8 18:17 .git/
+drwxrwxr-x  2 preet preet 4096 Nov  8 18:16 MoodBoard/
+-rw-rw-r--  1 preet preet  538 Nov  8 18:16 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ rm -r MoodBoard/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ ll
+total 32
+drwxrwxr-x  3 preet preet 4096 Nov  8 18:34 ./
+drwxrwxr-x 13 preet preet 4096 Nov  7 23:27 ../
+-rw-rw-r--  1 preet preet 1703 Nov  8 18:16 chapter1.txt
+-rw-rw-r--  1 preet preet 1875 Nov  8 18:16 chapter2.txt
+-rw-rw-r--  1 preet preet   22 Nov  8 18:16 chapter3.txt
+-rw-rw-r--  1 preet preet    0 Nov  8 18:16 chapter4.txt
+-rw-rw-r--  1 preet preet 2789 Nov  8 18:16 characters.txt
+drwxrwxr-x  8 preet preet 4096 Nov  8 18:17 .git/
+-rw-rw-r--  1 preet preet  538 Nov  8 18:16 outline.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    MoodBoard/jeremy-bishop-EwKXn5CapA4-unsplash.jpg
+	deleted:    MoodBoard/quentin-zwzeorQPepo-unsplash.jpg
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m  "remove moodboard"
+[master 4609123] remove moodboard
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 MoodBoard/jeremy-bishop-EwKXn5CapA4-unsplash.jpg
+ delete mode 100644 MoodBoard/quentin-zwzeorQPepo-unsplash.jpg
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git switch empty
+Switched to branch 'empty'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ touch summary.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git add summary.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git commit -m "add summary file"
+[empty 77c6b91] add summary file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 summary.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git log
+commit 77c6b9199991e2c733ea9d5c7353ccffa867225b (HEAD -> empty)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:35:44 2023 +0530
+
+    add summary file
+
+commit c86a1edab095eccdc540acf7d295c02ca4590d53 (origin/empty)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:13:48 2023 +0530
+
+    delete most things
+
+commit fe7da568497d03bc9bf1775538d20c94b5ef79a7 (origin/chapter2-reado, chapter2-reado)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Mon Nov 6 15:43:02 2023 +0530
+
+    start second stab at chapter2
+
+commit d8d6b2127535f88883b4602601764177f7cc456b
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:05:01 2023 +0530
+
+    finish chapter one
+
+commit f2c4fdaa86f89e116742db46ad9781a9d50f3bf0
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 23:01:28 2023 +0530
+
+    begin work on chapter one
+
+commit 0f7282a02d148d3f1ba9c59b8762a95e3f7889e3
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 1 22:55:42 2023 +0530
+
+    start work on outline and main characters
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/preet-7/github-demo-novel.git/'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 220 bytes | 220.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/preet-7/github-demo-novel.git
+   1198b2a..4609123  master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ git push origin empty
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 279.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/github-demo-novel.git
+   c86a1ed..77c6b91  empty -> empty
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/MyFirstNovel$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir pushing
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd pushing/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/pushing/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ touch candy.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add candy.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add candy file"
+[master (root-commit) 5c5d9e6] add candy file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 candy.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ touch flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add flowers file"
+[master a5d9b98] add flowers file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 flowers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git status
+On branch master
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git remote add origin https://github.com/preet-7/pushme.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git remote -v
+origin	https://github.com/preet-7/pushme.git (fetch)
+origin	https://github.com/preet-7/pushme.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 426 bytes | 426.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/pushme.git
+ * [new branch]      master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ touch books.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add books.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add books file "
+[master 6cf3b17] add books file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 books.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 252 bytes | 252.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/pushme.git
+   a5d9b98..6cf3b17  master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git switch -c cats
+Switched to a new branch 'cats'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ touch cats.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -am "add cats file" 
+On branch cats
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	cats.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add cats file" 
+[cats 110df73] add cats file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cats.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git status
+On branch cats
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git log
+commit 110df7303d789cc49a1ed1ddc34ec3b11a3d3cb8 (HEAD -> cats)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:55:40 2023 +0530
+
+    add cats file
+
+commit 6cf3b17f426ccae8b1d8a4053d94b8e117245ac8 (origin/master, master)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:53:42 2023 +0530
+
+    add books file
+
+commit a5d9b98230c31b893d87aa02ec499c5bd0890ff7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:49:39 2023 +0530
+
+    add flowers file
+
+commit 5c5d9e6e7310ef8050de2ca3e74ae33de2e758b7
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Wed Nov 8 18:49:08 2023 +0530
+
+    add candy file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push origin cats
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 226 bytes | 226.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'cats' on GitHub by visiting:
+remote:      https://github.com/preet-7/pushme/pull/new/cats
+remote: 
+To https://github.com/preet-7/pushme.git
+ * [new branch]      cats -> cats
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push origin cats:master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/pushme.git
+   6cf3b17..110df73  cats -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git branch
+* cats
+  master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git switch -c dogs
+Switched to a new branch 'dogs'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ vi dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add dogs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add dogs file"
+[dogs a2c1212] add dogs file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push
+fatal: The current branch dogs has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dogs
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push -u origin dogs
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 230 bytes | 230.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'dogs' on GitHub by visiting:
+remote:      https://github.com/preet-7/pushme/pull/new/dogs
+remote: 
+To https://github.com/preet-7/pushme.git
+ * [new branch]      dogs -> dogs
+branch 'dogs' set up to track 'origin/dogs'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ touch moredogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git add moredogs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Everything up-to-date
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git commit -m "add more dogs file"
+[dogs 1317d42] add more dogs file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 moredogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ git push
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/preet-7/pushme.git
+   a2c1212..1317d42  dogs -> dogs
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/pushing$ cd .. 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 388
+drwxrwxr-x 14 preet preet  4096 Nov  8 18:48 ./
+drwxr-x--- 35 preet preet  4096 Nov  8 22:08 ../
+drwxrwxr-x  6 preet preet  4096 Nov  7 13:56 2048/
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 58322 Nov  6 23:05 commands6.txt
+-rw-rw-r--  1 preet preet 78903 Nov  7 23:27 commands7.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  4 preet preet  4096 Nov  7 22:33 hiring-without-whiteboards/
+drwxrwxr-x  3 preet preet  4096 Nov  8 18:35 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  8 22:10 pushing/
+drwxrwxr-x  3 preet preet  4096 Nov  7 22:37 sample-project/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:49 yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir cloning
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd cloning/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning$ git clone https://github.com/preet-7/chickens-demo.git
+Cloning into 'chickens-demo'...
+warning: You appear to have cloned an empty repository.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning$ ll
+total 12
+drwxrwxr-x  3 preet preet 4096 Nov  8 22:14 ./
+drwxrwxr-x 15 preet preet 4096 Nov  8 22:14 ../
+drwxrwxr-x  3 preet preet 4096 Nov  8 22:14 chickens-demo/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning$ cd chickens-demo/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov  8 22:14 ./
+drwxrwxr-x 3 preet preet 4096 Nov  8 22:14 ../
+drwxrwxr-x 7 preet preet 4096 Nov  8 22:14 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git remote -v
+origin	https://github.com/preet-7/chickens-demo.git (fetch)
+origin	https://github.com/preet-7/chickens-demo.git (push)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ touch chickens.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ vi chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git add chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git commit -m "add my first 2 chickens"
+[main (root-commit) 4626f9b] add my first 2 chickens
+ 1 file changed, 2 insertions(+)
+ create mode 100644 chickens.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/preet-7/chickens-demo.git'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git branch
+* main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git push origin main
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/preet-7/chickens-demo.git/'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git push origin main
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 250 bytes | 250.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/chickens-demo.git
+ * [new branch]      main -> main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git branch -M master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git branch
+* master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ git push origin master
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/preet-7/chickens-demo/pull/new/master
+remote: 
+To https://github.com/preet-7/chickens-demo.git
+ * [new branch]      master -> master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/cloning/chickens-demo$ 
+
+

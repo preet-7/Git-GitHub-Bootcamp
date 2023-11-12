@@ -1,0 +1,218 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ mkdir GHPages
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd GHPages/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ touch chickens.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add chickens.txt 
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/preet/Git-Github-Bootcamp/GHPages/.git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "add empty chickens file"
+[master (root-commit) 4113f3d] add empty chickens file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chickens.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "add some chickens breed"
+[master ddcab63] add some chickens breed
+ 1 file changed, 7 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git branch -M main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git status
+On branch main
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git log
+commit ddcab639e0e3747201845b5556c4211c57d2d2ad (HEAD -> main)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 21:01:35 2023 +0530
+
+    add some chickens breed
+
+commit 4113f3de67983944ca66974657aae0a9a439c371
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 20:58:39 2023 +0530
+
+    add empty chickens file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git remote add https://github.com/preet-7/chickens.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git remote add origin https://github.com/preet-7/chickens.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git push -u origin main
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 500 bytes | 125.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/chickens.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git switch -c gh-pages
+Switched to a new branch 'gh-pages'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ ll
+total 16
+drwxrwxr-x  3 preet preet 4096 Nov 12 21:00 ./
+drwxrwxr-x 18 preet preet 4096 Nov 12 20:56 ../
+-rw-rw-r--  1 preet preet   68 Nov 12 21:00 chickens.txt
+drwxrwxr-x  8 preet preet 4096 Nov 12 23:04 .git/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ rm chickens.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ touch index.html
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "add index html file
+> ^C
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "add index html file"
+[gh-pages 9d371b0] add index html file
+ 2 files changed, 7 deletions(-)
+ delete mode 100644 chickens.txt
+ create mode 100644 index.html
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi index.html 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi index.html 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "update index html file"
+[gh-pages f13669f] update index html file
+ 1 file changed, 13 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git log
+commit f13669f21209c422a432872dff198fbbc56f6224 (HEAD -> gh-pages)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:11:45 2023 +0530
+
+    update index html file
+
+commit 9d371b0573a945f01a98bf2aceb3ddb7f0eb75fc
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:05:23 2023 +0530
+
+    add index html file
+
+commit ddcab639e0e3747201845b5556c4211c57d2d2ad (origin/main, main)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 21:01:35 2023 +0530
+
+    add some chickens breed
+
+commit 4113f3de67983944ca66974657aae0a9a439c371
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 20:58:39 2023 +0530
+
+    add empty chickens file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git push origin gh-pages 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 965 bytes | 482.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'gh-pages' on GitHub by visiting:
+remote:      https://github.com/preet-7/chickens/pull/new/gh-pages
+remote: 
+To https://github.com/preet-7/chickens.git
+ * [new branch]      gh-pages -> gh-pages
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi index.html 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi app.css
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "modifiy html files"
+[gh-pages a4dfb89] modifiy html files
+ 2 files changed, 77 insertions(+), 3 deletions(-)
+ create mode 100644 app.css
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git push origin gh-pages 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.03 KiB | 350.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/preet-7/chickens.git
+   f13669f..a4dfb89  gh-pages -> gh-pages
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git status
+On branch gh-pages
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi app.css
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git status
+On branch gh-pages
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ vi index.html 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git add index.html 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git status
+On branch gh-pages
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   index.html
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git commit -m "fix"
+[gh-pages 8d70db5] fix
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git push origin gh-pages 
+Username for 'https://github.com': preet-7
+Password for 'https://preet-7@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 170.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/preet-7/chickens.git
+   a4dfb89..8d70db5  gh-pages -> gh-pages
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ git log
+commit 8d70db5004e2d68338d8f77e6da1c2bcf7ccefff (HEAD -> gh-pages, origin/gh-pages)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:26:28 2023 +0530
+
+    fix
+
+commit a4dfb894f87d98d50e3b476a28076dea528924df
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:22:28 2023 +0530
+
+    modifiy html files
+
+commit f13669f21209c422a432872dff198fbbc56f6224
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:11:45 2023 +0530
+
+    update index html file
+
+commit 9d371b0573a945f01a98bf2aceb3ddb7f0eb75fc
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 23:05:23 2023 +0530
+
+    add index html file
+
+commit ddcab639e0e3747201845b5556c4211c57d2d2ad (origin/main, main)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 21:01:35 2023 +0530
+
+    add some chickens breed
+
+commit 4113f3de67983944ca66974657aae0a9a439c371
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Sun Nov 12 20:58:39 2023 +0530
+
+    add empty chickens file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/GHPages$ 
+
