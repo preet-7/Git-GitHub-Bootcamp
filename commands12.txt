@@ -1,0 +1,1042 @@
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll
+total 228
+drwxrwxr-x 10 preet preet  4096 Nov 16 14:21 ./
+drwxrwxr-x 21 preet preet  4096 Nov 16 14:19 ../
+-rw-rw-r--  1 preet preet   594 Nov 16 14:21 ADOPTERS.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 14:21 .circleci/
+drwxrwxr-x  3 preet preet  4096 Nov 16 14:21 cmd/
+-rw-rw-r--  1 preet preet   137 Nov 16 14:21 code-of-conduct.md
+-rw-rw-r--  1 preet preet 18809 Nov 16 14:21 CONTRIBUTING.md
+drwxrwxr-x  8 preet preet  4096 Nov 16 14:21 .git/
+drwxrwxr-x  3 preet preet  4096 Nov 16 14:21 .github/
+-rw-rw-r--  1 preet preet   176 Nov 16 14:21 .gitignore
+-rw-rw-r--  1 preet preet   341 Nov 16 14:21 .golangci.yml
+-rw-rw-r--  1 preet preet  7922 Nov 16 14:21 go.mod
+-rw-rw-r--  1 preet preet 52689 Nov 16 14:21 go.sum
+drwxrwxr-x 12 preet preet  4096 Nov 16 14:21 internal/
+-rw-rw-r--  1 preet preet 58701 Nov 16 14:21 KEYS
+-rw-rw-r--  1 preet preet 11373 Nov 16 14:21 LICENSE
+-rw-rw-r--  1 preet preet  7840 Nov 16 14:21 Makefile
+-rw-rw-r--  1 preet preet   397 Nov 16 14:21 OWNERS
+drwxrwxr-x 25 preet preet  4096 Nov 16 14:21 pkg/
+-rw-rw-r--  1 preet preet  3483 Nov 16 14:21 README.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 14:21 scripts/
+-rw-rw-r--  1 preet preet   171 Nov 16 14:21 SECURITY.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 14:21 testdata/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag
+1.999.0
+v1.0
+v1.1
+v1.2
+v1.2.1
+v2.0.0
+v2.0.0-alpha.1
+v2.0.0-alpha.2
+v2.0.0-alpha.3
+v2.0.0-alpha.4
+v2.0.0-alpha.5
+v2.0.0-beta.1
+v2.0.0-beta.2
+v2.0.0-rc.1
+v2.0.0-rc.2
+v2.0.1
+v2.0.2
+v2.1.0
+v2.1.1
+v2.1.2
+v2.1.3
+v2.10.0
+v2.10.0-rc.1
+v2.10.0-rc.2
+v2.10.0-rc.3
+v2.11.0
+v2.11.0-rc.1
+v2.11.0-rc.2
+v2.11.0-rc.3
+v2.11.0-rc.4
+v2.12.0
+v2.12.0-rc.1
+v2.12.0-rc.2
+v2.12.1
+v2.12.2
+v2.12.3
+v2.13.0
+v2.13.0-rc.1
+v2.13.0-rc.2
+v2.13.1
+v2.13.1-rc.1
+v2.14.0
+v2.14.0-rc.1
+v2.14.0-rc.2
+v2.14.1
+v2.14.2
+v2.14.3
+v2.15.0
+v2.15.0-rc.1
+v2.15.0-rc.2
+v2.15.1
+v2.15.2
+v2.16.0
+v2.16.0-rc.1
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git checkout v2.0.1
+Note: switching to 'v2.0.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at dc87ea8d chore(*): bump to v2.0.1
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+	status
+	stage
+	stash
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git status
+HEAD detached at v2.0.1
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+dc87ea8d (HEAD, tag: v2.0.1) chore(*): bump to v2.0.1
+352fea90 fix(helm): add no-hooks to upgrade
+189bc431 fix(helm): pass the no-hooks flag during upgrade
+fa462a6f fix(helm): improve URL comparison logic
+8fd3f095 fix(Makefile): build windows amd64 binaries
+a435604b fix(tiller): validate names before performing operations
+1249ffd8 fix(helm): improve --set parser
+7853f52b fix(helm): fix windows support with port forward connection in setupConnection
+a29b2250 fix(helm): don't pass nil-opt to ReleaseContent
+51bdad42 (tag: v2.0.0) chore(*): bump to v2.0.0
+a772697f Merge pull request #1560 from technosophos/fix/1528-increase-release-name-limit
+425b1b1f Merge pull request #1559 from adamreese/fix/update-patch
+57ccce10 Merge pull request #1551 from technosophos/docs/yaml-tips
+9effe7a5 fix(tiller): allow release name to be up to 53 chars
+df123865 fix(kube): fix incomplete patches generated on update
+3fb2feb8 docs(yaml_techniques): add YAML techniques document
+62df1ad3 Merge pull request #1549 from adamreese/fix/1519-bubbly-yaml-errors
+ae88a01a Merge pull request #1552 from adamreese/feat/detailed-log
+2c0af5ff Merge pull request #1550 from mattfarina/feat/gometalinter-versioned
+bae4508d Merge pull request #1538 from technosophos/fix/1515-no-overwrite-for-helm-create
+48c1ba53 Merge pull request #1545 from mattfarina/feat/1543-charts-domain-change
+985e975f Merge pull request #1546 from technosophos/fix/1499-show-broken-yaml
+5520c193 Merge pull request #1553 from waynebrantley/patch-1
+50beadbe Merge pull request #1527 from rollulus/fix-delete-dry-run
+1f17788d use openssl instead of shasum
+8a13be29 fix(helm): respect dryRun opt in DeleteRelease
+8740d3eb feat(tiller): add source file to log entries
+d2fa0396 feat(gometalinter): Move to versioned releases
+da73150c fix(tls): download helm and charts over https
+e2ab4072 fix(tiller): return yaml parsing errors
+6eabe283 fix(tiller): show failed YAML
+915769b3 Merge pull request #1529 from technosophos/fix/1522-replace-duplicate-entries
+c21922f2 Merge pull request #1535 from technosophos/docs/add-release-server-docblocks
+7a79661f feat(charts): Move bucket to domain from path
+0a163a2a fix(helm): helm create will not overwrite existing files
+2cecfa8b Merge pull request #1536 from technosophos/docs/1507-socat
+c616bb5a fix(helm): replace repo entry instead of duplicating
+8f9b9db5 docs(tiller): add docblocks to public methods
+13404ebf docs(install_faq): add more info on socat on CoreOS
+e4bbe33e Merge pull request #1514 from technosophos/docs/consistent-spacing
+8120508c Merge pull request #1541 from adamreese/fix/lint-errors
+d59f66fc fix(*): fix new linter errors
+79e43a75 Merge pull request #1532 from adamreese/fix/linter-timeout
+cf965e24 fix(scripts): increase deadline for linter
+4d69d48f Merge pull request #1518 from enisoc/tiller-deploy
+b070a82b Merge pull request #1517 from mandrean/fix/chartutil-create-notes
+9c74dae4 docs(install): fix deployment name in tiller delete command
+b3d45aef fix(1516): use correct value reference in boilerplate NOTES.txt
+f8037c83 (tag: v2.0.0-rc.2) chore(*): bump to v2.0.0-rc.2
+8857d122 docs(chart_template_guide): fix spacing
+ddc208b8 Merge pull request #1500 from technosophos/docs/template-guide
+8a7e1ec2 Merge pull request #1512 from technosophos/fix/1508-delete-error-message
+57c55a7d Merge pull request #1510 from adamreese/ref/ci-deploy
+d5346b1b docs(chart_tempalte_primer): add template primer
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -c BRANCH_FROM_TAG
+Switched to a new branch 'BRANCH_FROM_TAG'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git status
+On branch BRANCH_FROM_TAG
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag
+1.999.0
+v1.0
+v1.1
+v1.2
+v1.2.1
+v2.0.0
+v2.0.0-alpha.1
+v2.0.0-alpha.2
+v2.0.0-alpha.3
+v2.0.0-alpha.4
+v2.0.0-alpha.5
+v2.0.0-beta.1
+v2.0.0-beta.2
+v2.0.0-rc.1
+v2.0.0-rc.2
+v2.0.1
+v2.0.2
+v2.1.0
+v2.1.1
+v2.1.2
+v2.1.3
+v2.10.0
+v2.10.0-rc.1
+v2.10.0-rc.2
+v2.10.0-rc.3
+v2.11.0
+v2.11.0-rc.1
+v2.11.0-rc.2
+v2.11.0-rc.3
+v2.11.0-rc.4
+v2.12.0
+v2.12.0-rc.1
+v2.12.0-rc.2
+v2.12.1
+v2.12.2
+v2.12.3
+v2.13.0
+v2.13.0-rc.1
+v2.13.0-rc.2
+v2.13.1
+v2.13.1-rc.1
+v2.14.0
+v2.14.0-rc.1
+v2.14.0-rc.2
+v2.14.1
+v2.14.2
+v2.14.3
+v2.15.0
+v2.15.0-rc.1
+v2.15.0-rc.2
+v2.15.1
+v2.15.2
+v2.16.0
+v2.16.0-rc.1
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff v2.0.1 v2.0.2
+diff --git a/README.md b/README.md
+index c585866a..3455a79d 100644
+--- a/README.md
++++ b/README.md
+@@ -32,10 +32,10 @@ Think of it like apt/yum/homebrew for Kubernetes.
+ 
+ Binary downloads of the Helm client can be found at the following links:
+ 
+-- [OSX](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.1-darwin-amd64.tar.gz)
+-- [Linux](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.1-linux-amd64.tar.gz)
+-- [Linux 32-bit](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.1-linux-386.tar.gz)
+-- [Windows](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.1-windows-amd64.zip)
++- [OSX](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.2-darwin-amd64.tar.gz)
++- [Linux](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.2-linux-amd64.tar.gz)
++- [Linux 32-bit](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.2-linux-386.tar.gz)
++- [Windows](https://kubernetes-helm.storage.googleapis.com/helm-v2.0.2-windows-amd64.zip)
+ 
+ Unpack the `helm` binary and add it to your PATH and you are good to go! OS X/[Cask](https://caskroom.github.io/) users can `brew cask install helm`.
+ 
+diff --git a/cmd/helm/upgrade.go b/cmd/helm/upgrade.go
+index 950c48c7..4d42c1d3 100644
+--- a/cmd/helm/upgrade.go
++++ b/cmd/helm/upgrade.go
+@@ -171,7 +171,7 @@ func (u *upgradeCmd) vals() ([]byte, error) {
+                        return []byte{}, err
+                }
+ 
+-               if err := yaml.Unmarshal(bytes, base); err != nil {
++               if err := yaml.Unmarshal(bytes, &base); err != nil {
+                        return []byte{}, fmt.Errorf("failed to parse %s: %s", u.valuesFile, err)
+                }
+        }
+diff --git a/cmd/tiller/tiller.go b/cmd/tiller/tiller.go
+index 70672a85..188eddfe 100644
+--- a/cmd/tiller/tiller.go
++++ b/cmd/tiller/tiller.go
+@@ -24,7 +24,6 @@ import (
+        "os"
+ 
+        "github.com/spf13/cobra"
+-       "google.golang.org/grpc"
+ 
+        "k8s.io/helm/pkg/proto/hapi/services"
+        "k8s.io/helm/pkg/storage"
+@@ -41,7 +40,7 @@ const (
+ // rootServer is the root gRPC server.
+ //
+ // Each gRPC service registers itself to this server during init().
+-var rootServer = grpc.NewServer()
++var rootServer = tiller.NewServer()
+ 
+ // env is the default environment.
+ //
+diff --git a/docs/examples/nginx/templates/_helpers.tpl b/docs/examples/nginx/templates/_helpers.tpl
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll
+total 228
+drwxrwxr-x 10 preet preet  4096 Nov 16 18:56 ./
+drwxrwxr-x 21 preet preet  4096 Nov 16 14:19 ../
+-rw-rw-r--  1 preet preet   594 Nov 16 18:56 ADOPTERS.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 .circleci/
+drwxrwxr-x  3 preet preet  4096 Nov 16 18:56 cmd/
+-rw-rw-r--  1 preet preet   137 Nov 16 18:56 code-of-conduct.md
+-rw-rw-r--  1 preet preet 18809 Nov 16 18:56 CONTRIBUTING.md
+drwxrwxr-x  8 preet preet  4096 Nov 16 18:56 .git/
+drwxrwxr-x  3 preet preet  4096 Nov 16 18:56 .github/
+-rw-rw-r--  1 preet preet   176 Nov 16 18:56 .gitignore
+-rw-rw-r--  1 preet preet   341 Nov 16 18:56 .golangci.yml
+-rw-rw-r--  1 preet preet  7922 Nov 16 18:56 go.mod
+-rw-rw-r--  1 preet preet 52689 Nov 16 18:56 go.sum
+drwxrwxr-x 12 preet preet  4096 Nov 16 18:56 internal/
+-rw-rw-r--  1 preet preet 58701 Nov 16 18:56 KEYS
+-rw-rw-r--  1 preet preet 11373 Nov 16 14:21 LICENSE
+-rw-rw-r--  1 preet preet  7840 Nov 16 18:56 Makefile
+-rw-rw-r--  1 preet preet   397 Nov 16 18:56 OWNERS
+drwxrwxr-x 25 preet preet  4096 Nov 16 18:56 pkg/
+-rw-rw-r--  1 preet preet  3483 Nov 16 18:56 README.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 scripts/
+-rw-rw-r--  1 preet preet   171 Nov 16 18:56 SECURITY.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 testdata/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag
+1.999.0
+v1.0
+v1.1
+v1.2
+v1.2.1
+v2.0.0
+v2.0.0-alpha.1
+v2.0.0-alpha.2
+v2.0.0-alpha.3
+v2.0.0-alpha.4
+v2.0.0-alpha.5
+v2.0.0-beta.1
+v2.0.0-beta.2
+v2.0.0-rc.1
+v2.0.0-rc.2
+v2.0.1
+v2.0.2
+v2.1.0
+v2.1.1
+v2.1.2
+v2.1.3
+v2.10.0
+v2.10.0-rc.1
+v2.10.0-rc.2
+v2.10.0-rc.3
+v2.11.0
+v2.11.0-rc.1
+v2.11.0-rc.2
+v2.11.0-rc.3
+v2.11.0-rc.4
+v2.12.0
+v2.12.0-rc.1
+v2.12.0-rc.2
+v2.12.1
+v2.12.2
+v2.12.3
+v2.13.0
+v2.13.0-rc.1
+v2.13.0-rc.2
+v2.13.1
+v2.13.1-rc.1
+v2.14.0
+v2.14.0-rc.1
+v2.14.0-rc.2
+v2.14.1
+v2.14.2
+v2.14.3
+v2.15.0
+v2.15.0-rc.1
+v2.15.0-rc.2
+v2.15.1
+v2.15.2
+v2.16.0
+v2.16.0-rc.1
+v2.16.0-rc.2
+v2.16.1
+v2.16.10
+v2.16.11
+v2.16.12
+v2.16.2
+v2.16.3
+v2.16.4
+v2.16.5
+v2.16.6
+v2.16.7
+v2.16.8
+v2.16.9
+v2.17.0
+v2.17.0-rc.1
+v2.2.0
+v2.2.1
+v2.2.2
+v2.2.3
+v2.3.0
+v2.3.1
+v2.4.0
+v2.4.1
+v2.4.2
+v2.5.0
+v2.5.1
+v2.6.0
+v2.6.1
+v2.6.2
+v2.7.0
+v2.7.0-rc1
+v2.7.1
+v2.7.2
+v2.8.0
+v2.8.0-rc.1
+v2.8.1
+v2.8.2
+v2.8.2-rc1
+v2.9.0
+v2.9.0-rc1
+v2.9.0-rc2
+v2.9.0-rc3
+v2.9.0-rc4
+v2.9.0-rc5
+v2.9.1
+v3.0.0
+v3.0.0-alpha.1
+v3.0.0-alpha.2
+v3.0.0-beta.1
+v3.0.0-beta.2
+v3.0.0-beta.3
+v3.0.0-beta.4
+v3.0.0-beta.5
+v3.0.0-rc.1
+v3.0.0-rc.2
+v3.0.0-rc.3
+v3.0.0-rc.4
+v3.0.1
+v3.0.2
+v3.0.3
+v3.1.0
+v3.1.0-rc.1
+v3.1.0-rc.2
+v3.1.0-rc.3
+v3.1.1
+v3.1.2
+v3.1.3
+v3.10.0
+v3.10.0-rc.1
+v3.10.1
+v3.10.2
+v3.10.3
+v3.11.0
+v3.11.0-rc.1
+v3.11.0-rc.2
+v3.11.1
+v3.11.2
+v3.11.3
+v3.12.0
+v3.12.0-dev.1
+v3.12.0-rc.1
+v3.12.1
+v3.12.2
+v3.12.3
+v3.13.0
+v3.13.0-rc.1
+v3.13.1
+v3.13.2
+v3.2.0
+v3.2.0-rc.1
+v3.2.1
+v3.2.2
+v3.2.3
+v3.2.4
+v3.3.0
+v3.3.0-rc.1
+v3.3.0-rc.2
+v3.3.1
+v3.3.2
+v3.3.3
+v3.3.4
+v3.4.0
+v3.4.0-rc.1
+v3.4.1
+v3.4.2
+v3.5.0
+v3.5.0-rc.1
+v3.5.0-rc.2
+v3.5.1
+v3.5.2
+v3.5.3
+v3.5.4
+v3.6.0
+v3.6.0-rc.1
+v3.6.1
+v3.6.2
+v3.6.3
+v3.7.0
+v3.7.0-rc.1
+v3.7.0-rc.2
+v3.7.0-rc.3
+v3.7.1
+v3.7.2
+v3.8.0
+v3.8.0-rc.1
+v3.8.0-rc.2
+v3.8.1
+v3.8.2
+v3.9.0
+v3.9.0-rc.1
+v3.9.1
+v3.9.2
+v3.9.3
+v3.9.4
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ touch newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -am "new file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	newfile
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "new file"
+[main fea333b7] new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag v3.9.5
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag
+1.999.0
+v1.0
+v1.1
+v1.2
+v1.2.1
+v2.0.0
+v2.0.0-alpha.1
+v2.0.0-alpha.2
+v2.0.0-alpha.3
+v2.0.0-alpha.4
+v2.0.0-alpha.5
+v2.0.0-beta.1
+v2.0.0-beta.2
+v2.0.0-rc.1
+v2.0.0-rc.2
+v2.0.1
+v2.0.2
+v2.1.0
+v2.1.1
+v2.1.2
+v2.1.3
+v2.10.0
+v2.10.0-rc.1
+v2.10.0-rc.2
+v2.10.0-rc.3
+v2.11.0
+v2.11.0-rc.1
+v2.11.0-rc.2
+v2.11.0-rc.3
+v2.11.0-rc.4
+v2.12.0
+v2.12.0-rc.1
+v2.12.0-rc.2
+v2.12.1
+v2.12.2
+v2.12.3
+v2.13.0
+v2.13.0-rc.1
+v2.13.0-rc.2
+v2.13.1
+v2.13.1-rc.1
+v2.14.0
+v2.14.0-rc.1
+v2.14.0-rc.2
+v2.14.1
+v2.14.2
+v2.14.3
+v2.15.0
+v2.15.0-rc.1
+v2.15.0-rc.2
+v2.15.1
+v2.15.2
+v2.16.0
+v2.16.0-rc.1
+v2.16.0-rc.2
+v2.16.1
+v2.16.10
+v2.16.11
+v2.16.12
+v2.16.2
+v2.16.3
+v2.16.4
+v2.16.5
+v2.16.6
+v2.16.7
+v2.16.8
+v2.16.9
+v2.17.0
+v2.17.0-rc.1
+v2.2.0
+v2.2.1
+v2.2.2
+v2.2.3
+v2.3.0
+v2.3.1
+v2.4.0
+v2.4.1
+v2.4.2
+v2.5.0
+v2.5.1
+v2.6.0
+v2.6.1
+v2.6.2
+v2.7.0
+v2.7.0-rc1
+v2.7.1
+v2.7.2
+v2.8.0
+v2.8.0-rc.1
+v2.8.1
+v2.8.2
+v2.8.2-rc1
+v2.9.0
+v2.9.0-rc1
+v2.9.0-rc2
+v2.9.0-rc3
+v2.9.0-rc4
+v2.9.0-rc5
+v2.9.1
+v3.0.0
+v3.0.0-alpha.1
+v3.0.0-alpha.2
+v3.0.0-beta.1
+v3.0.0-beta.2
+v3.0.0-beta.3
+v3.0.0-beta.4
+v3.0.0-beta.5
+v3.0.0-rc.1
+v3.0.0-rc.2
+v3.0.0-rc.3
+v3.0.0-rc.4
+v3.0.1
+v3.0.2
+v3.0.3
+v3.1.0
+v3.1.0-rc.1
+v3.1.0-rc.2
+v3.1.0-rc.3
+v3.1.1
+v3.1.2
+v3.1.3
+v3.10.0
+v3.10.0-rc.1
+v3.10.1
+v3.10.2
+v3.10.3
+v3.11.0
+v3.11.0-rc.1
+v3.11.0-rc.2
+v3.11.1
+v3.11.2
+v3.11.3
+v3.12.0
+v3.12.0-dev.1
+v3.12.0-rc.1
+v3.12.1
+v3.12.2
+v3.12.3
+v3.13.0
+v3.13.0-rc.1
+v3.13.1
+v3.13.2
+v3.2.0
+v3.2.0-rc.1
+v3.2.1
+v3.2.2
+v3.2.3
+v3.2.4
+v3.3.0
+v3.3.0-rc.1
+v3.3.0-rc.2
+v3.3.1
+v3.3.2
+v3.3.3
+v3.3.4
+v3.4.0
+v3.4.0-rc.1
+v3.4.1
+v3.4.2
+v3.5.0
+v3.5.0-rc.1
+v3.5.0-rc.2
+v3.5.1
+v3.5.2
+v3.5.3
+v3.5.4
+v3.6.0
+v3.6.0-rc.1
+v3.6.1
+v3.6.2
+v3.6.3
+v3.7.0
+v3.7.0-rc.1
+v3.7.0-rc.2
+v3.7.0-rc.3
+v3.7.1
+v3.7.2
+v3.8.0
+v3.8.0-rc.1
+v3.8.0-rc.2
+v3.8.1
+v3.8.2
+v3.9.0
+v3.9.0-rc.1
+v3.9.1
+v3.9.2
+v3.9.3
+v3.9.4
+v3.9.5
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi newfeature
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add newfeature 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "add new feature"
+[main 0f4833e8] add new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfeature
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag -a v3.9.6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag
+1.999.0
+v1.0
+v1.1
+v1.2
+v1.2.1
+v2.0.0
+v2.0.0-alpha.1
+v2.0.0-alpha.2
+v2.0.0-alpha.3
+v2.0.0-alpha.4
+v2.0.0-alpha.5
+v2.0.0-beta.1
+v2.0.0-beta.2
+v2.0.0-rc.1
+v2.0.0-rc.2
+v2.0.1
+v2.0.2
+v2.1.0
+v2.1.1
+v2.1.2
+v2.1.3
+v2.10.0
+v2.10.0-rc.1
+v2.10.0-rc.2
+v2.10.0-rc.3
+v2.11.0
+v2.11.0-rc.1
+v2.11.0-rc.2
+v2.11.0-rc.3
+v2.11.0-rc.4
+v2.12.0
+v2.12.0-rc.1
+v2.12.0-rc.2
+v2.12.1
+v2.12.2
+v2.12.3
+v2.13.0
+v2.13.0-rc.1
+v2.13.0-rc.2
+v2.13.1
+v2.13.1-rc.1
+v2.14.0
+v2.14.0-rc.1
+v2.14.0-rc.2
+v2.14.1
+v2.14.2
+v2.14.3
+v2.15.0
+v2.15.0-rc.1
+v2.15.0-rc.2
+v2.15.1
+v2.15.2
+v2.16.0
+v2.16.0-rc.1
+v2.16.0-rc.2
+v2.16.1
+v2.16.10
+v2.16.11
+v2.16.12
+v2.16.2
+v2.16.3
+v2.16.4
+v2.16.5
+v2.16.6
+v2.16.7
+v2.16.8
+v2.16.9
+v2.17.0
+v2.17.0-rc.1
+v2.2.0
+v2.2.1
+v2.2.2
+v2.2.3
+v2.3.0
+v2.3.1
+v2.4.0
+v2.4.1
+v2.4.2
+v2.5.0
+v2.5.1
+v2.6.0
+v2.6.1
+v2.6.2
+v2.7.0
+v2.7.0-rc1
+v2.7.1
+v2.7.2
+v2.8.0
+v2.8.0-rc.1
+v2.8.1
+v2.8.2
+v2.8.2-rc1
+v2.9.0
+v2.9.0-rc1
+v2.9.0-rc2
+v2.9.0-rc3
+v2.9.0-rc4
+v2.9.0-rc5
+v2.9.1
+v3.0.0
+v3.0.0-alpha.1
+v3.0.0-alpha.2
+v3.0.0-beta.1
+v3.0.0-beta.2
+v3.0.0-beta.3
+v3.0.0-beta.4
+v3.0.0-beta.5
+v3.0.0-rc.1
+v3.0.0-rc.2
+v3.0.0-rc.3
+v3.0.0-rc.4
+v3.0.1
+v3.0.2
+v3.0.3
+v3.1.0
+v3.1.0-rc.1
+v3.1.0-rc.2
+v3.1.0-rc.3
+v3.1.1
+v3.1.2
+v3.1.3
+v3.10.0
+v3.10.0-rc.1
+v3.10.1
+v3.10.2
+v3.10.3
+v3.11.0
+v3.11.0-rc.1
+v3.11.0-rc.2
+v3.11.1
+v3.11.2
+v3.11.3
+v3.12.0
+v3.12.0-dev.1
+v3.12.0-rc.1
+v3.12.1
+v3.12.2
+v3.12.3
+v3.13.0
+v3.13.0-rc.1
+v3.13.1
+v3.13.2
+v3.2.0
+v3.2.0-rc.1
+v3.2.1
+v3.2.2
+v3.2.3
+v3.2.4
+v3.3.0
+v3.3.0-rc.1
+v3.3.0-rc.2
+v3.3.1
+v3.3.2
+v3.3.3
+v3.3.4
+v3.4.0
+v3.4.0-rc.1
+v3.4.1
+v3.4.2
+v3.5.0
+v3.5.0-rc.1
+v3.5.0-rc.2
+v3.5.1
+v3.5.2
+v3.5.3
+v3.5.4
+v3.6.0
+v3.6.0-rc.1
+v3.6.1
+v3.6.2
+v3.6.3
+v3.7.0
+v3.7.0-rc.1
+v3.7.0-rc.2
+v3.7.0-rc.3
+v3.7.1
+v3.7.2
+v3.8.0
+v3.8.0-rc.1
+v3.8.0-rc.2
+v3.8.1
+v3.8.2
+v3.9.0
+v3.9.0-rc.1
+v3.9.1
+v3.9.2
+v3.9.3
+v3.9.4
+v3.9.5
+v3.9.6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git show v3.9.6
+tag v3.9.6
+Tagger: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 17 00:15:20 2023 +0530
+
+this is more stuff for annotated tag
+
+commit 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 (HEAD -> main, tag: v3.9.6)
+Author: preet-7 <preet3.14159@gmail.com>
+Date:   Fri Nov 17 00:15:01 2023 +0530
+
+    add new feature
+
+diff --git a/newfeature b/newfeature
+new file mode 100644
+index 00000000..f8ec38df
+--- /dev/null
++++ b/newfeature
+@@ -0,0 +1 @@
++sdfksf
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ tag show v3.9.1
+Command 'tag' not found, but there are 15 similar ones.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag show v3.9.1
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag mytag 352fea90
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+0f4833e8 (HEAD -> main, tag: v3.9.6) add new feature
+fea333b7 (tag: v3.9.5) new file
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+0e72b647 Merge pull request #11880 from Bhargav-InfraCloud/fail-on-no-result
+162b3efc Merge pull request #12394 from abrarcv170/patch-1
+cad58107 Merge pull request #12337 from y-yagi/patch-1
+46265d8e Merge pull request #12410 from helm/dependabot/github_actions/github/codeql-action-2.21.8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag mytagg fea333b7
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+0f4833e8 (HEAD -> main, tag: v3.9.6) add new feature
+fea333b7 (tag: v3.9.5, tag: mytagg) new file
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+0e72b647 Merge pull request #11880 from Bhargav-InfraCloud/fail-on-no-result
+162b3efc Merge pull request #12394 from abrarcv170/patch-1
+cad58107 Merge pull request #12337 from y-yagi/patch-1
+46265d8e Merge pull request #12410 from helm/dependabot/github_actions/github/codeql-action-2.21.8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag mytagg fea333b7
+fatal: tag 'mytagg' already exists
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag mytagg fea333b7 -f
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git tag -d mytagg 
+Deleted tag 'mytagg' (was fea333b7)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+

@@ -1,0 +1,961 @@
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/HEAD 
+ref: refs/heads/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ ll
+total 252
+drwxrwxr-x  8 preet preet   4096 Nov 17 10:17 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 11:22 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    423 Nov 17 09:52 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet   5859 Nov 17 10:20 FETCH_HEAD
+-rw-rw-r--  1 preet preet     21 Nov 17 10:17 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 10:17 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 35 preet preet   4096 Nov 17 11:19 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd logs
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/logs$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 10:17 ../
+-rw-rw-r-- 1 preet preet 1387 Nov 17 10:17 HEAD
+drwxrwxr-x 4 preet preet 4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/logs$ cat HEAD
+0000000000000000000000000000000000000000 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700124683 +0530	clone: from https://github.com/helm/helm.git
+82195652495d757d87c1a01f640973f20ca141b0 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140260 +0530	checkout: moving from main to v2.0.1
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140323 +0530	checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700141202 +0530	checkout: moving from BRANCH_FROM_TAG to main
+82195652495d757d87c1a01f640973f20ca141b0 fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 preet-7 <preet3.14159@gmail.com> 1700141305 +0530	commit: new file
+fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 preet-7 <preet3.14159@gmail.com> 1700160301 +0530	commit: add new feature
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196023 +0530	checkout: moving from main to chicken
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196464 +0530	checkout: moving from chicken to main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/logs$ git switch -c turtle
+fatal: this operation must be run in a work tree
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/logs$ cat HEAD
+0000000000000000000000000000000000000000 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700124683 +0530	clone: from https://github.com/helm/helm.git
+82195652495d757d87c1a01f640973f20ca141b0 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140260 +0530	checkout: moving from main to v2.0.1
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140323 +0530	checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700141202 +0530	checkout: moving from BRANCH_FROM_TAG to main
+82195652495d757d87c1a01f640973f20ca141b0 fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 preet-7 <preet3.14159@gmail.com> 1700141305 +0530	commit: new file
+fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 preet-7 <preet3.14159@gmail.com> 1700160301 +0530	commit: add new feature
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196023 +0530	checkout: moving from main to chicken
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196464 +0530	checkout: moving from chicken to main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/logs$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -c turtle
+Switched to a new branch 'turtle'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/logs/HEAD
+0000000000000000000000000000000000000000 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700124683 +0530	clone: from https://github.com/helm/helm.git
+82195652495d757d87c1a01f640973f20ca141b0 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140260 +0530	checkout: moving from main to v2.0.1
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 dc87ea8dd0111164c720fd13b4eb8a905f97ac62 preet-7 <preet3.14159@gmail.com> 1700140323 +0530	checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62 82195652495d757d87c1a01f640973f20ca141b0 preet-7 <preet3.14159@gmail.com> 1700141202 +0530	checkout: moving from BRANCH_FROM_TAG to main
+82195652495d757d87c1a01f640973f20ca141b0 fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 preet-7 <preet3.14159@gmail.com> 1700141305 +0530	commit: new file
+fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 preet-7 <preet3.14159@gmail.com> 1700160301 +0530	commit: add new feature
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196023 +0530	checkout: moving from main to chicken
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700196464 +0530	checkout: moving from chicken to main
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 chicken-little <chicken@gmail.com> 1700223921 +0530	checkout: moving from main to turtle
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show head
+fatal: ambiguous argument 'head': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog --show head
+fatal: ambiguous argument 'head': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD
+0f4833e8 (HEAD -> turtle, tag: v3.9.6, main, chicken) HEAD@{0}: checkout: moving from main to turtle
+0f4833e8 (HEAD -> turtle, tag: v3.9.6, main, chicken) HEAD@{1}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> turtle, tag: v3.9.6, main, chicken) HEAD@{2}: checkout: moving from main to chicken
+0f4833e8 (HEAD -> turtle, tag: v3.9.6, main, chicken) HEAD@{3}: commit: add new feature
+fea333b7 (tag: v3.9.5) HEAD@{4}: commit: new file
+82195652 (origin/main, origin/HEAD) HEAD@{5}: checkout: moving from BRANCH_FROM_TAG to main
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{6}: checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{7}: checkout: moving from main to v2.0.1
+82195652 (origin/main, origin/HEAD) HEAD@{8}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch chicken
+Switched to branch 'chicken'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{0}: checkout: moving from turtle to chicken
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{1}: checkout: moving from main to turtle
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{2}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{3}: checkout: moving from main to chicken
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{4}: commit: add new feature
+fea333b7 (tag: v3.9.5) HEAD@{5}: commit: new file
+82195652 (origin/main, origin/HEAD) HEAD@{6}: checkout: moving from BRANCH_FROM_TAG to main
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{7}: checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{8}: checkout: moving from main to v2.0.1
+82195652 (origin/main, origin/HEAD) HEAD@{9}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show chicken
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) chicken@{0}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD@{2}
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{2}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{3}: checkout: moving from main to chicken
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) HEAD@{4}: commit: add new feature
+fea333b7 (tag: v3.9.5) HEAD@{5}: commit: new file
+82195652 (origin/main, origin/HEAD) HEAD@{6}: checkout: moving from BRANCH_FROM_TAG to main
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{7}: checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{8}: checkout: moving from main to v2.0.1
+82195652 (origin/main, origin/HEAD) HEAD@{9}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show main@{2}
+82195652 (origin/main, origin/HEAD) main@{2}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show main
+0f4833e8 (HEAD -> chicken, tag: v3.9.6, turtle, main) main@{0}: commit: add new feature
+fea333b7 (tag: v3.9.5) main@{1}: commit: new file
+82195652 (origin/main, origin/HEAD) main@{2}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git checkout HEAD@{2}
+Note: switching to 'HEAD@{2}'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0f4833e8 add new feature
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog HEAD@{2}
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{2}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{3}: checkout: moving from turtle to chicken
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{4}: checkout: moving from main to turtle
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{5}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{6}: checkout: moving from main to chicken
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{7}: commit: add new feature
+fea333b7 (tag: v3.9.5) HEAD@{8}: commit: new file
+82195652 (origin/main, origin/HEAD) HEAD@{9}: checkout: moving from BRANCH_FROM_TAG to main
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{10}: checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{11}: checkout: moving from main to v2.0.1
+82195652 (origin/main, origin/HEAD) HEAD@{12}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD@{0} HEAD@{2}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD@{0} HEAD@{4}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD@{0} HEAD@{7}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD@{0} HEAD@{12}
+diff --git a/newfeature b/newfeature
+deleted file mode 100644
+index f8ec38df..00000000
+--- a/newfeature
++++ /dev/null
+@@ -1 +0,0 @@
+-sdfksf
+diff --git a/newfile b/newfile
+deleted file mode 100644
+index e69de29b..00000000
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog main@{one.week.ago}
+warning: log for 'main' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog main@{2.days.ago}
+warning: log for 'main' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD HEAD@{yesterday}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff master HEAD@{yesterday}
+fatal: ambiguous argument 'master': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff main HEAD@{yesterday}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD{2.days.ago}
+fatal: ambiguous argument 'HEAD{2.days.ago}': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD@{2.days.ago}
+warning: log for 'HEAD' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD@{one.minute.ago}
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Sat Nov 18 09:17:24 2023 +0530}: checkout: moving from 0f4833e8c687d2fee9ecec5bcaef82fe00583dd2 to main
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Sat Nov 18 09:16:58 2023 +0530}: checkout: moving from main to HEAD@{2}
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Sat Nov 18 09:16:32 2023 +0530}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Fri Nov 17 18:40:19 2023 +0530}: checkout: moving from turtle to chicken
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Fri Nov 17 17:55:21 2023 +0530}: checkout: moving from main to turtle
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Fri Nov 17 10:17:44 2023 +0530}: checkout: moving from chicken to main
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Fri Nov 17 10:10:23 2023 +0530}: checkout: moving from main to chicken
+0f4833e8 (HEAD -> main, tag: v3.9.6, turtle, chicken) HEAD@{Fri Nov 17 00:15:01 2023 +0530}: commit: add new feature
+fea333b7 (tag: v3.9.5) HEAD@{Thu Nov 16 18:58:25 2023 +0530}: commit: new file
+82195652 (origin/main, origin/HEAD) HEAD@{Thu Nov 16 18:56:42 2023 +0530}: checkout: moving from BRANCH_FROM_TAG to main
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{Thu Nov 16 18:42:03 2023 +0530}: checkout: moving from dc87ea8dd0111164c720fd13b4eb8a905f97ac62 to BRANCH_FROM_TAG
+dc87ea8d (tag: v2.0.1, BRANCH_FROM_TAG) HEAD@{Thu Nov 16 18:41:00 2023 +0530}: checkout: moving from main to v2.0.1
+82195652 (origin/main, origin/HEAD) HEAD@{Thu Nov 16 14:21:23 2023 +0530}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show HEAD@{one.month.ago}
+warning: log for 'HEAD' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git checkout main@{1.week.ago}
+warning: log for 'main' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+warning: log for 'main' only goes back to Thu, 16 Nov 2023 14:21:23 +0530
+Note: switching to 'main@{1.week.ago}'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 82195652 Merge pull request #12554 from lixin963/patch-1
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log
+commit 82195652495d757d87c1a01f640973f20ca141b0 (HEAD, origin/main, origin/HEAD)
+Merge: 0592b380 312a0739
+Author: Matt Farina <matt@mattfarina.com>
+Date:   Fri Nov 10 16:02:37 2023 -0500
+
+    Merge pull request #12554 from lixin963/patch-1
+    
+    Update CONTRIBUTING.md
+
+commit 312a07398fa6bef2a9e0d9a973de360dfb4c7044
+Author: lixin18 <68135097+lixin963@users.noreply.github.com>
+Date:   Thu Nov 9 10:18:30 2023 +0800
+
+    Update CONTRIBUTING.md
+    
+    needs --> need
+    themself  -->  themselves
+    
+    Signed-off-by: lixin18 <68135097+lixin963@users.noreply.github.com>
+
+commit 0592b3800a2f4520f5dc066de342a3349d805357
+Merge: a9608786 919bffe2
+Author: Matt Farina <matt@mattfarina.com>
+Date:   Wed Nov 8 14:41:53 2023 -0500
+
+    Merge pull request #12457 from genofire/patch-1
+    
+    chore(create): indent to spaces
+
+commit a96087868ade265120cab84025f46a9f8d38a42a
+Merge: 1ed713c2 8b0a78c6
+Author: Matt Farina <matt@mattfarina.com>
+Date:   Wed Nov 8 14:27:56 2023 -0500
+
+    Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+    
+    chore(deps): bump github.com/evanphx/json-patch from 5.6.0+incompatible to 5.7.0+incompatible
+
+commit 1ed713c2233d59c712637b2fb291f60a5a801ad8
+Merge: d70e293e d6e91970
+Author: Matt Farina <matt@mattfarina.com>
+Date:   Wed Nov 8 14:25:23 2023 -0500
+
+    Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+    
+    chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+
+commit d70e293e5fea032e843c29d15c7e85e78b0aca6b
+Merge: 65088ade c5fe7dd7
+Author: Matt Farina <matt@mattfarina.com>
+Date:   Tue Nov 7 10:07:45 2023 -0500
+
+    Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ touch veggies.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "veggies"
+[detached HEAD 58b4c186] veggies
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 veggies.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "veggies"
+[detached HEAD cbd184be] veggies
+ 1 file changed, 4 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit --amend
+[detached HEAD a3cce208] winter veggies
+ Date: Sat Nov 18 09:45:24 2023 +0530
+ 1 file changed, 4 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "more veggies"
+[detached HEAD b0e12e8e] more veggies
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "summer seed"
+[detached HEAD 25168ae0] summer seed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+25168ae0 (HEAD) summer seed
+b0e12e8e more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reset --hard b0e12e8e
+HEAD is now at b0e12e8e more veggies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+b0e12e8e (HEAD) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+0e72b647 Merge pull request #11880 from Bhargav-InfraCloud/fail-on-no-result
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show main
+0f4833e8 (tag: v3.9.6, turtle, main, chicken) main@{0}: commit: add new feature
+fea333b7 (tag: v3.9.5) main@{1}: commit: new file
+82195652 (origin/main, origin/HEAD) main@{2}: clone: from https://github.com/helm/helm.git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git status
+HEAD detached from 82195652
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dogs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -c test
+Switched to a new branch 'test'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show test
+b0e12e8e (HEAD -> test) test@{0}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+b0e12e8e (HEAD -> test) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+0e72b647 Merge pull request #11880 from Bhargav-InfraCloud/fail-on-no-result
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add veggies.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "summer seed"
+[test f629dd99] summer seed
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+f629dd99 (HEAD -> test) summer seed
+b0e12e8e more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reset --hard b0e12e8e
+HEAD is now at b0e12e8e more veggies
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show test
+b0e12e8e (HEAD -> test) test@{0}: reset: moving to b0e12e8e
+f629dd99 test@{1}: commit: summer seed
+b0e12e8e (HEAD -> test) test@{2}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git checkout f629dd99
+Note: switching to 'f629dd99'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at f629dd99 summer seed
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show test
+b0e12e8e (test) test@{0}: reset: moving to b0e12e8e
+f629dd99 (HEAD) test@{1}: commit: summer seed
+b0e12e8e (test) test@{2}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat veggies.txt 
+broccoli
+rainbow chard
+kale
+cabbage
+watermelon
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reset --hard test@{1}
+HEAD is now at f629dd99 summer seed
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -c flowers
+Switched to a new branch 'flowers'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi flowers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "add flowers file"
+[flowers 41fc090f] add flowers file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 flowers.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git add flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -m "some zinnias flower"
+[flowers 277ff0fa] some zinnias flower
+ 1 file changed, 2 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -am "some dahlos flower"
+[flowers db56ca01] some dahlos flower
+ 1 file changed, 3 insertions(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -am "some amarnath flower"
+[flowers 96c81ed2] some amarnath flower
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi flowers.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git commit -am "some celosia flower"
+[flowers 0496afd5] some celosia flower
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+0496afd5 (HEAD -> flowers) some celosia flower
+96c81ed2 some amarnath flower
+db56ca01 some dahlos flower
+277ff0fa some zinnias flower
+41fc090f add flowers file
+f629dd99 summer seed
+b0e12e8e (test) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git rebase -i HEAD~4
+Successfully rebased and updated refs/heads/flowers.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+69594566 (HEAD -> flowers) some zinnias flower
+41fc090f add flowers file
+f629dd99 summer seed
+b0e12e8e (test) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git rebase -i HEAD~2
+[detached HEAD b8580e38] add list of flowers
+ Date: Sat Nov 18 10:20:40 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 flowers.txt
+Successfully rebased and updated refs/heads/flowers.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat flowers.txt 
+salmon zinnias
+queen lime
+old rose dahlias
+dinner plate
+coral fountain amarnath
+hot biscuits
+coral reef celosia`
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+f5c8078c (HEAD -> flowers) add list of flowers
+f629dd99 summer seed
+b0e12e8e (test) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show flowers
+f5c8078c (HEAD -> flowers) flowers@{0}: rebase (finish): refs/heads/flowers onto f629dd9948a8e164cda119a4080c694eb118a229
+69594566 flowers@{1}: rebase (finish): refs/heads/flowers onto 41fc090fb5753a8cbbd9a79f3d92ec399fcec3f6
+0496afd5 flowers@{2}: commit: some celosia flower
+96c81ed2 flowers@{3}: commit: some amarnath flower
+db56ca01 flowers@{4}: commit: some dahlos flower
+277ff0fa flowers@{5}: commit: some zinnias flower
+41fc090f flowers@{6}: commit: add flowers file
+f629dd99 flowers@{7}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reset --hard 0496afd5
+HEAD is now at 0496afd5 some celosia flower
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+0496afd5 (HEAD -> flowers) some celosia flower
+96c81ed2 some amarnath flower
+db56ca01 some dahlos flower
+277ff0fa some zinnias flower
+41fc090f add flowers file
+f629dd99 summer seed
+b0e12e8e (test) more veggies
+a3cce208 winter veggies
+58b4c186 veggies
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git reflog show flowers
+0496afd5 (HEAD -> flowers) flowers@{0}: reset: moving to 0496afd5
+f5c8078c flowers@{1}: rebase (finish): refs/heads/flowers onto f629dd9948a8e164cda119a4080c694eb118a229
+69594566 flowers@{2}: rebase (finish): refs/heads/flowers onto 41fc090fb5753a8cbbd9a79f3d92ec399fcec3f6
+0496afd5 (HEAD -> flowers) flowers@{3}: commit: some celosia flower
+96c81ed2 flowers@{4}: commit: some amarnath flower
+db56ca01 flowers@{5}: commit: some dahlos flower
+277ff0fa flowers@{6}: commit: some zinnias flower
+41fc090f flowers@{7}: commit: add flowers file
+f629dd99 flowers@{8}: branch: Created from HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+
+
+
+
+
+
+
+
+
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = chicken-little
+	email = chicken@gmail.com
+[color]
+	ui = true
+[color "branch"]
+	local = cyan bold
+	current = yellow bold
+[color "diff"]
+	old = magenta bold
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global user.name
+preet-7
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global user.email
+preet3.14159@gmail.com
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat ~/.gitconfig
+[user]
+	email = preet3.14159@gmail.com
+	name = preet-7
+[core]
+	autocrlf = input
+	editor = vim
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git s
+On branch flowers
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dogs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global alias.b branch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git b
+  BRANCH_FROM_TAG
+  chicken
+* flowers
+  main
+  test
+  turtle
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = chicken-little
+	email = chicken@gmail.com
+[color]
+	ui = true
+[color "branch"]
+	local = cyan bold
+	current = yellow bold
+[color "diff"]
+	old = magenta bold
+[alias]
+	s = status
+	l = log
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat ~/.gitconfig
+[user]
+	email = preet3.14159@gmail.com
+	name = preet-7
+[core]
+	autocrlf = input
+	editor = vim
+[alias]
+	b = branch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi ~/.gitconfig
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ touch new.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git s
+On branch flowers
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dogs.txt
+	new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git a
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git a .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cm "files"
+[flowers 65746bf6] files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 dogs.txt
+ create mode 100644 new.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+

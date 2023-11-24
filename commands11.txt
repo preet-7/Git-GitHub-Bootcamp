@@ -1,0 +1,658 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ ll
+total 460
+drwxrwxr-x 19 preet preet  4096 Nov 15 11:40 ./
+drwxr-x--- 35 preet preet  4096 Nov 15 11:49 ../
+drwxrwxr-x  6 preet preet  4096 Nov  7 13:56 2048/
+drwxrwxr-x  7 preet preet  4096 Nov  5 20:38 Branching/
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 cat.txt
+drwxrwxr-x  3 preet preet  4096 Nov  8 22:14 cloning/
+-rw-rw-r--  1 preet preet  9524 Nov 12 23:29 commands10.txt
+-rw-rw-r--  1 preet preet 39353 Nov  3 00:04 commands2.txt
+-rw-rw-r--  1 preet preet 85618 Nov  3 23:34 commands3.txt
+-rw-rw-r--  1 preet preet 23774 Nov  5 22:38 commands4.txt
+-rw-rw-r--  1 preet preet 25305 Nov  6 13:11 commands5.txt
+-rw-rw-r--  1 preet preet 58322 Nov  6 23:05 commands6.txt
+-rw-rw-r--  1 preet preet 78903 Nov  7 23:27 commands7.txt
+-rw-rw-r--  1 preet preet 28600 Nov  9 00:17 commands8.txt
+-rw-rw-r--  1 preet preet  8980 Nov 10 00:33 commands9.txt
+-rw-rw-r--  1 preet preet 14204 Nov  2 23:29 commands.txt
+-rw-rw-r--  1 preet preet     0 Nov  6 16:50 dog.txt
+drwxrwxr-x  3 preet preet  4096 Nov  9 23:57 favorites/
+drwxrwxr-x  4 preet preet  4096 Nov 10 12:45 FetchingPulling/
+drwxrwxr-x  3 preet preet  4096 Nov 12 23:26 GHPages/
+drwxrwxr-x  3 preet preet  4096 Nov  2 12:03 gitignoredemo/
+drwxrwxr-x  4 preet preet  4096 Nov  7 22:33 hiring-without-whiteboards/
+drwxrwxr-x  3 preet preet  4096 Nov  8 18:35 MyFirstNovel/
+drwxrwxr-x  3 preet preet  4096 Nov  8 22:10 pushing/
+drwxrwxr-x  3 preet preet  4096 Nov 15 11:49 RebaseDemo/
+drwxrwxr-x  3 preet preet  4096 Nov  7 22:37 sample-project/
+drwxrwxr-x  3 preet preet  4096 Nov  1 23:28 shopping/
+drwxrwxr-x  3 preet preet  4096 Nov  6 13:10 stash-diary/
+drwxrwxr-x  3 preet preet  4096 Nov  6 12:25 stashing/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:29 undoingstuff/
+drwxrwxr-x  3 preet preet  4096 Nov  6 22:49 yesterday-exercise/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd RebaseDemo/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 15 11:49 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    4 Nov 15 11:49 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 15 11:49 .git/
+-rw-rw-r--  1 preet preet   37 Nov 15 11:49 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git branch
+* feat
+  master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+4603553 (HEAD -> feat) Merge branch 'master' into feat
+cfb3074 (master) add login form
+18c4215 add feature two
+0e11194 Merge branch 'master' into feat
+10db439 add footer
+98169b2 add feature one
+c074895 add feature
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+cfb3074 (HEAD -> master) add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch feat
+Switched to branch 'feat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+4603553 (HEAD -> feat) Merge branch 'master' into feat
+cfb3074 (master) add login form
+18c4215 add feature two
+0e11194 Merge branch 'master' into feat
+10db439 add footer
+98169b2 add feature one
+c074895 add feature
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git status
+On branch feat
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git rebase master
+Successfully rebased and updated refs/heads/feat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+113d188 (HEAD -> feat) add feature two
+42062af add feature one
+d3fd6bb add feature
+cfb3074 (master) add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi website.txt 
+ipreet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "add image gallery"
+[master 8ba8a23] add image gallery
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+8ba8a23 (HEAD -> master) add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch feat
+Switched to branch 'feat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git diff feat..master
+diff --git a/feature.txt b/feature.txt
+deleted file mode 100644
+index 1191247..0000000
+--- a/feature.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
+-1
+-2
+diff --git a/website.txt b/website.txt
+index 37ac168..e39f226 100644
+--- a/website.txt
++++ b/website.txt
+@@ -1,3 +1,4 @@
+ navbar added
+ footer added
+ login form
++image gallery 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git rebase master
+Successfully rebased and updated refs/heads/feat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+19d8324 (HEAD -> feat) add feature two
+cfb9adf add feature one
+2c4edf0 add feature
+8ba8a23 (master) add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi feature.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 16 11:33 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    4 Nov 16 11:12 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 16 11:12 .git/
+-rw-rw-r--  1 preet preet   52 Nov 16 11:12 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi website.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "update website on feat"
+[feat bc4575f] update website on feat
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi website.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "update website on master"
+[master bb58e94] update website on master
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+bb58e94 (HEAD -> master) update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch feat
+Switched to branch 'feat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi feature.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "more work on feat"
+[feat 49c3b17] more work on feat
+ 1 file changed, 1 insertion(+)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+49c3b17 (HEAD -> feat) more work on feat
+bc4575f update website on feat
+19d8324 add feature two
+cfb9adf add feature one
+2c4edf0 add feature
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git rebase master
+Auto-merging website.txt
+CONFLICT (content): Merge conflict in website.txt
+error: could not apply bc4575f... update website on feat
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply bc4575f... update website on feat
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+574c853 (HEAD) add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 (master) update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git status
+interactive rebase in progress; onto bb58e94
+Last commands done (4 commands done):
+   pick 19d8324 add feature two
+   pick bc4575f update website on feat
+  (see more in file .git/rebase-merge/done)
+Next command to do (1 remaining command):
+   pick 49c3b17 more work on feat
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'feat' on 'bb58e94'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+	both modified:   website.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ vi website.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git status
+interactive rebase in progress; onto bb58e94
+Last commands done (4 commands done):
+   pick 19d8324 add feature two
+   pick bc4575f update website on feat
+  (see more in file .git/rebase-merge/done)
+Next command to do (1 remaining command):
+   pick 49c3b17 more work on feat
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'feat' on 'bb58e94'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+	both modified:   website.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git status
+interactive rebase in progress; onto bb58e94
+Last commands done (4 commands done):
+   pick 19d8324 add feature two
+   pick bc4575f update website on feat
+  (see more in file .git/rebase-merge/done)
+Next command to do (1 remaining command):
+   pick 49c3b17 more work on feat
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'feat' on 'bb58e94'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   website.txt
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git rebase --continue
+[detached HEAD 419bb8b] update website on feat
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Successfully rebased and updated refs/heads/feat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git status
+On branch feat
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+a49005a (HEAD -> feat) more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 (master) update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+bb58e94 (HEAD -> master) update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git merge feat
+Updating bb58e94..a49005a
+Fast-forward
+ feature.txt | 3 +++
+ website.txt | 4 ++--
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+ create mode 100644 feature.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+a49005a (HEAD -> master, feat) more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ touch newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "new file on master"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	newfile
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -am "new file on master"
+[master ef0827d] new file on master
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch featy
+fatal: invalid reference: featy
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch feat
+Switched to branch 'feat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git merge master
+Updating a49005a..ef0827d
+Fast-forward
+ newfile | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+ef0827d (HEAD -> feat, master) new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git revert 
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --reference           use the 'reference' format to refer to commits
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git revert ef0827d
+[feat bb39ce2] Revert "new file on master"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 newfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+bb39ce2 (HEAD -> feat) Revert "new file on master"
+ef0827d (master) new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 16 11:58 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    6 Nov 16 11:56 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 16 11:59 .git/
+-rw-rw-r--  1 preet preet   62 Nov 16 11:56 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch master
+Switched to branch 'master'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 16 11:59 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    6 Nov 16 11:56 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 16 11:59 .git/
+-rw-rw-r--  1 preet preet    0 Nov 16 11:59 newfile
+-rw-rw-r--  1 preet preet   62 Nov 16 11:56 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ touch anothernewfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git add .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit -m "another new file on maibn"
+[master d1c2e6e] another new file on maibn
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anothernewfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git ammend -m "another new file on maibn"
+git: 'ammend' is not a git command. See 'git --help'.
+
+The most similar command is
+	imap-send
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git amend commit -m "another new file on maibn"
+git: 'amend' is not a git command. See 'git --help'.
+
+The most similar command is
+	imap-send
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit ammend -m "another new file on master"
+error: pathspec 'ammend' did not match any file(s) known to git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git amend
+git: 'amend' is not a git command. See 'git --help'.
+
+The most similar command is
+	imap-send
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit amend 
+error: pathspec 'amend' did not match any file(s) known to git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit ammend 
+error: pathspec 'ammend' did not match any file(s) known to git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git commit --amend 
+[master c16b479] another new file on master
+ Date: Thu Nov 16 12:00:10 2023 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anothernewfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+c16b479 (HEAD -> master) another new file on master
+ef0827d new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git switch feat
+Switched to branch 'feat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+bb39ce2 (HEAD -> feat) Revert "new file on master"
+ef0827d new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git merge main
+merge: main - not something we can merge
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git merge master
+Merge made by the 'ort' strategy.
+ anothernewfile | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 anothernewfile
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+d4be550 (HEAD -> feat) Merge branch 'master' into feat
+c16b479 (master) another new file on master
+bb39ce2 Revert "new file on master"
+ef0827d new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 16 12:02 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    0 Nov 16 12:02 anothernewfile
+-rw-rw-r--  1 preet preet    6 Nov 16 11:56 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 16 12:02 .git/
+-rw-rw-r--  1 preet preet   62 Nov 16 11:56 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git rebase master
+Successfully rebased and updated refs/heads/feat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ git log --oneline
+91cef7c (HEAD -> feat) Revert "new file on master"
+c16b479 (master) another new file on master
+ef0827d new file on master
+a49005a more work on feat
+419bb8b update website on feat
+574c853 add feature two
+42502fc add feature one
+ead0177 add feature
+bb58e94 update website on master
+8ba8a23 add image gallery
+cfb3074 add login form
+10db439 add footer
+9101435 add navbar
+57596e7 add website file
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ ll
+total 20
+drwxrwxr-x  3 preet preet 4096 Nov 16 12:03 ./
+drwxrwxr-x 19 preet preet 4096 Nov 15 11:40 ../
+-rw-rw-r--  1 preet preet    0 Nov 16 12:02 anothernewfile
+-rw-rw-r--  1 preet preet    6 Nov 16 11:56 feature.txt
+drwxrwxr-x  8 preet preet 4096 Nov 16 12:03 .git/
+-rw-rw-r--  1 preet preet   62 Nov 16 11:56 website.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ 
+
+
+
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/RebaseDemo$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git clone https://github.com/Colt/interactive-rebase-demo
+Cloning into 'interactive-rebase-demo'...
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 29 (delta 8), reused 8 (delta 8), pack-reused 13
+Receiving objects: 100% (29/29), 4.05 KiB | 4.05 MiB/s, done.
+Resolving deltas: 100% (13/13), done.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ git status
+fatal: not a git repository (or any of the parent directories): .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp$ cd interactive-rebase-demo/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+3b23c17 (HEAD -> main, origin/main, origin/HEAD) Create README.md
+2029e20 my cat made this commit
+655204d fix another navbar typo
+2a45e71 fix navbar typos
+4ff2290 add top navbar
+6e39a76 whoops forgot to add bootstrap js script
+240827f add bootstrap
+519aab6 add basic HTML boilerplate
+cbee26b I added project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git switch -c myfeat
+Switched to a new branch 'myfeat'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git status
+On branch myfeat
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+3b23c17 (HEAD -> myfeat, origin/main, origin/HEAD, main) Create README.md
+2029e20 my cat made this commit
+655204d fix another navbar typo
+2a45e71 fix navbar typos
+4ff2290 add top navbar
+6e39a76 whoops forgot to add bootstrap js script
+240827f add bootstrap
+519aab6 add basic HTML boilerplate
+cbee26b I added project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~9
+[detached HEAD ad4e146] add project files
+ Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+ Date: Tue Feb 9 13:58:21 2021 -0800
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.css
+ create mode 100644 index.html
+Successfully rebased and updated refs/heads/myfeat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+372b2d9 (HEAD -> myfeat) Create README.md
+538292f my cat made this commit
+7516494 fix another navbar typo
+44070cb fix navbar typos
+f845060 add top navbar
+a335995 whoops forgot to add bootstrap js script
+d62a0f8 add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~7
+Successfully rebased and updated refs/heads/myfeat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+50ec4cc (HEAD -> myfeat) Create README.md
+ebf01d5 my cat made this commit
+6e21382 fix another navbar typo
+0592496 fix navbar typos
+5c419f7 add top navbar
+961f0df add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~8
+Successfully rebased and updated refs/heads/myfeat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+0d64979 (HEAD -> myfeat) Create README.md
+c534140 my cat made this commit
+a98f4b3 add top navbar
+961f0df add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ cat app.js 
+alskj
+askdj;) (; a
+sdkljasdkljas
+aslkdja)preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/myfeat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+0d64979 (HEAD -> myfeat) Create README.md
+c534140 my cat made this commit
+a98f4b3 add top navbar
+961f0df add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ cat app.js 
+alskj
+askdj;) (; a
+sdkljasdkljas
+aslkdja)preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~8
+fatal: invalid upstream 'HEAD~8'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/myfeat.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ cat app.js 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+73af9b9 (HEAD -> myfeat) Create README.md
+a98f4b3 add top navbar
+961f0df add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git status
+On branch myfeat
+nothing to commit, working tree clean
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git commit --amend
+[myfeat 21dcd35] create README.md
+ Author: Colt Steele <5498438+Colt@users.noreply.github.com>
+ Date: Tue Feb 9 14:20:39 2021 -0800
+ 1 file changed, 26 insertions(+)
+ create mode 100644 README.md
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+21dcd35 (HEAD -> myfeat) create README.md
+a98f4b3 add top navbar
+961f0df add bootstrap
+77e2c5a add basic HTML boilerplate
+ad4e146 add project files
+0e19c7a initial commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/interactive-rebase-demo$ git log --oneline
+3b23c17 (HEAD -> main, origin/main, origin/HEAD) Create README.md
+2029e20 my cat made this commit
+655204d fix another navbar typo
+2a45e71 fix navbar typos
+4ff2290 add top navbar
+6e39a76 whoops forgot to add bootstrap js script
+240827f add bootstrap
+519aab6 add basic HTML boilerplate
+cbee26b I added project files
+0e19c7a initial commit
+

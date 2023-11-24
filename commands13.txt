@@ -1,0 +1,656 @@
+preet@preet-HP-Notebook:~$ cd Git-Github-Bootcamp/helm/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll
+total 232
+drwxrwxr-x 10 preet preet  4096 Nov 17 00:14 ./
+drwxrwxr-x 21 preet preet  4096 Nov 17 00:27 ../
+-rw-rw-r--  1 preet preet   594 Nov 16 18:56 ADOPTERS.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 .circleci/
+drwxrwxr-x  3 preet preet  4096 Nov 16 18:56 cmd/
+-rw-rw-r--  1 preet preet   137 Nov 16 18:56 code-of-conduct.md
+-rw-rw-r--  1 preet preet 18809 Nov 16 18:56 CONTRIBUTING.md
+drwxrwxr-x  8 preet preet  4096 Nov 17 00:22 .git/
+drwxrwxr-x  3 preet preet  4096 Nov 16 18:56 .github/
+-rw-rw-r--  1 preet preet   176 Nov 16 18:56 .gitignore
+-rw-rw-r--  1 preet preet   341 Nov 16 18:56 .golangci.yml
+-rw-rw-r--  1 preet preet  7922 Nov 16 18:56 go.mod
+-rw-rw-r--  1 preet preet 52689 Nov 16 18:56 go.sum
+drwxrwxr-x 12 preet preet  4096 Nov 16 18:56 internal/
+-rw-rw-r--  1 preet preet 58701 Nov 16 18:56 KEYS
+-rw-rw-r--  1 preet preet 11373 Nov 16 14:21 LICENSE
+-rw-rw-r--  1 preet preet  7840 Nov 16 18:56 Makefile
+-rw-rw-r--  1 preet preet     7 Nov 17 00:14 newfeature
+-rw-rw-r--  1 preet preet     0 Nov 16 18:57 newfile
+-rw-rw-r--  1 preet preet   397 Nov 16 18:56 OWNERS
+drwxrwxr-x 25 preet preet  4096 Nov 16 18:56 pkg/
+-rw-rw-r--  1 preet preet  3483 Nov 16 18:56 README.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 scripts/
+-rw-rw-r--  1 preet preet   171 Nov 16 18:56 SECURITY.md
+drwxrwxr-x  2 preet preet  4096 Nov 16 18:56 testdata/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ ll
+total 244
+drwxrwxr-x  8 preet preet   4096 Nov 17 00:22 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:14 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    253 Nov 16 14:21 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet     21 Nov 16 18:56 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 00:15 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:15 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cat config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config.username
+git: 'config.username' is not a git command. See 'git --help'.
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config user.name
+preet-7
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config --local user.name "chicken-little"
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config user.name
+chicken-little
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config user.email
+preet3.14159@gmail.com
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config --local user.email "chicken@gmail.com"
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git config user.email
+chicken@gmail.com
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cat config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = chicken-little
+	email = chicken@gmail.com
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ vi config 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git branch
+  BRANCH_FROM_TAG
+* main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ vi config 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git branch
+  BRANCH_FROM_TAG
+* main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ vi config 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git diff HEAD~2
+fatal: this operation must be run in a work tree
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD~2
+diff --git a/newfeature b/newfeature
+new file mode 100644
+index 00000000..f8ec38df
+--- /dev/null
++++ b/newfeature
+@@ -0,0 +1 @@
++sdfksf
+diff --git a/newfile b/newfile
+new file mode 100644
+index 00000000..e69de29b
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git diff HEAD~3
+diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
+index 37627e71..5bbe2ec6 100644
+--- a/CONTRIBUTING.md
++++ b/CONTRIBUTING.md
+@@ -13,7 +13,7 @@ chance to try to fix the issue before it is exploited in the wild.
+ 
+ ## Sign Your Work
+ 
+-The sign-off is a simple line at the end of the explanation for a commit. All commits needs to be
++The sign-off is a simple line at the end of the explanation for a commit. All commits need to be
+ signed. Your signature certifies that you wrote the patch or otherwise have the right to contribute
+ the material. The rules are pretty simple, if you can certify the below (from
+ [developercertificate.org](https://developercertificate.org/)):
+@@ -195,7 +195,7 @@ below.
+       See [Proposing an Idea](#proposing-an-idea). Smaller quality-of-life enhancements are exempt.
+     - Issues that are labeled as `feature` or `bug` should be connected to the PR that resolves it.
+     - Whoever is working on a `feature` or `bug` issue (whether a maintainer or someone from the
+-      community), should either assign the issue to themself or make a comment in the issue saying
++      community), should either assign the issue to themselves or make a comment in the issue saying
+       that they are taking it.
+     - `proposal` and `support/question` issues should stay open until resolved or if they have not
+       been active for more than 30 days. This will help keep the issue queue to a manageable size
+diff --git a/newfeature b/newfeature
+new file mode 100644
+index 00000000..f8ec38df
+--- /dev/null
++++ b/newfeature
+@@ -0,0 +1 @@
++sdfksf
+diff --git a/newfile b/newfile
+new file mode 100644
+index 00000000..e69de29b
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ ll
+total 244
+drwxrwxr-x  8 preet preet   4096 Nov 17 09:52 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:14 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    423 Nov 17 09:52 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet     21 Nov 16 18:56 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 00:15 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:15 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ ll
+total 20
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 09:52 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:15 heads/
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 remotes/
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd head
+bash: cd: head: No such file or directory
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd heads
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ ll
+total 16
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:15 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+-rw-rw-r-- 1 preet preet   41 Nov 16 18:42 BRANCH_FROM_TAG
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:15 main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ cat main
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ cat BRANCH_FROM_TAG 
+dc87ea8dd0111164c720fd13b4eb8a905f97ac62
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch -c chicken
+Switched to a new branch 'chicken'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/refs/heads/
+total 20
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+-rw-rw-r-- 1 preet preet   41 Nov 16 18:42 BRANCH_FROM_TAG
+-rw-rw-r-- 1 preet preet   41 Nov 17 10:10 chicken
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:15 main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/refs/heads/chicken 
+0f4833e8c687d2fee9ecec5bcaef82fe00583dd2
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git/refs/heads/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ ll
+total 20
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 10:10 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 heads/
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 remotes/
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd tags
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/tags$ ll
+total 24
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:19 mytag
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:17 show
+-rw-rw-r-- 1 preet preet   41 Nov 16 18:58 v3.9.5
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:15 v3.9.6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/tags$ cat mytag
+352fea903d4dfa9daa4352988c3d8c852caa3845
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/tags$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ ll
+total 20
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 10:10 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 heads/
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 remotes/
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd remotes/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+drwxrwxr-x 2 preet preet 4096 Nov 16 14:21 origin/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ cd origin
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ ll
+total 12
+drwxrwxr-x 2 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ../
+-rw-rw-r-- 1 preet preet   30 Nov 16 14:21 HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ cat HEAD 
+ref: refs/remotes/origin/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ...
+bash: cd: ...: No such file or directory
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git fecth
+git: 'fecth' is not a git command. See 'git --help'.
+
+The most similar command is
+	fetch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git fetch
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 21 (delta 13), reused 6 (delta 5), pack-reused 0
+Unpacking objects: 100% (21/21), 32.02 KiB | 565.00 KiB/s, done.
+From https://github.com/helm/helm
+ * [new branch]        dependabot/github_actions/github/codeql-action-2.22.7        -> origin/dependabot/github_actions/github/codeql-action-2.22.7
+ * [new branch]        dependabot/go_modules/github.com/containerd/containerd-1.7.9 -> origin/dependabot/go_modules/github.com/containerd/containerd-1.7.9
+ * [new branch]        dependabot/go_modules/k8s-io-ec30088301                      -> origin/dependabot/go_modules/k8s-io-ec30088301
+ * [new branch]        dependabot/go_modules/k8s.io/apimachinery-0.28.4             -> origin/dependabot/go_modules/k8s.io/apimachinery-0.28.4
+ * [new branch]        dependabot/go_modules/k8s.io/client-go-0.28.4                -> origin/dependabot/go_modules/k8s.io/client-go-0.28.4
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git/refs/heads/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ ll
+total 20
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+-rw-rw-r-- 1 preet preet   41 Nov 16 18:42 BRANCH_FROM_TAG
+-rw-rw-r-- 1 preet preet   41 Nov 17 10:10 chicken
+-rw-rw-r-- 1 preet preet   41 Nov 17 00:15 main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/heads$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ ll
+total 20
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 10:13 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 heads/
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 remotes/
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd remotes/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 origin/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ cd origin/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ../
+drwxrwxr-x 4 preet preet 4096 Nov 17 10:13 dependabot/
+-rw-rw-r-- 1 preet preet   30 Nov 16 14:21 HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ cd dependabot/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot$ ll
+total 16
+drwxrwxr-x 4 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 ../
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 github_actions/
+drwxrwxr-x 4 preet preet 4096 Nov 17 10:13 go_modules/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot$ cd github_actions/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x 4 preet preet 4096 Nov 17 10:13 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:13 github/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions$ cd github/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions/github$ ll
+total 12
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 ../
+-rw-rw-r-- 1 preet preet   41 Nov 17 10:13 codeql-action-2.22.7
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions/github$ cat codeql-action-2.22.7 
+42c5af2a3add3003b108f119461a0be7df643b92
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions/github$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot/github_actions$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin/dependabot$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ ll
+total 16
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ../
+drwxrwxr-x 4 preet preet 4096 Nov 17 10:13 dependabot/
+-rw-rw-r-- 1 preet preet   30 Nov 16 14:21 HEAD
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ cat HEAD 
+ref: refs/remotes/origin/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes/origin$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ ll
+total 12
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ../
+drwxrwxr-x 3 preet preet 4096 Nov 17 10:13 origin/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs/remotes$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ ll
+total 20
+drwxrwxr-x 5 preet preet 4096 Nov 16 14:21 ./
+drwxrwxr-x 8 preet preet 4096 Nov 17 10:13 ../
+drwxrwxr-x 2 preet preet 4096 Nov 17 10:10 heads/
+drwxrwxr-x 3 preet preet 4096 Nov 16 14:21 remotes/
+drwxrwxr-x 2 preet preet 4096 Nov 17 00:22 tags/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git/refs$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ ll
+total 252
+drwxrwxr-x  8 preet preet   4096 Nov 17 10:13 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:14 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    423 Nov 17 09:52 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet   5872 Nov 17 10:13 FETCH_HEAD
+-rw-rw-r--  1 preet preet     24 Nov 17 10:10 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 00:15 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 31 preet preet   4096 Nov 17 10:13 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cat HEAD 
+ref: refs/heads/chicken
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ git switch main 
+fatal: this operation must be run in a work tree
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ cd ..
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch master
+fatal: invalid reference: master
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/HEAD
+ref: refs/heads/main
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/
+total 252
+drwxrwxr-x  8 preet preet   4096 Nov 17 10:17 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 00:14 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    423 Nov 17 09:52 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet   5872 Nov 17 10:13 FETCH_HEAD
+-rw-rw-r--  1 preet preet     21 Nov 17 10:17 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 10:17 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 31 preet preet   4096 Nov 17 10:13 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/objects
+total 124
+drwxrwxr-x 31 preet preet 4096 Nov 17 10:13 ./
+drwxrwxr-x  8 preet preet 4096 Nov 17 10:17 ../
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 0f/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 14/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 20/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 27/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 2a/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 32/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 40/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 42/
+drwxrwxr-x  2 preet preet 4096 Nov 16 18:58 47/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 50/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 57/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 5b/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 61/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 76/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 89/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 a0/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 aa/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 bb/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 cf/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 d9/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 dc/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 e0/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 ed/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 f1/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 f7/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:14 f8/
+drwxrwxr-x  2 preet preet 4096 Nov 16 18:58 fe/
+drwxrwxr-x  2 preet preet 4096 Nov 16 14:19 info/
+drwxrwxr-x  2 preet preet 4096 Nov 16 14:21 pack/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/objects/of
+ls: cannot access '.git/objects/of': No such file or directory
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/objects/0f
+total 12
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 ./
+drwxrwxr-x 31 preet preet 4096 Nov 17 10:20 ../
+-r--r--r--  1 preet preet  159 Nov 17 00:15 4833e8c687d2fee9ecec5bcaef82fe00583dd2
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/objects/0f/4833e8c687d2fee9ecec5bcaef82fe00583dd2
+x��A
+��#��m��s(�t�0�#0��߽��?��Z�K��̾�j>��E{preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ echo "hello" | git hashobject --stdin
+git: 'hashobject' is not a git command. See 'git --help'.
+
+The most similar command is
+	hash-object
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ echo "hello" | git hash-object --stdin
+ce013625030ba8dba906f756967f9e9ca394464a
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ echo "goodbye" | git hash-object --stdin
+dd7e1c6f0fefe118f0b63d9f10908c460aa317a6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ echo "goodbye" | git hash-object --stdin -w
+dd7e1c6f0fefe118f0b63d9f10908c460aa317a6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/objects/
+total 128
+drwxrwxr-x 32 preet preet 4096 Nov 17 11:13 ./
+drwxrwxr-x  8 preet preet 4096 Nov 17 10:17 ../
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 0f/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 14/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 20/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 27/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 2a/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 32/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 40/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 42/
+drwxrwxr-x  2 preet preet 4096 Nov 16 18:58 47/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 50/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 57/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 5b/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 61/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 76/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:15 89/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 a0/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 aa/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 bb/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 cf/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 d9/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 dc/
+drwxrwxr-x  2 preet preet 4096 Nov 17 11:13 dd/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 e0/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 ed/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 f1/
+drwxrwxr-x  2 preet preet 4096 Nov 17 10:13 f7/
+drwxrwxr-x  2 preet preet 4096 Nov 17 00:14 f8/
+drwxrwxr-x  2 preet preet 4096 Nov 16 18:58 fe/
+drwxrwxr-x  2 preet preet 4096 Nov 16 14:19 info/
+drwxrwxr-x  2 preet preet 4096 Nov 16 14:21 pack/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ ll .git/objects/dd
+total 12
+drwxrwxr-x  2 preet preet 4096 Nov 17 11:13 ./
+drwxrwxr-x 32 preet preet 4096 Nov 17 11:13 ../
+-r--r--r--  1 preet preet   23 Nov 17 11:13 7e1c6f0fefe118f0b63d9f10908c460aa317a6
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ echo "hello" | git hash-object --stdin -w 
+ce013625030ba8dba906f756967f9e9ca394464a
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a
+hello
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p dd7e1c6f0fefe118f0b63d9f10908c460aa317a6
+goodbye
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ touch dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi dogs
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git hash-object dogs.txt
+b9f1bcafe52341c5dd5d25b927e195d9ae2a20df
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git hash-object dogs.txt
+b9f1bcafe52341c5dd5d25b927e195d9ae2a20df
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git hash-object dogs.txt -w
+b9f1bcafe52341c5dd5d25b927e195d9ae2a20df
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p b9f1bcafe52341c5dd5d25b927e195d9ae2a20df
+Rusty
+Wyatt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git hash-object dogs.txt -w
+96358df328a2bea4b6480e5ca3853359fb7cb75c
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p 96358df328a2bea4b6480e5ca3853359fb7cb75c
+Rusty
+Wyatt
+fhgjklhg
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p b9f1bcafe52341c5dd5d25b927e195d9ae2a20df
+Rusty
+Wyatt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ rm dogs.txt 
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p b9f1bcafe52341c5dd5d25b927e195d9ae2a20df > dogs.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat dogs.txt 
+Rusty
+Wyatt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p master^{tree}
+fatal: Not a valid object name master^{tree}
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p main^{tree}
+040000 tree 7367fcf45b241651bbc79acac6743524f3fac585	.circleci
+040000 tree 9a65f81d33e4c3bfd948c52d8525e70511dda516	.github
+100644 blob d1af995a39e4ff2e79fe681a53fdb6f520ec0ae3	.gitignore
+100644 blob 3cf50a0d4844300e9b96a1eed9d894e966996896	.golangci.yml
+100644 blob 9d5365b723e8ab3c909b1f0a63e0e501153f44be	ADOPTERS.md
+100644 blob 5bbe2ec631449f568cd6decc98836d434b3ea873	CONTRIBUTING.md
+100644 blob 89ef930fd54876f24366bde87d0c5556386a4ede	KEYS
+100644 blob 21c57fae21f7e9ab4112e99ddbf14e74528a0abc	LICENSE
+100644 blob d61ac15075f74dd035461866e5fd84fc51746eb6	Makefile
+100644 blob cc18ea5227003b4f958f844f6e64f1b9e1ed01df	OWNERS
+100644 blob b279d6af8e609b83b508e44c125d7fc22e7aeb19	README.md
+100644 blob c84a6f86631d5a21527e612113a94c5e4d752613	SECURITY.md
+040000 tree 19b1a178e7be4e8bfdbe64b9db216474dffa796a	cmd
+100644 blob 91ccaf0353393dbd3407d9bb6f6eaa45f38bd95d	code-of-conduct.md
+100644 blob 6eef690da429760561e1db77993b686007a68476	go.mod
+100644 blob 2ed2d3f8ffb464b93c43ad9bcf8f5ac44b0c0ff7	go.sum
+040000 tree 3b79fd68964045a38cb3ca49e26b65da20104083	internal
+100644 blob f8ec38df4ada209396bbecf92c530a3ddb2bea28	newfeature
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	newfile
+040000 tree 4922dee605614afcc4eabe3aa9d2a542af4a024d	pkg
+040000 tree 3c05db2769b8ca0e136cb5b672d4467e6c12f12c	scripts
+040000 tree 3f695bf5e91d78d385b828eb9413e9f11fbf1871	testdata
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p d1af995a39e4ff2e79fe681a53fdb6f520ec0ae3
+*.exe
+*.swp
+.DS_Store
+.coverage/
+.idea/
+.vimrc
+.vscode/
+_dist/
+bin/
+vendor/
+# Ignores charts pulled for dependency build tests
+cmd/helm/testdata/testcharts/issue-7233/charts/*
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -t d1af995a39e4ff2e79fe681a53fdb6f520ec0ae3
+blob
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p 7367fcf45b241651bbc79acac6743524f3fac585
+100644 blob b377a086c0fb09ff9aa5d7f3ff2f4d58f5fb5b7c	config.yml
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -t 7367fcf45b241651bbc79acac6743524f3fac585
+tree
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log --oneline
+0f4833e8 (HEAD -> main, tag: v3.9.6, chicken) add new feature
+fea333b7 (tag: v3.9.5) new file
+82195652 (origin/main, origin/HEAD) Merge pull request #12554 from lixin963/patch-1
+312a0739 Update CONTRIBUTING.md
+0592b380 Merge pull request #12457 from genofire/patch-1
+a9608786 Merge pull request #12392 from helm/dependabot/go_modules/github.com/evanphx/json-patch-5.7.0incompatible
+1ed713c2 Merge pull request #12531 from helm/dependabot/github_actions/github/codeql-action-2.22.5
+d70e293e Merge pull request #12525 from helm/dependabot/go_modules/google.golang.org/grpc-1.56.3
+65088ade Merge pull request #12519 from MarHum26/patch-1
+d65990ef Merge pull request #12535 from helm/dependabot/go_modules/github.com/docker/docker-24.0.7incompatible
+c682fdfe Merge pull request #12539 from chojnack/main
+dae87831 Merge pull request #12447 from dm3ch/allow-filtering-using-system-labels
+2745909d Merge pull request #9653 from Okhoshi/feat/reset-then-reuse-flag
+8814bfb4 Fixing release labelling in rollback
+c54e39a1 chore(deps): bump github.com/docker/docker
+d6e91970 chore(deps): bump github/codeql-action from 2.22.4 to 2.22.5
+f3099cdb Merge pull request #12527 from mattfarina/revert-12237
+24e2864c Revert "fix(main): fix basic auth for helm pull or push"
+b091c149 Merge pull request #12524 from helm/revert-12424-fix-anonymous-pull
+c5fe7dd7 chore(deps): bump google.golang.org/grpc from 1.54.0 to 1.56.3
+992dc585 Revert "fix(registry): address anonymous pull issue"
+8fbbc863 Merge pull request #12515 from helm/dependabot/github_actions/github/codeql-action-2.22.4
+81362d98 Update get-helm-3
+6d1f6cd6 chore(deps): bump github/codeql-action from 2.22.3 to 2.22.4
+1338ffe6 Merge pull request #12481 from helm/dependabot/go_modules/golang.org/x/net-0.17.0
+1fe01a20 Merge pull request #12397 from z4ce/update-get-helm-script
+c5d78b89 Merge pull request #12493 from helm/dependabot/github_actions/github/codeql-action-2.22.3
+a1a21ae8 chore(deps): bump github/codeql-action from 2.21.8 to 2.22.3
+250f0bd4 Drop filterSystemLabels usage from Query method
+0ec47f8e Apply review suggestions
+f94e5db6 Update get-helm-3 to get version through get.helm.sh
+fe595b69 Merge pull request #12480 from mattfarina/fix-12460
+544cabb0 chore(deps): bump golang.org/x/net from 0.13.0 to 0.17.0
+25371e2f Fixing precedence issue with the import of values.
+ee4e03eb Merge pull request #12437 from z4ce/write-helm-latest-version
+1b260d0a Merge pull request #12433 from larszi/fix-12432-helm-create-serviceaccount
+ff8f0276 Merge pull request #12429 from hiddeco/fix-swallowed-err
+3871583b Merge pull request #12445 from manslaughter03/fix/useless-print-onupgrade
+919bffe2 chore(create): indent to spaces
+e6d9b992 Allow using label selectors for system labels for sql backend.
+e219c756 Allow using label selectors for system labels for secrets and configmap backends.
+f004d428 remove useless print during prepareUpgrade
+c288f0b7 Merge pull request #12424 from hiddeco/fix-anonymous-pull
+9d3d17aa Add missing with clause to release gh action
+828763e0 FIX Default ServiceAccount yaml
+fe4c01f6 fix(registry): address anonymous pull issue
+da3c666a fix(registry): unswallow error
+4a5e26b8 Merge pull request #12425 from z4ce/write-helm-latest-version
+21ea847f Fix missing run statement on release action
+fa918d12 Merge pull request #12411 from helm/dependabot/go_modules/oras.land/oras-go-1.2.4
+0e72b647 Merge pull request #11880 from Bhargav-InfraCloud/fail-on-no-result
+162b3efc Merge pull request #12394 from abrarcv170/patch-1
+cad58107 Merge pull request #12337 from y-yagi/patch-1
+46265d8e Merge pull request #12410 from helm/dependabot/github_actions/github/codeql-action-2.21.8
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -t 0f4833e8
+commit
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p 0f4833e8
+tree 76564c6fb6bce9116f0dda7b4558851230094b5a
+parent fea333b7a3b0d42c9a3d5be52f6825f6dda1b9c1
+author preet-7 <preet3.14159@gmail.com> 1700160301 +0530
+committer preet-7 <preet3.14159@gmail.com> 1700160301 +0530
+
+add new feature
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cat-file -p 76564c6fb6bce9116f0dda7b4558851230094b5a
+040000 tree 7367fcf45b241651bbc79acac6743524f3fac585	.circleci
+040000 tree 9a65f81d33e4c3bfd948c52d8525e70511dda516	.github
+100644 blob d1af995a39e4ff2e79fe681a53fdb6f520ec0ae3	.gitignore
+100644 blob 3cf50a0d4844300e9b96a1eed9d894e966996896	.golangci.yml
+100644 blob 9d5365b723e8ab3c909b1f0a63e0e501153f44be	ADOPTERS.md
+100644 blob 5bbe2ec631449f568cd6decc98836d434b3ea873	CONTRIBUTING.md
+100644 blob 89ef930fd54876f24366bde87d0c5556386a4ede	KEYS
+100644 blob 21c57fae21f7e9ab4112e99ddbf14e74528a0abc	LICENSE
+100644 blob d61ac15075f74dd035461866e5fd84fc51746eb6	Makefile
+100644 blob cc18ea5227003b4f958f844f6e64f1b9e1ed01df	OWNERS
+100644 blob b279d6af8e609b83b508e44c125d7fc22e7aeb19	README.md
+100644 blob c84a6f86631d5a21527e612113a94c5e4d752613	SECURITY.md
+040000 tree 19b1a178e7be4e8bfdbe64b9db216474dffa796a	cmd
+100644 blob 91ccaf0353393dbd3407d9bb6f6eaa45f38bd95d	code-of-conduct.md
+100644 blob 6eef690da429760561e1db77993b686007a68476	go.mod
+100644 blob 2ed2d3f8ffb464b93c43ad9bcf8f5ac44b0c0ff7	go.sum
+040000 tree 3b79fd68964045a38cb3ca49e26b65da20104083	internal
+100644 blob f8ec38df4ada209396bbecf92c530a3ddb2bea28	newfeature
+100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	newfile
+040000 tree 4922dee605614afcc4eabe3aa9d2a542af4a024d	pkg
+040000 tree 3c05db2769b8ca0e136cb5b672d4467e6c12f12c	scripts
+040000 tree 3f695bf5e91d78d385b828eb9413e9f11fbf1871	testdata
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cd .git
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ ll
+total 252
+drwxrwxr-x  8 preet preet   4096 Nov 17 10:17 ./
+drwxrwxr-x 10 preet preet   4096 Nov 17 11:22 ../
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 branches/
+-rw-rw-r--  1 preet preet     16 Nov 17 00:15 COMMIT_EDITMSG
+-rw-rw-r--  1 preet preet    423 Nov 17 09:52 config
+-rw-rw-r--  1 preet preet     73 Nov 16 14:19 description
+-rw-rw-r--  1 preet preet   5859 Nov 17 10:20 FETCH_HEAD
+-rw-rw-r--  1 preet preet     21 Nov 17 10:17 HEAD
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 hooks/
+-rw-rw-r--  1 preet preet 173170 Nov 17 10:17 index
+drwxrwxr-x  2 preet preet   4096 Nov 16 14:19 info/
+drwxrwxr-x  3 preet preet   4096 Nov 16 14:21 logs/
+drwxrwxr-x 35 preet preet   4096 Nov 17 11:19 objects/
+-rw-rw-r--  1 preet preet  22324 Nov 17 00:22 packed-refs
+drwxrwxr-x  5 preet preet   4096 Nov 16 14:21 refs/
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm/.git$ 

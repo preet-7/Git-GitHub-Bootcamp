@@ -1,0 +1,123 @@
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = chicken-little
+	email = chicken@gmail.com
+[color]
+	ui = true
+[color "branch"]
+	local = cyan bold
+	current = yellow bold
+[color "diff"]
+	old = magenta bold
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global user.name
+preet-7
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global user.email
+preet3.14159@gmail.com
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat ~/.gitconfig
+[user]
+	email = preet3.14159@gmail.com
+	name = preet-7
+[core]
+	autocrlf = input
+	editor = vim
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log l
+fatal: bad config line 23 in file .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log l
+fatal: bad config line 23 in file .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log l
+fatal: bad config line 23 in file .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git log l
+fatal: ambiguous argument 'l': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git s
+On branch flowers
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dogs.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git config --global alias.b branch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git b
+  BRANCH_FROM_TAG
+  chicken
+* flowers
+  main
+  test
+  turtle
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/helm/helm.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = chicken-little
+	email = chicken@gmail.com
+[color]
+	ui = true
+[color "branch"]
+	local = cyan bold
+	current = yellow bold
+[color "diff"]
+	old = magenta bold
+[alias]
+	s = status
+	l = log
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ cat ~/.gitconfig
+[user]
+	email = preet3.14159@gmail.com
+	name = preet-7
+[core]
+	autocrlf = input
+	editor = vim
+[alias]
+	b = branch
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi ~/.gitconfig
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ vi .git/config
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ touch new.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git s
+On branch flowers
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dogs.txt
+	new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git a
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git a .
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ git cm "files"
+[flowers 65746bf6] files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 dogs.txt
+ create mode 100644 new.txt
+preet@preet-HP-Notebook:~/Git-Github-Bootcamp/helm$ 
+
+
